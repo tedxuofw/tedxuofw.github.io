@@ -1,2 +1,0 @@
-set input/output scripts in webpack.config
-run "node_modules\.bin\webpack -d" on command line

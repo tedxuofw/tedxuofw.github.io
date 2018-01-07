@@ -1,0 +1,40 @@
+/* Misc. CSS */
+body {
+    font-family: 'Roboto';
+}
+
+
+/* TEDNavbar CSS */
+#tednav {
+    background-color: white;
+}
+.tednavlink a {
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Roboto';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* TEDNavbar CSS */
+.tedsection {
+    width: 100%;
+    min-height: 75vh;
+    
+    padding-top: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.tedsection:nth-child(even) {
+    background: rgb(189, 195, 199);
+}
+.tedsection:nth-child(odd) {
+    background: rgb(236, 240, 241);
+}
+
+
+/* TEDFooter CSS */
+#tedfooter {
+    background-color: #565660;
+}
