@@ -9,14 +9,15 @@
   "author": "NikolasUntoten",
   "license": "UNLICENSED",
   "dependencies": {
-    "materialize-css": "^0.97.3",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "materialize-css": "^0.97.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-materialize": ">=0.14.0",
+    "react-materialize": "^1.1.2",
+    "react-router-dom": "^4.2.2",
     "webpack": "^3.10.0"
   }
 }
