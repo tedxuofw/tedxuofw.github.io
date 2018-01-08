@@ -1,29 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {TEDNavbar} from './components/tednavbar.jsx';
-import {TEDFooter} from './components/tedfooter.jsx';
-import {Section} from './components/section.jsx';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import { Page } from './main.jsx';
+import { About } from './about.jsx';
 
 class App extends React.Component {
 	render() {
 		return (
-            <div>
-                <TEDNavbar />
-                <Section>
-                    Section 1
-                </Section>
-                <Section>
-                    Section 2
-                </Section>
-                <Section>
-                    Section 3
-                </Section>
-                <Section>
-                    Section 4
-                </Section>
-                <TEDFooter />
-            </div>
+			<BrowserRouter>
+				<Switch>
+					<Route path="/" component={Page}/>
+					<Route path="/about" component={About}/>
+				</Switch>
+			</BrowserRouter>
         );
 	}
 }
