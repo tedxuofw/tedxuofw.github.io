@@ -11,8 +11,8 @@ class App extends React.Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-					<Route path="/" component={Page}/>
-					<Route path="/about" component={About}/>
+					<Route exact path='/' component={Page}/>
+					<Route path='/about' component={About}/>
 				</Switch>
 			</BrowserRouter>
         );
