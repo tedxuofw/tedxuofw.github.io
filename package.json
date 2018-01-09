@@ -4,9 +4,9 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "start"
-  },
-  "author": "NikolasUntoten",
+    "test": "start",
+  "start": "webpack-dev-server" },
+  "author": "TedxUofW Webdev Team",
   "license": "UNLICENSED",
   "dependencies": {
     "babel-core": "^6.26.0",
