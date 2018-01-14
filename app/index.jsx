@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import { Page } from './main.jsx';
 import { About } from './about.jsx';
@@ -9,12 +9,12 @@ import { About } from './about.jsx';
 class App extends React.Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<Switch>
 					<Route path='/' component={Page}/>
 					<Route path='/about' component={About}/>
 				</Switch>
-			</BrowserRouter>
+			</HashRouter>
         );
 	}
 }
