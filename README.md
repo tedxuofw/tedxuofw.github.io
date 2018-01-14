@@ -27,7 +27,12 @@ git push origin master
 This will recognize which files you have changed, commit them to your project with a short message, and push them online.
 
 ### Running React
- - How to npm start
+While making changes to the project, you can compile and test the React app to see what it looks like. In your terminal, navigate to the project folder on your machine and run
+```
+npm start
+```
+This will run the 'start' script in the package.json file. If everything goes well, you should be able to open any web browser and view your project at [http://localhost:8080/#/](http://localhost:8080/#/). 
+
  - How to install new node packages so that they get stored w/ project
  - How to debug common problems?
  - How to gh-pages?
