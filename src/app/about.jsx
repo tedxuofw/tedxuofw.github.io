@@ -10,6 +10,10 @@ export class About extends React.Component {
 		return (
             <div>
                 <TEDNavbar />
+                <Section>
+                    About Page
+                </Section>
+                <TEDFooter />
             </div>
         );
 	}

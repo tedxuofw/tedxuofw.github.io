@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "start",
-    "start": "webpack-dev-server"
+    "start": "webpack && webpack-dev-server"
   },
   "author": "TedxUofW Webdev Team",
   "license": "UNLICENSED",

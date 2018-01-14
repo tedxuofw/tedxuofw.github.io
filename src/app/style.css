@@ -1,40 +1,154 @@
+@font-face { font-family: Avenir; src: url('resources/fonts/Avenir-Medium.ttf'); }
+@font-face { font-family: AvenirBlack; src: url('resources/fonts/AvenirBlack.otf'); } 
+@font-face { font-family: Futura; src: url('resources/fonts/Futura.ttf'); } 
+
+
 /* Misc. CSS */
 body {
-    font-family: 'Roboto';
+    font-family: 'Avenir';
+    overflow-x: hidden;
+    margin: 0;
 }
 
 
+
+/** TODO: Add Media Queries for navbar resize **/
 /* TEDNavbar CSS */
 #tednav {
-    background-color: white;
+    background-color: #F5F5F5;
+    height: 85px;
+    line-height: 85px;
+}
+#tednavlogo {
+    height: 70px;
+    float: left;
+    
+    /* (85px nav - 70px logo) */
+    margin-top: 8px; 
+    margin-bottom: 7px;
+    margin-left: 12%;    
+}
+
+.tednavgold {
+    border-style: solid;
+    border-width: 3px;
+    border-color: gold;
 }
 .tednavlink a {
-    text-transform: uppercase;
     color: black;
-    font-family: 'Roboto';
+    margin: 0 10px 0 10px;
+    font-family: 'Avenir';
     font-weight: bold;
+    font-size: 16px;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.tednavcontainer {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
-/* TEDNavbar CSS */
+
+/* Section CSS */
 .tedsection {
-    width: 100%;
+    width: 70%;
     min-height: 75vh;
+    background: white;
     
-    padding-top: 20px;
+    padding-top: 50px;
     padding-left: 15%;
     padding-right: 15%;
+    padding-bottom: 50px;
 }
-.tedsection:nth-child(even) {
-    background: rgb(189, 195, 199);
+.tedsectiontitle {
+    font-size: 65px;
+    font-weight: bold;
+    font-family: AvenirBlack;
+    text-transform: uppercase;
 }
-.tedsection:nth-child(odd) {
-    background: rgb(236, 240, 241);
+
+
+/* Sponsor CSS */
+.tedsponsor {
+    margin: 60px 20px 30px 20px;  
+    overflow: auto
 }
+.tedsponsorimage {
+    float: left;
+}
+.tedsponsorimage img {
+    display: block;
+    max-width: 160px;
+}
+.tedsponsorcontent {
+    margin-left: 215px;
+}
+.tedsponsortitle {
+    font-family: AvenirBlack;
+    margin-bottom: 5px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.tedsponsorsubtitle {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+.tedsponsorbar{
+    background: #E62B25;
+    height: 10px;
+    width: 82px;
+    margin-left: 215px;
+    margin-bottom: 30px;
+}
+
+
 
 
 /* TEDFooter CSS */
 #tedfooter {
-    background-color: #565660;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding-top: 25px;
+}
+#tedfooter > i {
+    font-size: 150px;
+}
+#tedfooter p {
+    font-weight: bolder;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0;
+}
+#tedfooter h3 {
+    font-size: 24px;
+    color: #E62B25;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+#tedfooter h4 {
+    font-size: 18px;
+    font-family: AvenirBlack;
+    text-transform: uppercase;
+    margin: 5px;
+}
+#tedfooter h5 {
+    text-align: center;
+    line-height: 13px;
+    font-size: 12px;
+    margin: 0;
+}
+#tedfooterlogo {
+    width: 100px;
+    margin: 15px 0 15px 0;
+}
+.tedfootergroup {
+    margin-bottom: 20px;
+}
+.tedfootergroup > i {
+    color: #E62B25;
+    font-size: 50px;
+    margin: 0 5px 0 5px;
+    vertical-align: middle;
 }

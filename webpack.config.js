@@ -1,5 +1,5 @@
-var webpack = require('webpack');
-var path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 var BUILD_DIR = path.resolve(__dirname, 'src/build');
 var APP_DIR = path.resolve(__dirname, 'src/app');
@@ -12,7 +12,7 @@ var config = {
   },
   devServer: {
 	  contentBase: "./src",
-	  hot: true
+      hot: true
   },
   module: {
 	  loaders : [
@@ -22,8 +22,7 @@ var config = {
         loader : 'babel-loader'
       }
     ]
-  }
-  
+  }  
 };
 
 module.exports = config;

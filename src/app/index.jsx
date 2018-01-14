@@ -3,16 +3,18 @@ import ReactDOM from 'react-dom';
 
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import { Page } from './main.jsx';
+import { Home } from './main.jsx';
 import { About } from './about.jsx';
+import { Sponsors } from './sponsors.jsx';
 
 class App extends React.Component {
 	render() {
 		return (
 			<HashRouter>
 				<Switch>
-					<Route path='/' component={Page}/>
+					<Route exact path='/' component={Home}/>
 					<Route path='/about' component={About}/>
+                    <Route path='/sponsors' component={Sponsors}/>
 				</Switch>
 			</HashRouter>
         );
