@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+
+import {Link} from 'react-router-dom';
 import {TEDNavbar} from './components/tednavbar.jsx';
 import {TEDFooter} from './components/tedfooter.jsx';
 import {Section} from './components/section.jsx';
@@ -12,6 +14,7 @@ export class Page extends React.Component {
                 <TEDNavbar />
                 <Section>
                     Section 1
+					<Link to="/about" > About </Link>
                 </Section>
                 <Section>
                     Section 2
