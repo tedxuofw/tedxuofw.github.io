@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom';
 export class TEDNavbar extends React.Component {
     render(){
         var links = [ {text: 'About', className: 'tednavlink', link: '/about'},
-                      {text: 'Speakers', className: 'tednavlink', link: '/'},
+                      {text: 'Speakers', className: 'tednavlink', link: '/speakers'},
                       {text: 'Sponsors', className: 'tednavlink', link: '/sponsors'},
-                      {text: 'Contact', className: 'tednavlink', link: '/'},
-                      {text: 'Attend', className: 'tednavlink tednavgold', link: '/'}]
+                      {text: 'Contact', className: 'tednavlink', link: '/contact'},
+                      {text: 'Attend', className: 'tednavlink tednavgold', link: '/attend'}]
         
         return (
             <nav id='tednav' href='#'>
