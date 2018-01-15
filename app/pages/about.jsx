@@ -1,0 +1,21 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import {TEDNavbar} from '../components/tednavbar.jsx';
+import {TEDFooter} from '../components/tedfooter.jsx';
+import {Section} from '../components/section.jsx';
+import {InfoSlider} from '../components/infoslider.jsx';
+
+export class About extends React.Component {
+	render() {
+		return (
+            <div>
+                <TEDNavbar index='0' />
+                <Section>
+                    <InfoSlider />
+                </Section>
+                <TEDFooter />
+            </div>
+        );
+	}
+}

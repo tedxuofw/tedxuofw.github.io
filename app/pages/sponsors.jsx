@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {TEDNavbar} from './components/tednavbar.jsx';
-import {TEDFooter} from './components/tedfooter.jsx';
-import {Section} from './components/section.jsx';
-import {Sponsor} from './components/sponsor.jsx';
+import {TEDNavbar} from '../components/tednavbar.jsx';
+import {TEDFooter} from '../components/tedfooter.jsx';
+import {Section} from '../components/section.jsx';
+import {Sponsor} from '../components/sponsor.jsx';
 
 export class Sponsors extends React.Component {
 	render() {
                 
 		return (
             <div>
-                <TEDNavbar />
+                <TEDNavbar index='2'/>
                 <Section title='Sponsors'>
                     <Sponsor title='ASUW' subtitle='Associated Students of the University of Washington'
                         img='/app/resources/images/sponsor-asuw.jpg'

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 
 import {Link} from 'react-router-dom';
-import {TEDNavbar} from './components/tednavbar.jsx';
-import {TEDFooter} from './components/tedfooter.jsx';
-import {Section} from './components/section.jsx';
+import {TEDNavbar} from '../components/tednavbar.jsx';
+import {TEDFooter} from '../components/tedfooter.jsx';
+import {Section} from '../components/section.jsx';
 
 export class Home extends React.Component {
 	render() {
