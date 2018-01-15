@@ -14,10 +14,18 @@ export class TEDFooter extends React.Component {
                 <img className={css(styles.tedfooterlogo)} src="/app/resources/images/logo-red.png" />
                 <h4 className={css(styles.tedfooterh4)}><b>Envision the Future</b></h4>
                 <div className={css(styles.tedfootergroup)}>
-                    <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-facebook.png" />
-                    <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
-                    <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-instagram.png" />
-                    <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-youtube.png" />
+                    <a href="https://www.facebook.com/TEDxUofW/">
+                        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-facebook.png" />
+                    </a>
+                    <a href="https://www.instagram.com/tedxuofw/">
+                        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
+                    </a>
+                    <a href="https://twitter.com/tedxuofw?lang=en">
+                        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-instagram.png" />
+                    </a>
+                    <a href="https://www.youtube.com/user/TEDxUofWashington">
+                        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-youtube.png" />
+                    </a>
                 </div>
                 <h5 className={css(styles.tedfooterh5)}>This independent TEDx event is</h5>
                 <h5 className={css(styles.tedfooterh5)}>operated under license from TED.</h5>
@@ -64,7 +72,12 @@ const styles = StyleSheet.create({
     tedfootericon: {
         width: '36px',
         margin: '0 10px 0 10px',
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
+        transition: 'opacity 0.2s ease-out',
+        ':hover': {
+            opacity: '0.8',
+            transition: 'opacity 0.2s ease-out'
+        }
     },
     tedfootergroup: {
         marginBottom: '20px',

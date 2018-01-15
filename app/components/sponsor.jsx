@@ -5,7 +5,8 @@ import {StyleSheet, css} from 'aphrodite';
 
 
 export class Sponsor extends React.Component {
-    render(){        
+    
+    render() {        
         return ( 
             <div className={css(styles.tedsponsor)}>
                 <div className={css(styles.tedsponsorbar)}></div>

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {Link} from 'react-router-dom';
+import {StyleSheet, css} from 'aphrodite/no-important';
 
 export class TEDNavbar extends React.Component {
     render(){
@@ -9,18 +10,20 @@ export class TEDNavbar extends React.Component {
                       {text: 'Speakers', className: 'tednavlink', link: '/speakers'},
                       {text: 'Sponsors', className: 'tednavlink', link: '/sponsors'},
                       {text: 'Contact', className: 'tednavlink', link: '/contact'},
-                      {text: 'Attend', className: 'tednavlink tednavgold', link: '/attend'}]
+                      {text: 'Attend', className: 'tednavlink tednavgold', link: '/attend'}];
+        
+        
         
         return (
-            <nav id='tednav' href='#'>
-                <span className='tednavcontainer'>
-                    <img id='tednavlogo' src="/app/resources/images/logo-red.png" />
+            <nav className={css(styles.tednav)} href='#'>
+                <span className={css(styles.tednavcontainer)}>
+                    <Link to='/'><img className={css(styles.tednavlogo)} src="/app/resources/images/logo-red.png" /></Link>
                 </span>
-                <span className='tednavcontainer'>
+                <span className={css(styles.tednavcontainer)}>
                     { 
                         links.map((item, index) => { 
                             if(index == this.props.index) {item.className += ' active'}
-                            return <span className={item.className} key={item.text}><Link to={item.link}>{item.text}</Link></span> 
+                            return <span className={item.className} key={item.text}><Link className={css(styles.tednavlinka)} to={item.link}>{item.text}</Link></span> 
                         }) 
                     }
                 </span>
@@ -29,7 +32,6 @@ export class TEDNavbar extends React.Component {
     }
 }
 
-/*
 // Aphrodite CSS (doesn't support css selectors though)
 const styles = StyleSheet.create({
     tednav: {
@@ -44,11 +46,23 @@ const styles = StyleSheet.create({
         marginBottom: '7px',
         marginLeft: '12%' 
     }, 
-    tednavgold: {
-        borderStyle: 'solid',
-        borderWidth: '3px',
-        borderColor: 'gold'
+    tednavcontainer: {
+        paddingLeft: '10%',
+        paddingRight: '10%'
+    },
+    tednavlinka: {
+        color: 'black',
+        margin: '0 10px 0 10px',
+        fontFamily: 'Avenir',
+        fontWeight: 'bold',
+        fontSize: '16px',
+        letterSpacing: '1px',
+        textTransform: 'uppercase',
+        transition: 'color 0.2s ease-out',
+        textDecoration: 'none',
+        ':hover' : {
+            color: '#ab1814',
+            transition: 'color 0.2s ease-out'
+        }
     }
 });
-
-*/
