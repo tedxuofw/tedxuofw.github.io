@@ -8,7 +8,7 @@ Before you can begin editing files, make sure that you have [Node.js](https://no
 Once you have downloaded the pre-requisites, make a folder on your computer to store the project files. Using the terminal on your machine (command prompt for Windows) change directories so that you are in your new folder. Once there, run the following commands:
 ```
 git init
-git remote add origin https://github.com/SohamPardeshi/tedxuofw2018
+git remote add origin https://github.com/tedxuofw/tedxuofw2018
 ```
 This will set up an empty Git project in your folder and point it to the online repository from which you will download your files.
 

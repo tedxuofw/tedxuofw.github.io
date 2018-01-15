@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import { Home } from './main.jsx';
-import { About } from './about.jsx';
-import { Speakers } from './speakers.jsx';
-import { Sponsors } from './sponsors.jsx';
-import { Contact } from './contact.jsx';
-import { Attend } from './attend.jsx';
+import { Home } from './pages/main.jsx';
+import { About } from './pages/about.jsx';
+import { Speakers } from './pages/speakers.jsx';
+import { Sponsors } from './pages/sponsors.jsx';
+import { Contact } from './pages/contact.jsx';
+import { Attend } from './pages/attend.jsx';
 
 
 class App extends React.Component {

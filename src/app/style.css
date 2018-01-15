@@ -28,7 +28,11 @@ body {
     margin-bottom: 7px;
     margin-left: 12%;    
 }
-
+.active a {
+    border-bottom: 3px solid gold;
+    border-left: 0;
+    border-right: 0;
+}
 .tednavgold {
     border-style: solid;
     border-width: 3px;
@@ -44,111 +48,8 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 }
+
 .tednavcontainer {
     padding-left: 10%;
     padding-right: 10%;
-}
-
-
-
-/* Section CSS */
-.tedsection {
-    width: 70%;
-    min-height: 75vh;
-    background: white;
-    
-    padding-top: 50px;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-bottom: 50px;
-}
-.tedsectiontitle {
-    font-size: 65px;
-    font-weight: bold;
-    font-family: AvenirBlack;
-    text-transform: uppercase;
-}
-
-
-/* Sponsor CSS */
-.tedsponsor {
-    margin: 60px 20px 30px 20px;  
-    overflow: auto
-}
-.tedsponsorimage {
-    float: left;
-}
-.tedsponsorimage img {
-    display: block;
-    max-width: 160px;
-}
-.tedsponsorcontent {
-    margin-left: 215px;
-}
-.tedsponsortitle {
-    font-family: AvenirBlack;
-    margin-bottom: 5px;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-.tedsponsorsubtitle {
-    margin-bottom: 15px;
-    font-size: 22px;
-}
-.tedsponsorbar{
-    background: #E62B25;
-    height: 10px;
-    width: 82px;
-    margin-left: 215px;
-    margin-bottom: 30px;
-}
-
-
-
-
-/* TEDFooter CSS */
-#tedfooter {
-    background-color: #F5F5F5;
-    text-align: center;
-    padding-top: 25px;
-}
-#tedfooter > i {
-    font-size: 150px;
-}
-#tedfooter p {
-    font-weight: bolder;
-    font-size: 16px;
-    text-transform: uppercase;
-    margin: 0;
-}
-#tedfooter h3 {
-    font-size: 24px;
-    color: #E62B25;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-#tedfooter h4 {
-    font-size: 18px;
-    font-family: AvenirBlack;
-    text-transform: uppercase;
-    margin: 5px;
-}
-#tedfooter h5 {
-    text-align: center;
-    line-height: 13px;
-    font-size: 12px;
-    margin: 0;
-}
-#tedfooterlogo {
-    width: 100px;
-    margin: 15px 0 15px 0;
-}
-.tedfootergroup {
-    margin-bottom: 20px;
-}
-.tedfootergroup > i {
-    color: #E62B25;
-    font-size: 50px;
-    margin: 0 5px 0 5px;
-    vertical-align: middle;
 }

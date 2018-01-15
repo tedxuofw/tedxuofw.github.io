@@ -17,9 +17,38 @@ export class TEDNavbar extends React.Component {
                     <img id='tednavlogo' src="/app/resources/images/logo-red.png" />
                 </span>
                 <span className='tednavcontainer'>
-                    { links.map(item => { return <span className={item.className} key={item.text}><Link to={item.link}>{item.text}</Link></span> }) }
+                    { 
+                        links.map((item, index) => { 
+                            if(index == this.props.index) {item.className += ' active'}
+                            return <span className={item.className} key={item.text}><Link to={item.link}>{item.text}</Link></span> 
+                        }) 
+                    }
                 </span>
             </nav>
         );
     }
 }
+
+/*
+// Aphrodite CSS (doesn't support css selectors though)
+const styles = StyleSheet.create({
+    tednav: {
+        backgroundColor: '#F5F5F5',
+        height: '85px',
+        lineHeight: '85px'
+    },
+    tednavlogo: {
+        height: '70px',
+        float: 'left',
+        marginTop: '8px', 
+        marginBottom: '7px',
+        marginLeft: '12%' 
+    }, 
+    tednavgold: {
+        borderStyle: 'solid',
+        borderWidth: '3px',
+        borderColor: 'gold'
+    }
+});
+
+*/
