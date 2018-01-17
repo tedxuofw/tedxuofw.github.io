@@ -810,7 +810,7 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.tedfooterp) },
                     'Kane Hall, Room 130'
                 ),
-                _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfooterlogo), src: '/app/resources/images/logo-red.png' }),
+                _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfooterlogo), src: './app/resources/images/logo-red.png' }),
                 _react2.default.createElement(
                     'h4',
                     { className: (0, _aphrodite.css)(styles.tedfooterh4) },
@@ -826,22 +826,22 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     _react2.default.createElement(
                         'a',
                         { href: 'https://www.facebook.com/TEDxUofW/' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-facebook.png' })
+                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: './app/resources/images/icon-facebook.png' })
                     ),
                     _react2.default.createElement(
                         'a',
                         { href: 'https://www.instagram.com/tedxuofw/' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-twitter.png' })
+                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: './app/resources/images/icon-twitter.png' })
                     ),
                     _react2.default.createElement(
                         'a',
                         { href: 'https://twitter.com/tedxuofw?lang=en' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-instagram.png' })
+                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: './app/resources/images/icon-instagram.png' })
                     ),
                     _react2.default.createElement(
                         'a',
                         { href: 'https://www.youtube.com/user/TEDxUofWashington' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-youtube.png' })
+                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: './app/resources/images/icon-youtube.png' })
                     )
                 ),
                 _react2.default.createElement(
