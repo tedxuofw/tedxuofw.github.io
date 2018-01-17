@@ -16,9 +16,7 @@ export class TEDNavbar extends React.Component {
         
         return (
             <nav className={css(styles.tednav)} href='#'>
-                <span className={css(styles.tednavcontainer)}>
-                    <Link to='/'><img className={css(styles.tednavlogo)} src="/app/resources/images/logo-red.png" /></Link>
-                </span>
+                    <Link to='/'><img className={css(styles.tednavlogo)} src="./app/resources/images/logo-red.png" /></Link>
                 <span className={css(styles.tednavcontainer)}>
                     { 
                         links.map((item, index) => { 
@@ -47,6 +45,7 @@ const styles = StyleSheet.create({
         marginLeft: '12%' 
     }, 
     tednavcontainer: {
+        marginLeft: '20%',
         paddingLeft: '10%',
         paddingRight: '10%'
     },

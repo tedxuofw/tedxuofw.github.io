@@ -8,6 +8,11 @@ import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 
 export class Home extends React.Component {
+    
+    componentDidMount() {
+        document.title = "TEDx - University of Washington";
+    }
+    
 	render() {
 		return (
             <div>

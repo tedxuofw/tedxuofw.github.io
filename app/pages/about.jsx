@@ -7,6 +7,11 @@ import {Section} from '../components/section.jsx';
 import {SliderSection} from '../components/slidersection.jsx';
 
 export class About extends React.Component {
+    
+    componentDidMount() {
+        document.title = "About - TEDxUofW";
+    }
+    
 	render() {
 		return (
             <div>

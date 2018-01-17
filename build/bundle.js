@@ -662,13 +662,9 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
                 'nav',
                 { className: (0, _noImportant.css)(styles.tednav), href: '#' },
                 _react2.default.createElement(
-                    'span',
-                    { className: (0, _noImportant.css)(styles.tednavcontainer) },
-                    _react2.default.createElement(
-                        _reactRouterDom.Link,
-                        { to: '/' },
-                        _react2.default.createElement('img', { className: (0, _noImportant.css)(styles.tednavlogo), src: '/app/resources/images/logo-red.png' })
-                    )
+                    _reactRouterDom.Link,
+                    { to: '/' },
+                    _react2.default.createElement('img', { className: (0, _noImportant.css)(styles.tednavlogo), src: './app/resources/images/logo-red.png' })
                 ),
                 _react2.default.createElement(
                     'span',
@@ -712,6 +708,7 @@ var styles = _noImportant.StyleSheet.create({
         marginLeft: '12%'
     },
     tednavcontainer: {
+        marginLeft: '20%',
         paddingLeft: '10%',
         paddingRight: '10%'
     },
@@ -24696,6 +24693,11 @@ var Home = exports.Home = function (_React$Component) {
     }
 
     _createClass(Home, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "TEDx - University of Washington";
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -26142,6 +26144,11 @@ var About = exports.About = function (_React$Component) {
     }
 
     _createClass(About, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "About - TEDxUofW";
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -26423,6 +26430,11 @@ var Speakers = exports.Speakers = function (_React$Component) {
     }
 
     _createClass(Speakers, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "Speakers - TEDxUofW";
+        }
+    }, {
         key: 'render',
         value: function render() {
 
@@ -26487,6 +26499,11 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
     }
 
     _createClass(Sponsors, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "Sponsors - TEDxUofW";
+        }
+    }, {
         key: 'render',
         value: function render() {
 
@@ -26498,13 +26515,13 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
                     _section.Section,
                     { title: 'Sponsors' },
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'ASUW', subtitle: 'Associated Students of the University of Washington',
-                        img: '/app/resources/images/sponsor-asuw.jpg',
+                        img: './app/resources/images/sponsor-asuw.jpg',
                         descr: 'The ASUW Special Appropriations Fund is a student levied, student distributed fund to support and enhance the out of class experience of students. The fund provides one-time funding grants to student initiated and developed event-centered programs which enrich the cultural, emotional, intellectual, and social well-being of the student.' }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'Amazon Catalyst',
-                        img: '/app/resources/images/sponsor-amazon.png',
+                        img: './app/resources/images/sponsor-amazon.png',
                         descr: 'The Amazon Catalyst program is a collaboration between UW CoMotion and Amazon to encourage innovation within the UW community and awards grants from $10,000 to $100,000 per project. The goal of the program is to inspire people to think big, invent solutions to real-world problems, and make a positive impact on the world. Open to all three UW campuses and all disciplines, the program provides the winners with mentorship, community through the Amazon Catalyst Fellows, and funding. Amazon Catalyst is not a traditional research fund; it is a different kind of funding model to stimulate big ideas with immediate impact.' }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'UWAA', subtitle: 'UW Alumni Association',
-                        img: '/app/resources/images/sponsor-uwaa.png',
+                        img: './app/resources/images/sponsor-uwaa.png',
                         descr: 'The UW Alumni Association supports the UW and higher education in the state of Washington. In pursuit of that mission, UWAA member dues fund programs and services to help students, to inform the public about the UW community\u2019s remarkable achievements and to bring UW alumni and the public together for learning, fun and advocacy. With more than 56,000 members, UWAA is one of the largest alumni organizations in the United States.' })
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
@@ -26679,6 +26696,11 @@ var Contact = exports.Contact = function (_React$Component) {
     }
 
     _createClass(Contact, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "Contact - TEDxUofW";
+        }
+    }, {
         key: 'render',
         value: function render() {
 
@@ -26741,9 +26763,13 @@ var Attend = exports.Attend = function (_React$Component) {
     }
 
     _createClass(Attend, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            document.title = "Attend - TEDxUofW";
+        }
+    }, {
         key: 'render',
         value: function render() {
-
             return _react2.default.createElement(
                 'div',
                 null,
