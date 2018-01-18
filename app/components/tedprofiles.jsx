@@ -8,7 +8,7 @@ import {Profile} from '../components/profile.jsx';
 export class Profiles extends React.Component {
 	render() {
 		return (
-			<table className={css(styles.table)}>
+			<table frame="void" className={css(styles.table)}>
 				<tbody>
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
