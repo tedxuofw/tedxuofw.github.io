@@ -31,7 +31,7 @@ export class Profile extends React.Component {
 const styles = StyleSheet.create({
 	tedprofile: {
 		width: '100%',
-		minWidth: '250px',
+		minWidth: '70px',
 		maxWidth: '600px',
 		position: 'relative',
 	},

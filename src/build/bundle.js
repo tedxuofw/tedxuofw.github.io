@@ -3789,7 +3789,7 @@ var Profile = exports.Profile = function (_React$Component) {
 var styles = _aphrodite.StyleSheet.create({
 	tedprofile: {
 		width: '100%',
-		minWidth: '250px',
+		minWidth: '70px',
 		maxWidth: '600px',
 		position: 'relative'
 	},
@@ -26580,42 +26580,42 @@ var Descriptions = exports.Descriptions = function (_React$Component) {
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 0 '
+						' The TedxUofW team works to bring new ideas to dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, for a brighter future. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 1 '
+						' The Curators hold the team together, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur making us a better team. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 2 '
+						' Design focuses on holding the team\'s image together, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt, but the public always knows who we are. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 3 '
+						' Finance brings in the much needed funding, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit dolor sit amet, consectetur adipiscing elit, sed do eiusmod keeps us on budget. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 4 '
+						' On the speaker selection team, many decisions sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 5 '
+						' Production is there when the presentations starts, until  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor working towards bringing  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor for the viewing pleasure of our audiences. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 6 '
+						' Public relations works closely with many teams to make sure Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation And that we have a consistent image throughout all of our TEDx ventures. '
 					),
 					_react2.default.createElement(
 						'p',
 						{ className: (0, _aphrodite.css)(styles.description) },
-						' Content 7 '
+						' Web team is clearly the best, and fastest working team. We are just so awesome all the time, I mean look at this cool website. Are you still reading this? Don\'t I\'m just using filler text here, but I have to make it look like its talking about Web Development Strategies, so this is about where I end. Striving to connect the information to the people. '
 					)
 				)
 			);
@@ -26637,11 +26637,32 @@ var Tab = function (_React$Component2) {
 	_createClass(Tab, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement(
-				'span',
-				{ onClick: this.props.onClick, className: (0, _aphrodite.css)(styles.tab) },
-				this.props.label
-			);
+			if (this.props.selected) {
+				return _react2.default.createElement(
+					'span',
+					{ className: (0, _aphrodite.css)(styles.tabcontainer) },
+					_react2.default.createElement(
+						'span',
+						{ className: (0, _aphrodite.css)(styles.selectedtabcontainer) },
+						_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.selectedbar) }),
+						_react2.default.createElement(
+							'span',
+							{ onClick: this.props.onClick, className: (0, _aphrodite.css)(styles.selectedtab) },
+							this.props.label
+						)
+					)
+				);
+			} else {
+				return _react2.default.createElement(
+					'span',
+					{ className: (0, _aphrodite.css)(styles.tabcontainer) },
+					_react2.default.createElement(
+						'span',
+						{ onClick: this.props.onClick, className: (0, _aphrodite.css)(styles.tab) },
+						this.props.label
+					)
+				);
+			}
 		}
 	}]);
 
@@ -26684,28 +26705,28 @@ var Content = function (_React$Component3) {
 			return _react2.default.createElement(
 				'div',
 				null,
-				_react2.default.createElement(Tab, { label: 'All', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'All', selected: this.state.index == 0, onClick: function onClick() {
 						return _this4.setTab(0);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Curators', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Curators', selected: this.state.index == 1, onClick: function onClick() {
 						return _this4.setTab(1);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Design', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Design', selected: this.state.index == 2, onClick: function onClick() {
 						return _this4.setTab(2);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Finance', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 3, onClick: function onClick() {
 						return _this4.setTab(3);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Speaker Selection', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 4, onClick: function onClick() {
 						return _this4.setTab(4);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Production', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Production', selected: this.state.index == 5, onClick: function onClick() {
 						return _this4.setTab(5);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Public Relations', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Public Relations', selected: this.state.index == 6, onClick: function onClick() {
 						return _this4.setTab(6);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Web', onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Web', selected: this.state.index == 7, onClick: function onClick() {
 						return _this4.setTab(7);
 					} }),
 				this.content()
@@ -26718,16 +26739,42 @@ var Content = function (_React$Component3) {
 
 var styles = _aphrodite.StyleSheet.create({
 	descriptioncontainer: {
-		marginBottom: '70px'
+		marginBottom: '70px',
+		position: 'relative'
 	},
 	tab: {
 		width: '10%',
 		fontSize: '15px',
+		color: 'gray',
+		fontWeight: 'normal',
+		fontFamily: 'AvenirBlack',
+		textTransform: 'uppercase',
+		cursor: 'pointer'
+
+	},
+	tabcontainer: {
+		marginRight: '15px'
+	},
+	selectedtab: {
+		width: '10%',
+		color: '#E62B25',
+		fontSize: '15px',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
-		cursor: 'pointer',
-		marginRight: '15px'
+		cursor: 'pointer'
+	},
+	selectedbar: {
+		background: '#E62B25',
+		position: 'absolute',
+		height: '6px',
+		width: '100%',
+		marginLeft: '0px',
+		marginBottom: '10px',
+		marginTop: '20px'
+	},
+	selectedtabcontainer: {
+		position: 'relative'
 	},
 	description: {
 		fontWeight: 'normal',
@@ -26737,10 +26784,10 @@ var styles = _aphrodite.StyleSheet.create({
 	teddescriptionbar: {
 		background: '#E62B25',
 		position: 'absolute',
-		height: '60px',
+		height: '70%',
 		width: '10px',
 		marginLeft: '0px',
-		marginBottom: '30px',
+		marginBottom: '0px',
 		marginTop: '35px'
 	}
 });
@@ -26793,7 +26840,7 @@ var Profiles = exports.Profiles = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				'table',
-				{ className: (0, _aphrodite.css)(styles.table) },
+				{ frame: 'void', className: (0, _aphrodite.css)(styles.table) },
 				_react2.default.createElement(
 					'tbody',
 					null,
