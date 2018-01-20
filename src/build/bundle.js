@@ -26923,7 +26923,13 @@ var styles = _aphrodite.StyleSheet.create({
 		padding: '1%'
 	},
 	td: {
-		padding: '1%'
+		padding: '1%',
+		':first-child': {
+			paddingLeft: '0px'
+		},
+		':last-child': {
+			paddingRight: '0px'
+		}
 	}
 });
 
@@ -27099,7 +27105,13 @@ var styles = _aphrodite.StyleSheet.create({
 		padding: '1%'
 	},
 	td: {
-		padding: '1%'
+		padding: '1%',
+		':first-child': {
+			paddingLeft: '0px'
+		},
+		':last-child': {
+			paddingRight: '0px'
+		}
 	}
 });
 
