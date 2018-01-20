@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 		height:'auto',
 		opacity:'1',
 		':hover': {
-			opacity:'.7',
+			
 		},
     },
 	title: {

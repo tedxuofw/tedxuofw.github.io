@@ -130,14 +130,15 @@ const styles = StyleSheet.create({
 		fontWeight: 'normal',
         fontFamily: 'Avenir-Heavy',
 		marginLeft:'50px',
+		marginTop:'28px',
 	},
 	teddescriptionbar: {
         background: '#E62B25',
 		position:'absolute',
-        height: '70%',
+        height: '60%',
         width: '10px',
         marginLeft: '0px',
         marginBottom: '0px',
-		marginTop:'35px',
+		marginTop:'50px',
     },
 });
