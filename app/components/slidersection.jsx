@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
     infotab: {
         color: '#C5C5C5',
         textTransform: 'none',
-        transition: 'color 0.2s ease-out'
+        transition: 'color 0.2s ease-out',
+		cursor: 'pointer'
     },
     infotabcontent: {
         display: 'table'
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
+		cursor: 'pointer',
         ':hover': {
             opacity: '0.8',
             transition: 'opacity 0.2s ease-out'
