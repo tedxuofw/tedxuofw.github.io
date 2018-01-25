@@ -9,6 +9,11 @@ import {Descriptions} from '../components/roledescriptions.jsx';
 import {Profiles} from '../components/tedprofiles.jsx'
 
 export class About extends React.Component {
+    
+    componentDidMount() {
+        document.title = "About - TEDx";
+    }
+    
 	render() {
 		return (
             <div>
