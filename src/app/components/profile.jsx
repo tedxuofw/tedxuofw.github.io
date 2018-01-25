@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {StyleSheet, css} from 'aphrodite';
+import {Modal} from './tedmodal.jsx';
 
 export class Profile extends React.Component {
+
 	render() {
 		let company = this.props.company;
 		
@@ -21,7 +23,9 @@ export class Profile extends React.Component {
 					<p className={css(styles.title)}> {this.props.title} </p>
 					<p className={css(styles.subtitleone)}> {this.props.company} </p>
 					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
-					<img src={this.props.img} className={css(styles.profilepicture)} />
+					<img src={this.props.img} 
+                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
+                        className={css(styles.profilepicture)} />
 				</div>
 			);
 		}
@@ -41,8 +45,8 @@ const styles = StyleSheet.create({
 		height:'auto',
 		opacity:'1',
 		':hover': {
-			
-		},
+			opacity: '0.7'
+        }
     },
 	title: {
 		position: 'absolute',

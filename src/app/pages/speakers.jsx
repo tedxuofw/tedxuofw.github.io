@@ -8,23 +8,46 @@ import {Section} from '../components/section.jsx';
 import {StyleSheet, css} from 'aphrodite';
 
 import {Profile} from '../components/profile.jsx';
+import {Modal} from '../components/tedmodal.jsx';
 
 export class Speakers extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isModalOpen: false };
+        this.openModal = this.openModal.bind(this); // Important!
+    }
+    
+    openModal(image, name, text) {
+        this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalText: text });
+    }
+
+    closeModal() {
+        this.setState({ isModalOpen: false });
+    }
+    
 	render() {
                 
 		return (
             <div>
                 <TEDNavbar index='1' />
                 <Section title='Speakers'>
-                    <List />
+                    <ProfileList openModal={this.openModal} />
                 </Section>
+                <Modal 
+                    isOpen={this.state.isModalOpen} 
+                    onClose={() => this.closeModal()}
+                    modalImage={this.state.modalImage}
+                    modalName={this.state.modalName}
+                    modalText={this.state.modalText}
+                    />
                 <TEDFooter />
             </div>
         );
 	}
 }
 
-class List extends React.Component {
+class ProfileList extends React.Component {
+    
 	render() {
 		return (
 		<table className={css(styles.table)}>
@@ -36,6 +59,7 @@ class List extends React.Component {
 							title="Erin Jones" 
 							role="Superintendent"
 							company="Office of Public Instruction"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
@@ -44,6 +68,7 @@ class List extends React.Component {
 							title="Erin Jones" 
 							role="Superintendent"
 							company="Office of Public Instruction"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
@@ -52,6 +77,7 @@ class List extends React.Component {
 							title="Name" 
 							role="Role" 
 							company="Company"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 				</tr>
@@ -62,6 +88,7 @@ class List extends React.Component {
 							title="Name" 
 							role="Role" 
 							company="Company"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
@@ -70,6 +97,7 @@ class List extends React.Component {
 							title="Name" 
 							role="Role" 
 							company="Company"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
@@ -78,6 +106,7 @@ class List extends React.Component {
 							title="Name" 
 							role="Role" 
 							company="Company"
+                            openModal={this.props.openModal}
 						/>
 					</td>
 				</tr>
