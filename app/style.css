@@ -8,6 +8,7 @@ body {
     font-family: 'Avenir';
     overflow-x: hidden;
     margin: 0;
+    position: relative;
 }
 
 /** TODO: Add Media Queries for navbar resize **/
