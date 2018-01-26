@@ -11,7 +11,7 @@ export class Page extends React.Component {
             <div>
                 <TEDNavbar />
                 <Section>
-                    Section 1
+                    This is a test
                 </Section>
                 <Section>
                     Section 2
