@@ -24740,7 +24740,7 @@ var Page = exports.Page = function (_React$Component) {
                 _react2.default.createElement(
                     _section.Section,
                     null,
-                    'Section 1'
+                    'This is a test'
                 ),
                 _react2.default.createElement(
                     _section.Section,
