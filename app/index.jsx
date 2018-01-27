@@ -1,20 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import { Page } from './main.jsx';
-import { About } from './about.jsx';
+import { Home } from './pages/main.jsx';
+import { About } from './pages/about.jsx';
+import { Speakers } from './pages/speakers.jsx';
+import { Sponsors } from './pages/sponsors.jsx';
+import { Contacts } from './pages/contacts.jsx';
+import { Attend } from './pages/attend.jsx';
 
 class App extends React.Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter>
 				<Switch>
-					<Route exact path='/' component={Page}/>
+					<Route exact path='/' component={Home}/>
 					<Route path='/about' component={About}/>
-				</Switch>
-			</BrowserRouter>
+                    <Route path='/speakers' component={Speakers}/>
+                    <Route path='/sponsors' component={Sponsors}/>
+                    <Route path='/contacts'  component={Contacts}/>
+                    <Route path='/attend'   component={Attend}/>
+                    
+                </Switch>
+			</HashRouter>
         );
 	}
 }
