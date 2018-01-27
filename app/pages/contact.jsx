@@ -6,11 +6,6 @@ import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 
 export class Contact extends React.Component {
-    
-    componentDidMount() {
-        document.title = "Contact - TEDx";
-    }
-    
 	render() {
                 
 		return (

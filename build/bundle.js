@@ -25004,11 +25004,6 @@ var Home = exports.Home = function (_React$Component) {
     }
 
     _createClass(Home, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "TEDx - University of Washington";
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -26459,11 +26454,6 @@ var About = exports.About = function (_React$Component) {
     }
 
     _createClass(About, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "About - TEDx";
-        }
-    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -27170,11 +27160,6 @@ var Speakers = exports.Speakers = function (_React$Component) {
 	}
 
 	_createClass(Speakers, [{
-		key: 'componentDidMount',
-		value: function componentDidMount() {
-			document.title = "Speakers - TEDx";
-		}
-	}, {
 		key: 'openModal',
 		value: function openModal(image, name, text) {
 			this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalText: text });
@@ -27381,11 +27366,6 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
     }
 
     _createClass(Sponsors, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "Sponsors - TEDx";
-        }
-    }, {
         key: 'render',
         value: function render() {
 
@@ -27578,11 +27558,6 @@ var Contact = exports.Contact = function (_React$Component) {
     }
 
     _createClass(Contact, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "Contact - TEDx";
-        }
-    }, {
         key: 'render',
         value: function render() {
 
@@ -27645,11 +27620,6 @@ var Attend = exports.Attend = function (_React$Component) {
     }
 
     _createClass(Attend, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "Attend - TEDx";
-        }
-    }, {
         key: 'render',
         value: function render() {
 

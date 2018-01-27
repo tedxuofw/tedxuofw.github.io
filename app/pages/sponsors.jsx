@@ -7,11 +7,6 @@ import {Section} from '../components/section.jsx';
 import {Sponsor} from '../components/sponsor.jsx';
 
 export class Sponsors extends React.Component {
-    
-    componentDidMount() {
-        document.title = "Sponsors - TEDx";
-    }
-    
 	render() {
                 
 		return (

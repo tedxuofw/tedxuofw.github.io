@@ -9,11 +9,6 @@ import {Section} from '../components/section.jsx';
 import {FeaturedSpeaker} from '../components/featuredspeaker.jsx';
 
 export class Home extends React.Component {
-    
-    componentDidMount() {
-        document.title = "TEDx - University of Washington";
-    }
-    
 	render() {
 		return (
             <div>
