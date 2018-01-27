@@ -483,6 +483,29 @@ module.exports = invariant;
 "use strict";
 
 
+Object.defineProperty(exports, '__esModule', {
+    value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _generate = __webpack_require__(28);
+
+var _exports2 = __webpack_require__(46);
+
+var _exports3 = _interopRequireDefault(_exports2);
+
+var useImportant = true; // Add !important to all style definitions
+exports['default'] = (0, _exports3['default'])(useImportant, _generate.defaultSelectorHandlers);
+module.exports = exports['default'];
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -519,29 +542,6 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, '__esModule', {
-    value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _generate = __webpack_require__(28);
-
-var _exports2 = __webpack_require__(46);
-
-var _exports3 = _interopRequireDefault(_exports2);
-
-var useImportant = true; // Add !important to all style definitions
-exports['default'] = (0, _exports3['default'])(useImportant, _generate.defaultSelectorHandlers);
-module.exports = exports['default'];
-
-/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -563,7 +563,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -586,19 +586,26 @@ var Section = exports.Section = function (_React$Component) {
         key: 'render',
         value: function render() {
             var title = this.props.title;
+            var borderSize = this.props.border;
+            if (typeof borderSize === 'undefined') {
+                borderSize = '15%';
+            }
+            var style = {
+                paddingLeft: borderSize,
+                paddingRight: borderSize
 
-            // No title given
-            if (typeof title === 'undefined') {
+                // No title given
+            };if (typeof title === 'undefined') {
                 return _react2.default.createElement(
                     'div',
-                    { className: (0, _aphrodite.css)(styles.tedsection) },
+                    { style: style, className: (0, _aphrodite.css)(styles.tedsection) },
                     this.props.children
                 );
             }
 
             return _react2.default.createElement(
                 'div',
-                { className: (0, _aphrodite.css)(styles.tedsection) },
+                { style: style, className: (0, _aphrodite.css)(styles.tedsection) },
                 _react2.default.createElement(
                     'div',
                     { className: (0, _aphrodite.css)(styles.tedsectiontitle) },
@@ -614,13 +621,10 @@ var Section = exports.Section = function (_React$Component) {
 
 var styles = _aphrodite.StyleSheet.create({
     tedsection: {
-        width: '70%',
         minHeight: '75vh',
         background: 'white',
-
+        margin: '0px',
         paddingTop: '50px',
-        paddingLeft: '15%',
-        paddingRight: '15%',
         paddingBottom: '50px'
     },
     tedsectiontitle: {
@@ -795,7 +799,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1271,7 +1275,7 @@ module.exports = emptyObject;
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -2614,7 +2618,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -3708,7 +3712,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 var _tedmodal = __webpack_require__(48);
 
@@ -3856,7 +3860,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4015,15 +4019,15 @@ var _reactRouterDom = __webpack_require__(21);
 
 var _main = __webpack_require__(88);
 
-var _about = __webpack_require__(115);
+var _about = __webpack_require__(116);
 
-var _speakers = __webpack_require__(119);
+var _speakers = __webpack_require__(120);
 
-var _sponsors = __webpack_require__(120);
+var _sponsors = __webpack_require__(121);
 
-var _contact = __webpack_require__(122);
+var _contact = __webpack_require__(123);
 
-var _attend = __webpack_require__(123);
+var _attend = __webpack_require__(124);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4081,7 +4085,7 @@ _reactDom2.default.render(_react2.default.createElement(App, null), document.get
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(12),n=__webpack_require__(16),p=__webpack_require__(6),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(12),n=__webpack_require__(16),p=__webpack_require__(7),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -4121,7 +4125,7 @@ var _assign = __webpack_require__(12);
 var emptyObject = __webpack_require__(16);
 var invariant = __webpack_require__(13);
 var warning = __webpack_require__(17);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var checkPropTypes = __webpack_require__(19);
 
 // TODO: this is special because it gets imported during build.
@@ -5477,7 +5481,7 @@ module.exports = react;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),l=__webpack_require__(30),B=__webpack_require__(12),C=__webpack_require__(6),ba=__webpack_require__(31),da=__webpack_require__(32),ea=__webpack_require__(33),fa=__webpack_require__(34),ia=__webpack_require__(35),D=__webpack_require__(16);
+var aa=__webpack_require__(0),l=__webpack_require__(30),B=__webpack_require__(12),C=__webpack_require__(7),ba=__webpack_require__(31),da=__webpack_require__(32),ea=__webpack_require__(33),fa=__webpack_require__(34),ia=__webpack_require__(35),D=__webpack_require__(16);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -5779,7 +5783,7 @@ var invariant = __webpack_require__(13);
 var warning = __webpack_require__(17);
 var ExecutionEnvironment = __webpack_require__(30);
 var _assign = __webpack_require__(12);
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var EventListener = __webpack_require__(31);
 var getActiveElement = __webpack_require__(32);
 var shallowEqual = __webpack_require__(33);
@@ -21391,7 +21395,7 @@ BrowserRouter.propTypes = {
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var invariant = __webpack_require__(13);
 var warning = __webpack_require__(17);
 var assign = __webpack_require__(12);
@@ -21941,7 +21945,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 
-var emptyFunction = __webpack_require__(6);
+var emptyFunction = __webpack_require__(7);
 var invariant = __webpack_require__(13);
 var ReactPropTypesSecret = __webpack_require__(20);
 
@@ -24986,6 +24990,8 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
+var _featuredspeaker = __webpack_require__(115);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25012,17 +25018,17 @@ var Home = exports.Home = function (_React$Component) {
                 _react2.default.createElement(_tednavbar.TEDNavbar, null),
                 _react2.default.createElement(
                     _section.Section,
-                    null,
+                    { border: '0%' },
                     'Section 1'
                 ),
                 _react2.default.createElement(
                     _section.Section,
-                    null,
-                    'Section 2'
+                    { border: '0%' },
+                    _react2.default.createElement(_featuredspeaker.FeaturedSpeaker, { img: '/app/resources/images/generic.jpg', name: 'Erin Jones', desc: 'Office of Public Instruction' })
                 ),
                 _react2.default.createElement(
                     _section.Section,
-                    null,
+                    { border: '0%' },
                     'Section 3'
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
@@ -26410,6 +26416,115 @@ module.exports = g;
 
 
 Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.FeaturedSpeaker = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(1);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _aphrodite = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
+	_inherits(FeaturedSpeaker, _React$Component);
+
+	function FeaturedSpeaker() {
+		_classCallCheck(this, FeaturedSpeaker);
+
+		return _possibleConstructorReturn(this, (FeaturedSpeaker.__proto__ || Object.getPrototypeOf(FeaturedSpeaker)).apply(this, arguments));
+	}
+
+	_createClass(FeaturedSpeaker, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.sectioncontainer) },
+				_react2.default.createElement(
+					'div',
+					{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
+					_react2.default.createElement(
+						'p',
+						{ className: (0, _aphrodite.css)(styles.title) },
+						' ',
+						this.props.name,
+						' '
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' ',
+						this.props.desc,
+						' '
+					)
+				),
+				_react2.default.createElement('img', { src: this.props.img, className: (0, _aphrodite.css)(styles.picture) })
+			);
+		}
+	}]);
+
+	return FeaturedSpeaker;
+}(_react2.default.Component);
+
+var styles = _aphrodite.StyleSheet.create({
+	sectioncontainer: {
+		position: 'relative',
+		width: '100%',
+		height: 'auto',
+		margin: '15px, 0px, 15px, 0px'
+	},
+	picture: {
+
+		width: '320px',
+		height: 'auto',
+		margin: '0px, 0px, 0px, 10%'
+	},
+	title: {
+		textAlign: 'center',
+		fontSize: '45px',
+		fontWeight: 'bold',
+		fontFamily: 'AvenirBlack',
+		textTransform: 'uppercase',
+		margin: '30px, 0px, 10px, 0px'
+	},
+	description: {
+		textAlign: 'center',
+		fontSize: '30px',
+		fontWeight: 'normal',
+		fontFamily: 'AvenirBlack'
+	},
+	descriptioncontainer: {
+		position: 'absolute',
+		backgroundColor: '#CBCACD',
+		width: '60%',
+		height: '150px',
+		margin: '85px 0px 0px 40%'
+	}
+});
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.About = undefined;
@@ -26430,11 +26545,9 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _slidersection = __webpack_require__(116);
+var _slidersection = __webpack_require__(117);
 
-var _roledescriptions = __webpack_require__(117);
-
-var _tedprofiles = __webpack_require__(118);
+var _roledescriptions = __webpack_require__(118);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26464,8 +26577,7 @@ var About = exports.About = function (_React$Component) {
                 _react2.default.createElement(
                     _section.Section,
                     { title: 'Meet the Team' },
-                    _react2.default.createElement(_roledescriptions.Descriptions, null),
-                    _react2.default.createElement(_tedprofiles.Profiles, null)
+                    _react2.default.createElement(_roledescriptions.Descriptions, null)
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
             );
@@ -26476,7 +26588,7 @@ var About = exports.About = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26697,7 +26809,7 @@ var styles = _noImportant.StyleSheet.create({
 });
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26718,7 +26830,9 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
+
+var _tedprofiles = __webpack_require__(119);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26740,52 +26854,93 @@ var Descriptions = exports.Descriptions = function (_React$Component) {
 	_createClass(Descriptions, [{
 		key: 'render',
 		value: function render() {
+			var profiles = [{ name: "Jenny Liang", role: "Web Lead", team: "web", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "curators", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "finance", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "production", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "public relations", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "web", img: "/app/resources/images/generic.jpg" }];
+
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
-				_react2.default.createElement('div', { className: (0, _aphrodite.css)(styles.teddescriptionbar) }),
 				_react2.default.createElement(
 					Content,
 					null,
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' The TedxUofW team works to bring new ideas to dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum, for a brighter future. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' The Curators hold the team together, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur making us a better team. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference\'s theme, and representing TEDxUofW in professional inquiries. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'curators' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' Design focuses on holding the team\'s image together, dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt, but the public always knows who we are. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'design' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' Finance brings in the much needed funding, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit dolor sit amet, consectetur adipiscing elit, sed do eiusmod keeps us on budget. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							'  The finance and sponsorship team ensures that TEDxUofW\u2019s financial needs are always met. They control the organization\u2019s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'finance' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' On the speaker selection team, many decisions sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference\'s theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'speaker selection' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' Production is there when the presentations starts, until  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor working towards bringing  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor for the viewing pleasure of our audiences. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'production' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' Public relations works closely with many teams to make sure Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation And that we have a consistent image throughout all of our TEDx ventures. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, \u201Chyping\u201D people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about! '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'public relations' })
 					),
 					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' Web team is clearly the best, and fastest working team. We are just so awesome all the time, I mean look at this cool website. Are you still reading this? Don\'t I\'m just using filler text here, but I have to make it look like its talking about Web Development Strategies, so this is about where I end. Striving to connect the information to the people. '
+						Body,
+						null,
+						_react2.default.createElement(
+							'p',
+							{ className: (0, _aphrodite.css)(styles.description) },
+							' The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference. '
+						),
+						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'web' })
 					)
 				)
 			);
@@ -26795,8 +26950,37 @@ var Descriptions = exports.Descriptions = function (_React$Component) {
 	return Descriptions;
 }(_react2.default.Component);
 
-var Tab = function (_React$Component2) {
-	_inherits(Tab, _React$Component2);
+var Body = function (_React$Component2) {
+	_inherits(Body, _React$Component2);
+
+	function Body() {
+		_classCallCheck(this, Body);
+
+		return _possibleConstructorReturn(this, (Body.__proto__ || Object.getPrototypeOf(Body)).apply(this, arguments));
+	}
+
+	_createClass(Body, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				null,
+				_react2.default.createElement(
+					'div',
+					{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
+					_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.teddescriptionbar) }),
+					this.props.children[0]
+				),
+				this.props.children[1]
+			);
+		}
+	}]);
+
+	return Body;
+}(_react2.default.Component);
+
+var Tab = function (_React$Component3) {
+	_inherits(Tab, _React$Component3);
 
 	function Tab() {
 		_classCallCheck(this, Tab);
@@ -26839,18 +27023,18 @@ var Tab = function (_React$Component2) {
 	return Tab;
 }(_react2.default.Component);
 
-var Content = function (_React$Component3) {
-	_inherits(Content, _React$Component3);
+var Content = function (_React$Component4) {
+	_inherits(Content, _React$Component4);
 
 	function Content(props) {
 		_classCallCheck(this, Content);
 
-		var _this3 = _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
+		var _this4 = _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
 
-		_this3.state = { index: 0 };
+		_this4.state = { index: 0 };
 
-		_this3.setTab = _this3.setTab.bind(_this3);
-		return _this3;
+		_this4.setTab = _this4.setTab.bind(_this4);
+		return _this4;
 	}
 
 	_createClass(Content, [{
@@ -26870,34 +27054,34 @@ var Content = function (_React$Component3) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var _this4 = this;
+			var _this5 = this;
 
 			return _react2.default.createElement(
 				'div',
 				null,
 				_react2.default.createElement(Tab, { label: 'All', selected: this.state.index == 0, onClick: function onClick() {
-						return _this4.setTab(0);
+						return _this5.setTab(0);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Curators', selected: this.state.index == 1, onClick: function onClick() {
-						return _this4.setTab(1);
+						return _this5.setTab(1);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Design', selected: this.state.index == 2, onClick: function onClick() {
-						return _this4.setTab(2);
+						return _this5.setTab(2);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 3, onClick: function onClick() {
-						return _this4.setTab(3);
+						return _this5.setTab(3);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 4, onClick: function onClick() {
-						return _this4.setTab(4);
+						return _this5.setTab(4);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Production', selected: this.state.index == 5, onClick: function onClick() {
-						return _this4.setTab(5);
+						return _this5.setTab(5);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Public Relations', selected: this.state.index == 6, onClick: function onClick() {
-						return _this4.setTab(6);
+						return _this5.setTab(6);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Web', selected: this.state.index == 7, onClick: function onClick() {
-						return _this4.setTab(7);
+						return _this5.setTab(7);
 					} }),
 				this.content()
 			);
@@ -26948,23 +27132,24 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	description: {
 		fontWeight: 'normal',
-		fontFamily: 'Avenir-Heavy',
+		fontFamily: 'Avenir',
+		fontSize: '15px',
 		marginLeft: '50px',
 		marginTop: '28px'
 	},
 	teddescriptionbar: {
 		background: '#E62B25',
 		position: 'absolute',
-		height: '60%',
+		height: '100%',
 		width: '10px',
 		marginLeft: '0px',
 		marginBottom: '0px',
-		marginTop: '50px'
+		marginTop: '0px'
 	}
 });
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26985,7 +27170,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 var _profile = __webpack_require__(47);
 
@@ -27009,75 +27194,52 @@ var Profiles = exports.Profiles = function (_React$Component) {
 	_createClass(Profiles, [{
 		key: 'render',
 		value: function render() {
+
+			var profs = this.props.profiles;
+
+			if (typeof this.props.team !== 'undefined') {
+				var arr = [];
+				for (var i = 0; i < profs.length; i++) {
+					if (profs[i].team == this.props.team) {
+						arr.push(profs[i]);
+					}
+				}
+				profs = arr;
+			}
+
+			var rows = [];
+
+			for (var i = 0; i < profs.length; i += 3) {
+				var row;
+				if (i + 3 < profs.length) {
+					row = profs.slice(i, i + 3);
+				} else {
+					row = profs.slice(i);
+				}
+				rows.push(_react2.default.createElement(
+					'tr',
+					{ className: (0, _aphrodite.css)(styles.tr) },
+					row.map(function (profile) {
+						return _react2.default.createElement(
+							'td',
+							{ className: (0, _aphrodite.css)(styles.td) },
+							_react2.default.createElement(_profile.Profile, {
+								img: profile.img,
+								title: profile.name,
+								role: profile.role
+							})
+						);
+					})
+				));
+			}
+
 			return _react2.default.createElement(
 				'table',
 				{ frame: 'void', className: (0, _aphrodite.css)(styles.table) },
 				_react2.default.createElement(
 					'tbody',
 					null,
-					_react2.default.createElement(
-						'tr',
-						{ className: (0, _aphrodite.css)(styles.tr) },
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Jenny Liang',
-								role: 'Web Developer'
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Jenny Liang',
-								role: 'Web Developer',
-								company: 'Test Agency'
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role'
-							})
-						)
-					),
-					_react2.default.createElement(
-						'tr',
-						{ className: (0, _aphrodite.css)(styles.tr) },
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role'
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role'
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role'
-							})
-						)
-					)
+					rows
 				)
 			);
 		}
@@ -27105,7 +27267,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27132,7 +27294,7 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 var _profile = __webpack_require__(47);
 
@@ -27319,7 +27481,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27346,7 +27508,7 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _sponsor = __webpack_require__(121);
+var _sponsor = __webpack_require__(122);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27395,7 +27557,7 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27416,7 +27578,7 @@ var _reactDom = __webpack_require__(1);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _aphrodite = __webpack_require__(7);
+var _aphrodite = __webpack_require__(6);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27513,7 +27675,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27575,7 +27737,7 @@ var Contact = exports.Contact = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
