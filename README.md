@@ -13,7 +13,7 @@ git fetch --all
 for remote in `git branch -r `; do git branch --track $remote; done
 git pull --all
 ```
-This will set up an empty Git project in your folder and point it to the online repository from which you will download your files.
+This will set up an empty Git project in your folder and point it to the online repository from which you will download your files. It will also fetch both branches on the remote and point your local copies to their remote counterparts. Finally it will download the most recent version of each branch onto your machine.
 
 #### Making changes 
 Before you can make any of your own changes, it is important to make sure that you have the most updated version of the project. It is also important that you are working on the dev branch (the master branch is what is used to host the [website](tedxuofw.github.io)). Run the following command to test if anyone has made any alterations and download them.
