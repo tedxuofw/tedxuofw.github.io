@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "start",
-    "start": "webpack && webpack-dev-server"
+    "start": "webpack && webpack-dev-server",
+    "deploy": "git checkout dev && webpack && git add src && git commit -m 'Deploying src from dev' && git subtree push --prefix src origin master"
   },
   "author": "TedxUofW Webdev Team",
   "license": "UNLICENSED",
