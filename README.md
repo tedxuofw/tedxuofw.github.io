@@ -9,12 +9,16 @@ Once you have downloaded the pre-requisites, make a folder on your computer to s
 ```
 git init
 git remote add origin https://github.com/tedxuofw/tedxuofw2018
+git fetch --all
+for remote in `git branch -r `; do git branch --track $remote; done
+git pull --all
 ```
 This will set up an empty Git project in your folder and point it to the online repository from which you will download your files.
 
 #### Making changes 
-Before you can make any of your own changes, it is important to make sure that you have the most updated version of the project. Run the following command to test if anyone has made any alterations and download them.
+Before you can make any of your own changes, it is important to make sure that you have the most updated version of the project. It is also important that you are working on the dev branch (the master branch is what is used to host the [website](tedxuofw.github.io)). Run the following command to test if anyone has made any alterations and download them.
 ```
+git checkout dev
 git pull origin master
 ```
 
@@ -25,6 +29,9 @@ git commit -m "Some short message describing your changes"
 git push origin master
 ```
 This will recognize which files you have changed, commit them to your project with a short message, and push them online.
+
+#### Deploying the site 
+If you want the website to reflect the changes that you've made, you can run `npm run deploy`. This will take the src/ folder on your local dev branch and push it to master branch so the [website](tedxuofw.github.io) will update. 
 
 ### Running React
 While making changes to the project, you can compile and test the React app to see what it looks like. In your terminal, navigate to the project folder on your machine and run
