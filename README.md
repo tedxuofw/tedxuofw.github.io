@@ -26,7 +26,7 @@ Now, using your text editor make the changes to the files you would like. Once y
 ```
 git add .
 git commit -m "Some short message describing your changes"
-git push origin master
+git push origin dev
 ```
 This will recognize which files you have changed, commit them to your project with a short message, and push them online.
 
