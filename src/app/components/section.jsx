@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         paddingBottom: '50px'
     },
     tedsectiontitle: {
-        fontSize: '65px',
+        fontSize: '6vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase'

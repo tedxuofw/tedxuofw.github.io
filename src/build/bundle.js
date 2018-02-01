@@ -628,7 +628,7 @@ var styles = _aphrodite.StyleSheet.create({
         paddingBottom: '50px'
     },
     tedsectiontitle: {
-        fontSize: '65px',
+        fontSize: '6vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase'
@@ -3740,6 +3740,18 @@ var Profile = exports.Profile = function (_React$Component) {
 
 			var company = this.props.company;
 
+			if (this.props.title == "") {
+				return _react2.default.createElement(
+					'div',
+					{ className: (0, _aphrodite.css)(styles.blank) },
+					_react2.default.createElement(
+						'div',
+						{ className: (0, _aphrodite.css)(styles.tedprofile) },
+						_react2.default.createElement('img', { src: this.props.img, className: (0, _aphrodite.css)(styles.profilepicture) })
+					)
+				);
+			}
+
 			if (typeof company === 'undefined') {
 				return _react2.default.createElement(
 					'div',
@@ -3816,7 +3828,7 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	title: {
 		position: 'absolute',
-		fontSize: '160%',
+		fontSize: '2vw',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
@@ -3824,17 +3836,20 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	subtitleone: {
 		position: 'absolute',
-		fontSize: '120%',
+		fontSize: '1.5vw',
 		fontWeight: 'normal',
 		fontFamily: 'AvenirBlack',
 		margin: '75% 0px 0px 7%'
 	},
 	subtitletwo: {
 		position: 'absolute',
-		fontSize: '120%',
+		fontSize: '1.5vw',
 		fontWeight: 'normal',
 		fontFamily: 'AvenirBlack',
 		margin: '85% 0px 0px 7%'
+	},
+	blank: {
+		opacity: '0'
 	}
 });
 
@@ -27107,7 +27122,9 @@ var styles = _aphrodite.StyleSheet.create({
 
 	},
 	tabcontainer: {
-		marginRight: '15px'
+		display: 'inline-block',
+		marginRight: '15px',
+		marginTop: '15px'
 	},
 	selectedtab: {
 		width: '10%',
@@ -27215,6 +27232,9 @@ var Profiles = exports.Profiles = function (_React$Component) {
 					row = profs.slice(i, i + 3);
 				} else {
 					row = profs.slice(i);
+					for (var j = 0; j < 3 - (profs.length - i); j++) {
+						row.push({ name: "", role: "", team: "", img: "/app/resources/images/generic.jpg" });
+					}
 				}
 				rows.push(_react2.default.createElement(
 					'tr',
