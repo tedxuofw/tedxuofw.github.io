@@ -9,6 +9,16 @@ export class Profile extends React.Component {
 	render() {
 		let company = this.props.company;
 		
+		if (this.props.title == "") {
+			return (
+				<div className={css(styles.blank)}>
+					<div className={css(styles.tedprofile)}>
+						<img src={this.props.img} className={css(styles.profilepicture)} />
+					</div>
+				</div>
+			);
+		}
+		
 		if (typeof company === 'undefined') {
 			return (
 				<div className={css(styles.tedprofile)}>
@@ -50,7 +60,7 @@ const styles = StyleSheet.create({
     },
 	title: {
 		position: 'absolute',
-		fontSize: '160%',
+		fontSize: '2vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
@@ -58,16 +68,19 @@ const styles = StyleSheet.create({
 	},
     subtitleone: {
 		position: 'absolute',
-        fontSize: '120%',
+        fontSize: '1.5vw',
 		fontWeight: 'normal',
         fontFamily: 'AvenirBlack',
 		margin:'75% 0px 0px 7%',
     },
 	subtitletwo: {
 		position: 'absolute',
-        fontSize: '120%',
+        fontSize: '1.5vw',
 		fontWeight: 'normal',
         fontFamily: 'AvenirBlack',
 		margin:'85% 0px 0px 7%',
-	}
+	},
+	blank: {
+		opacity:'0',
+	},
 });

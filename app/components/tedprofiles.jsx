@@ -28,6 +28,9 @@ export class Profiles extends React.Component {
 				row = profs.slice(i, i+3);
 			} else {
 				row = profs.slice(i);
+				for (var j = 0; j < 3 - (profs.length - i); j++) {
+					row.push({name:"", role:"", team:"", img:"/app/resources/images/generic.jpg"});
+				}
 			}
 			rows.push(	
 				<tr className={css(styles.tr)}>

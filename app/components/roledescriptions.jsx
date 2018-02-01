@@ -155,7 +155,9 @@ const styles = StyleSheet.create({
 		
 	},
 	tabcontainer: {
-		marginRight:'15px'
+		display:'inline-block',
+		marginRight:'15px',
+		marginTop:'15px',
 	},
 	selectedtab: {
 		width:'10%',
