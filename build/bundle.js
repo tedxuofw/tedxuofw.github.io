@@ -4034,15 +4034,15 @@ var _reactRouterDom = __webpack_require__(21);
 
 var _main = __webpack_require__(88);
 
-var _about = __webpack_require__(116);
+var _about = __webpack_require__(118);
 
-var _speakers = __webpack_require__(120);
+var _speakers = __webpack_require__(122);
 
-var _sponsors = __webpack_require__(121);
+var _sponsors = __webpack_require__(123);
 
-var _contact = __webpack_require__(123);
+var _contact = __webpack_require__(125);
 
-var _attend = __webpack_require__(124);
+var _attend = __webpack_require__(126);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25005,7 +25005,9 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _featuredspeaker = __webpack_require__(115);
+var _multilinksection = __webpack_require__(115);
+
+var _featuredspeaker = __webpack_require__(117);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25039,13 +25041,9 @@ var Home = exports.Home = function (_React$Component) {
                 _react2.default.createElement(
                     _section.Section,
                     { border: '0%' },
-                    _react2.default.createElement(_featuredspeaker.FeaturedSpeaker, { img: '/app/resources/images/generic.jpg', name: 'Erin Jones', desc: 'Office of Public Instruction' })
+                    'Section 2'
                 ),
-                _react2.default.createElement(
-                    _section.Section,
-                    { border: '0%' },
-                    'Section 3'
-                ),
+                _react2.default.createElement(_multilinksection.LinksSection, { border: '0%' }),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
             );
         }
@@ -26433,6 +26431,195 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
+exports.LinksSection = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(1);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _aphrodite = __webpack_require__(6);
+
+var _linksection = __webpack_require__(116);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LinksSection = exports.LinksSection = function (_React$Component) {
+	_inherits(LinksSection, _React$Component);
+
+	function LinksSection() {
+		_classCallCheck(this, LinksSection);
+
+		return _possibleConstructorReturn(this, (LinksSection.__proto__ || Object.getPrototypeOf(LinksSection)).apply(this, arguments));
+	}
+
+	_createClass(LinksSection, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.section) },
+				_react2.default.createElement(
+					_linksection.LinkSection,
+					{ title: 'Get your tickets now!', color: '#000000', bgColor: '#FFFFFF' },
+					_react2.default.createElement(
+						'button',
+						{ className: (0, _aphrodite.css)(styles.linkButton) },
+						'Attend'
+					)
+				),
+				_react2.default.createElement(
+					_linksection.LinkSection,
+					{ title: 'Questions or comments?', color: '#FFFFFF', bgColor: '#000000' },
+					_react2.default.createElement(
+						'button',
+						{ className: (0, _aphrodite.css)(styles.linkButton) },
+						'Contact'
+					)
+				),
+				_react2.default.createElement(
+					_linksection.LinkSection,
+					{ title: 'Stay updated by signing up for our mailing list below!', color: '#000000', bgColor: '#FFFFFF' },
+					_react2.default.createElement(
+						'button',
+						{ className: (0, _aphrodite.css)(styles.linkButton) },
+						'Sign up'
+					)
+				)
+			);
+		}
+	}]);
+
+	return LinksSection;
+}(_react2.default.Component);
+
+var styles = _aphrodite.StyleSheet.create({
+	section: {
+		minHeight: '75vh',
+		background: 'white',
+		margin: '0px',
+		paddingTop: '50px',
+		paddingBottom: '50px'
+	},
+	linkButton: {
+		width: '12vw',
+		height: '6vw',
+		marginLeft: '43vw',
+		marginRight: '45vw',
+		marginBottom: '10vh',
+		marginTop: '2vh',
+		color: '#FFFFFF',
+		backgroundColor: '#E62B25',
+		fontSize: '2vw',
+		fontFamily: 'AvenirBlack',
+		textTransform: 'uppercase'
+	}
+
+});
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.LinkSection = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(1);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _aphrodite = __webpack_require__(6);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var LinkSection = exports.LinkSection = function (_React$Component) {
+	_inherits(LinkSection, _React$Component);
+
+	function LinkSection() {
+		_classCallCheck(this, LinkSection);
+
+		return _possibleConstructorReturn(this, (LinkSection.__proto__ || Object.getPrototypeOf(LinkSection)).apply(this, arguments));
+	}
+
+	_createClass(LinkSection, [{
+		key: 'render',
+		value: function render() {
+			var style = {
+				backgroundColor: this.props.bgColor,
+				color: this.props.color
+			};
+			return _react2.default.createElement(
+				'div',
+				{ style: style, className: (0, _aphrodite.css)(styles.section) },
+				_react2.default.createElement(
+					'p',
+					{ style: style, className: (0, _aphrodite.css)(styles.title) },
+					' ',
+					this.props.title,
+					' '
+				),
+				this.props.children
+			);
+		}
+	}]);
+
+	return LinkSection;
+}(_react2.default.Component);
+
+var styles = _aphrodite.StyleSheet.create({
+	section: {
+		minHeight: '50vh',
+		margin: '0px',
+		paddingTop: '50px',
+		paddingBottom: '50px'
+	},
+	title: {
+		fontSize: '3vw',
+		fontWeight: 'bold',
+		fontFamily: 'AvenirBlack',
+		marginTop: '8vw',
+		textAlign: 'center'
+	}
+});
+
+/***/ }),
+/* 117 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
 exports.FeaturedSpeaker = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -26533,7 +26720,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26560,9 +26747,9 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _slidersection = __webpack_require__(117);
+var _slidersection = __webpack_require__(119);
 
-var _roledescriptions = __webpack_require__(118);
+var _roledescriptions = __webpack_require__(120);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -26603,7 +26790,7 @@ var About = exports.About = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26824,7 +27011,7 @@ var styles = _noImportant.StyleSheet.create({
 });
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26847,7 +27034,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _aphrodite = __webpack_require__(6);
 
-var _tedprofiles = __webpack_require__(119);
+var _tedprofiles = __webpack_require__(121);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27166,7 +27353,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27287,7 +27474,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27501,7 +27688,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27528,7 +27715,7 @@ var _tedfooter = __webpack_require__(11);
 
 var _section = __webpack_require__(8);
 
-var _sponsor = __webpack_require__(122);
+var _sponsor = __webpack_require__(124);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27577,7 +27764,7 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27695,7 +27882,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27757,7 +27944,7 @@ var Contact = exports.Contact = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
