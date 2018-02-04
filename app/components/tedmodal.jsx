@@ -69,7 +69,26 @@ const styles = StyleSheet.create({
     },
     bottom: {
         height: '50%',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
+        paddingTop: '5px',
+        paddingLeft: '10px',
+        paddingRight: '10px',
+        paddingBottom: '5px',
+        
+        "::-webkit-scrollbar": {
+            width: '12px',
+            backgroundColor: '#F5F5F5',
+        },
+        "::-webkit-scrollbar-track": {
+            //WebkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.3)',
+            //borderRadius: '6px',
+            backgroundColor: '#F5F5F5',
+        },
+        "::-webkit-scrollbar-thumb": {
+            //borderRadius: '6px',
+            //WebkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.3)',
+            backgroundColor: '#CCC',
+        }
     },
     imagecontainer: {
         width: '50%',

@@ -34,8 +34,8 @@ export class Profiles extends React.Component {
 			}
 			rows.push(	
 				<tr className={css(styles.tr)}>
-					{row.map(profile => (
-							<td className={css(styles.td)}>
+					{row.map((profile, index) => (
+							<td className={css(styles.td)} key={index}>
 								<Profile 
 									img={profile.img} 
 									title={profile.name} 
