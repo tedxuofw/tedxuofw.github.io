@@ -6,8 +6,11 @@ import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 
 export class Attend extends React.Component {
-	render() {
-                
+    componentDidMount() {
+        document.title = "Attend - TEDxUofW";
+    }
+    
+	render() {            
 		return (
             <div>
                 <TEDNavbar index='4' />

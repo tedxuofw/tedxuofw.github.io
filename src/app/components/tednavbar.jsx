@@ -26,7 +26,7 @@ export class TEDNavbar extends React.Component {
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>
-                <Navbar.Collapse>
+                <Navbar.Collapse className={css(styles.navcollapse)}>
                     <Nav className={css(styles.tednavsection)} pullRight>
                         { 
                             links.map((item, index) => { 
@@ -99,5 +99,8 @@ const styles = StyleSheet.create({
             color: '#ab1814',
             transition: 'color 0.2s ease-out'
         }
+    },
+    navcollapse: {
+        marginRight: '0'
     }
 });

@@ -17,6 +17,10 @@ export class Speakers extends React.Component {
         this.openModal = this.openModal.bind(this); // Important!
     }
     
+    componentDidMount() {
+        document.title = "Speakers - TEDxUofW";
+    }
+    
     openModal(image, name, text) {
         this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalText: text });
     }
