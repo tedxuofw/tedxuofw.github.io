@@ -4,32 +4,37 @@ import ReactDOM from 'react-dom';
 import {StyleSheet, css} from 'aphrodite';
 import {Link} from 'react-router-dom';
 import {LinkSection} from '../components/linksection.jsx';
+import {InputArea} from '../components/inputarea.jsx';
 
 export class LinksSection extends React.Component {
     render(){
         return (
 			<div className={css(styles.section)}>
 				<LinkSection title="Get your tickets now!" color="#000000" bgColor="#FFFFFF">
-					<div className={css(styles.linkButton)}>
-						<Link className={css(styles.link)} to="/attend">Attend</Link>
-					</div>
+					<Button name="Attend" linkTo="/attend"/>
 				</LinkSection>
+				
 				<LinkSection title="Questions or comments?" color="#FFFFFF" bgColor="#000000">
-					<div className={css(styles.linkButton)}>
-						<Link className={css(styles.link)}  to="/contact">Contact</Link>
-					</div>
+					<Button name="Contact" linkTo="/contact"/>
 				</LinkSection>
+				
 				<LinkSection title="Stay updated by signing up for our mailing list below!" color="#000000" bgColor="#FFFFFF">
-					<div className={css(styles.linkButton)}>
-						<Link className={css(styles.link)} to="">Sign up</Link>
-					</div>
+					<InputArea ghostText="Enter your email here" buttonName="Submit" name="Sign up"/>
 				</LinkSection>
 			</div>
 		);
     }
 }
 
-
+class Button extends React.Component {
+	render() {
+		return (
+			<div className={css(styles.linkButton)}>
+				<Link className={css(styles.link)} to={this.props.linkTo}>{this.props.name}</Link>
+			</div>
+		);
+	}
+}
 
 const styles = StyleSheet.create({
 	section: {
