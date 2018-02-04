@@ -1765,7 +1765,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     _reactBootstrap.Navbar.Collapse,
-                    null,
+                    { className: (0, _noImportant.css)(styles.navcollapse) },
                     _react2.default.createElement(
                         _reactBootstrap.Nav,
                         { className: (0, _noImportant.css)(styles.tednavsection), pullRight: true },
@@ -1854,6 +1854,9 @@ var styles = _noImportant.StyleSheet.create({
             color: '#ab1814',
             transition: 'color 0.2s ease-out'
         }
+    },
+    navcollapse: {
+        marginRight: '0'
     }
 });
 
@@ -46145,12 +46148,12 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	linkButton: {
 		width: '12vw',
-		height: '6vw',
+		height: '5vw',
 		marginLeft: '43vw',
 		marginRight: '45vw',
 		marginBottom: '10vh',
 		marginTop: '2vh',
-		lineHeight: '6vw',
+		lineHeight: '5vw',
 		textAlign: 'center',
 		color: '#FFFFFF',
 		backgroundColor: '#E62B25',

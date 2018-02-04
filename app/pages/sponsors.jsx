@@ -7,8 +7,11 @@ import {Section} from '../components/section.jsx';
 import {Sponsor} from '../components/sponsor.jsx';
 
 export class Sponsors extends React.Component {
-	render() {
-                
+    componentDidMount() {
+        document.title = "Sponsors - TEDxUofW";
+    }
+    
+	render() {            
 		return (
             <div>
                 <TEDNavbar index='2'/>
