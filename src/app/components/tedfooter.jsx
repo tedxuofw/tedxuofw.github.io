@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     tedfooterh3: {
         fontSize: '24px',
         color: '#E62B25',
+        fontWeight: 'bold',
         marginTop: '0',
         marginBottom: '10px',
     },

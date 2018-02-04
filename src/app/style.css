@@ -13,7 +13,7 @@ body {
 
 /** TODO: Add Media Queries for navbar resize **/
 /** Need CSS Selector or pass value in **/
-.active a {
+.tedactive {
     border-bottom: 3px solid #C7A73D;
     border-left: 0;
     border-right: 0;
@@ -21,5 +21,16 @@ body {
 .tednavgold {
     border-style: solid;
     border-width: 3px;
+    padding: 5px;
     border-color: #C7A73D;
+    margin: 10;
+}
+
+ul.nav {
+    background: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
 }

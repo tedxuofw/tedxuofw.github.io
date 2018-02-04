@@ -11,7 +11,6 @@ export class SliderSection extends Section {
     }
     
     open(tab, content) {
-        console.log("Opening " + tab + " and " + content);
         var tabcontent = ["tab0", "tab1", "tab2"];
         for (let i = 0; i < tabcontent.length; i++) {
             document.getElementById(tabcontent[i]).style.display = "none";
@@ -63,7 +62,6 @@ export class SliderSection extends Section {
 
 const styles = StyleSheet.create({
     tedsection: {
-        width: '70%',
         background: 'white',
         position: 'relative',
 
@@ -95,7 +93,7 @@ const styles = StyleSheet.create({
         display: 'table-cell',
         background: '#E62B25',
         color: 'white',
-        width: '25px', 
+        width: 'px', 
         textAlign: 'center',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
