@@ -11,7 +11,9 @@ export class LinkSection extends React.Component {
 		}
         return (
 			<div style={style} className={css(styles.section)}>
-				<p style={style} className={css(styles.title)}> {this.props.title} </p>
+				<div className={css(styles.textcontainer)}>
+					<p style={style} className={css(styles.title)}> {this.props.title} </p>
+				</div>
 				{this.props.children}
 			</div>
 		);
@@ -34,4 +36,8 @@ const styles = StyleSheet.create({
 		marginTop:'8vw',
 		textAlign: 'center',
     },
+	textcontainer: {
+		marginLeft:'30vw',
+		width:'40vw',
+	},
 });
