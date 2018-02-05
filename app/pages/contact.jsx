@@ -8,6 +8,7 @@ import {Section} from '../components/section.jsx';
 export class Contact extends React.Component {
     componentDidMount() {
         document.title = "Contact - TEDxUofW";
+        window.scrollTo(0, 0);
     }
     
 	render() {            

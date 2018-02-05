@@ -10,6 +10,7 @@ import {Descriptions} from '../components/roledescriptions.jsx';
 export class About extends React.Component {
     componentDidMount() {
         document.title = "About - TEDxUofW";
+        window.scrollTo(0, 0);
     }
     
 	render() {
