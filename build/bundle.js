@@ -11923,15 +11923,15 @@ var _reactRouterDom = __webpack_require__(54);
 
 var _main = __webpack_require__(207);
 
-var _about = __webpack_require__(385);
+var _about = __webpack_require__(386);
 
-var _speakers = __webpack_require__(389);
+var _speakers = __webpack_require__(390);
 
-var _sponsors = __webpack_require__(390);
+var _sponsors = __webpack_require__(391);
 
-var _contact = __webpack_require__(392);
+var _contact = __webpack_require__(393);
 
-var _attend = __webpack_require__(393);
+var _attend = __webpack_require__(394);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32898,7 +32898,7 @@ var _section = __webpack_require__(25);
 
 var _multilinksection = __webpack_require__(382);
 
-var _featuredspeaker = __webpack_require__(384);
+var _featuredspeaker = __webpack_require__(385);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46267,6 +46267,8 @@ var _reactRouterDom = __webpack_require__(54);
 
 var _linksection = __webpack_require__(383);
 
+var _inputarea = __webpack_require__(384);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46293,47 +46295,50 @@ var LinksSection = exports.LinksSection = function (_React$Component) {
 				_react2.default.createElement(
 					_linksection.LinkSection,
 					{ title: 'Get your tickets now!', color: '#000000', bgColor: '#FFFFFF' },
-					_react2.default.createElement(
-						'div',
-						{ className: (0, _aphrodite.css)(styles.linkButton) },
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ className: (0, _aphrodite.css)(styles.link), to: '/attend' },
-							'Attend'
-						)
-					)
+					_react2.default.createElement(Button, { name: 'Attend', linkTo: '/attend' })
 				),
 				_react2.default.createElement(
 					_linksection.LinkSection,
 					{ title: 'Questions or comments?', color: '#FFFFFF', bgColor: '#000000' },
-					_react2.default.createElement(
-						'div',
-						{ className: (0, _aphrodite.css)(styles.linkButton) },
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ className: (0, _aphrodite.css)(styles.link), to: '/contact' },
-							'Contact'
-						)
-					)
+					_react2.default.createElement(Button, { name: 'Contact', linkTo: '/contact' })
 				),
 				_react2.default.createElement(
 					_linksection.LinkSection,
 					{ title: 'Stay updated by signing up for our mailing list below!', color: '#000000', bgColor: '#FFFFFF' },
-					_react2.default.createElement(
-						'div',
-						{ className: (0, _aphrodite.css)(styles.linkButton) },
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ className: (0, _aphrodite.css)(styles.link), to: '' },
-							'Sign up'
-						)
-					)
+					_react2.default.createElement(_inputarea.InputArea, { ghostText: 'Enter your email here', buttonName: 'Submit', name: 'Sign up' })
 				)
 			);
 		}
 	}]);
 
 	return LinksSection;
+}(_react2.default.Component);
+
+var Button = function (_React$Component2) {
+	_inherits(Button, _React$Component2);
+
+	function Button() {
+		_classCallCheck(this, Button);
+
+		return _possibleConstructorReturn(this, (Button.__proto__ || Object.getPrototypeOf(Button)).apply(this, arguments));
+	}
+
+	_createClass(Button, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.linkButton) },
+				_react2.default.createElement(
+					_reactRouterDom.Link,
+					{ className: (0, _aphrodite.css)(styles.link), to: this.props.linkTo },
+					this.props.name
+				)
+			);
+		}
+	}]);
+
+	return Button;
 }(_react2.default.Component);
 
 var styles = _aphrodite.StyleSheet.create({
@@ -46423,11 +46428,15 @@ var LinkSection = exports.LinkSection = function (_React$Component) {
 				'div',
 				{ style: style, className: (0, _aphrodite.css)(styles.section) },
 				_react2.default.createElement(
-					'p',
-					{ style: style, className: (0, _aphrodite.css)(styles.title) },
-					' ',
-					this.props.title,
-					' '
+					'div',
+					{ className: (0, _aphrodite.css)(styles.textcontainer) },
+					_react2.default.createElement(
+						'p',
+						{ style: style, className: (0, _aphrodite.css)(styles.title) },
+						' ',
+						this.props.title,
+						' '
+					)
 				),
 				this.props.children
 			);
@@ -46450,11 +46459,164 @@ var styles = _aphrodite.StyleSheet.create({
 		fontFamily: 'AvenirBlack',
 		marginTop: '8vw',
 		textAlign: 'center'
+	},
+	textcontainer: {
+		marginLeft: '30vw',
+		width: '40vw'
 	}
 });
 
 /***/ }),
 /* 384 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.InputArea = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(9);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _aphrodite = __webpack_require__(17);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var InputArea = exports.InputArea = function (_React$Component) {
+	_inherits(InputArea, _React$Component);
+
+	function InputArea(props) {
+		_classCallCheck(this, InputArea);
+
+		var _this = _possibleConstructorReturn(this, (InputArea.__proto__ || Object.getPrototypeOf(InputArea)).call(this, props));
+
+		_this.state = { value: _this.props.ghostText, touched: 'false', fontStyle: 'italic', fontColor: '#707070' };
+
+		_this.handleChange = _this.handleChange.bind(_this);
+		_this.handleSubmit = _this.handleSubmit.bind(_this);
+		_this.handleEnter = _this.handleEnter.bind(_this);
+		return _this;
+	}
+
+	_createClass(InputArea, [{
+		key: 'handleEnter',
+		value: function handleEnter(event) {
+			if (this.state.touched == 'false') {
+				this.setState({ touched: 'true' });
+				this.setState({ fontColor: '#000000' });
+				this.setState({ fontStyle: 'normal' });
+
+				this.setState({ value: '' });
+			}
+		}
+	}, {
+		key: 'handleChange',
+		value: function handleChange(event) {
+			this.setState({ value: event.target.value });
+		}
+	}, {
+		key: 'handleSubmit',
+		value: function handleSubmit(event) {
+			//Placeholder until mailing list stuff is working.
+			var value = this.state.value;
+
+			if (value.includes('@')) {
+				var domain = value.split('@')[1];
+				if (domain.includes('.')) {
+					alert("Signing " + this.state.value + " up to receive mail.");
+				} else {
+					alert("Please input valid email address");
+				}
+			} else {
+				alert("Please input valid email address");
+			}
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+
+			var textstyle = {
+				fontStyle: this.state.fontStyle,
+				color: this.state.fontColor
+			};
+
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.emailcontainer) },
+				_react2.default.createElement(
+					'form',
+					{ onSubmit: this.handleSubmit, onClick: this.handleEnter },
+					_react2.default.createElement(
+						'label',
+						{ className: (0, _aphrodite.css)(styles.textbox) },
+						_react2.default.createElement('input', { type: this.props.name, value: this.state.value, onChange: this.handleChange, className: (0, _aphrodite.css)(styles.emailtext), style: textstyle })
+					),
+					_react2.default.createElement('input', { type: 'submit', value: this.props.buttonName, className: (0, _aphrodite.css)(styles.submitbutton) })
+				)
+			);
+		}
+	}]);
+
+	return InputArea;
+}(_react2.default.Component);
+
+var styles = _aphrodite.StyleSheet.create({
+	emailcontainer: {
+		width: '42vw',
+		height: '5vw',
+		marginLeft: '28vw',
+		marginRight: '30vw',
+		marginBottom: '10vh',
+		marginTop: '2vh'
+	},
+	textbox: {
+		display: 'inline-block',
+		width: '30vw',
+		border: 'none'
+	},
+	emailtext: {
+		font: 'AvenirBlack',
+		fontSize: '1.7vw',
+		border: 'none',
+		width: '100%'
+	},
+	submitbutton: {
+		display: 'inline-block',
+		width: '12vw',
+		height: '5vw',
+		lineHeight: '5vw',
+		textAlign: 'center',
+		color: '#FFFFFF',
+		backgroundColor: '#E62B25',
+		fontSize: '2vw',
+		fontFamily: 'AvenirBlack',
+		transition: 'opacity 0.2s ease-out',
+		textTransform: 'uppercase',
+		":hover": {
+			opacity: ".8",
+			transition: 'opacity 0.2s ease-out'
+		}
+	}
+});
+
+/***/ }),
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46563,7 +46725,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46590,9 +46752,9 @@ var _tedfooter = __webpack_require__(40);
 
 var _section = __webpack_require__(25);
 
-var _slidersection = __webpack_require__(386);
+var _slidersection = __webpack_require__(387);
 
-var _roledescriptions = __webpack_require__(387);
+var _roledescriptions = __webpack_require__(388);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46639,7 +46801,7 @@ var About = exports.About = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46858,7 +47020,7 @@ var styles = _noImportant.StyleSheet.create({
 });
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46881,7 +47043,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _aphrodite = __webpack_require__(17);
 
-var _tedprofiles = __webpack_require__(388);
+var _tedprofiles = __webpack_require__(389);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47200,7 +47362,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47321,7 +47483,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47541,7 +47703,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47568,7 +47730,7 @@ var _tedfooter = __webpack_require__(40);
 
 var _section = __webpack_require__(25);
 
-var _sponsor = __webpack_require__(391);
+var _sponsor = __webpack_require__(392);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47622,7 +47784,7 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47740,7 +47902,7 @@ var styles = _aphrodite.StyleSheet.create({
 });
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47807,7 +47969,7 @@ var Contact = exports.Contact = function (_React$Component) {
 }(_react2.default.Component);
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
