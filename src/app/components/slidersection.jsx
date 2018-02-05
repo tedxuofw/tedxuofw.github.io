@@ -87,13 +87,13 @@ const styles = StyleSheet.create({
 		cursor: 'pointer'
     },
     infotabcontent: {
-        display: 'table'
+        display: 'table',
     },
     infocontentbutton: {
         display: 'table-cell',
         background: '#E62B25',
         color: 'white',
-        width: 'px', 
+        width: '40px', 
         textAlign: 'center',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',

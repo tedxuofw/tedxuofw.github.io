@@ -9,6 +9,7 @@ import {Sponsor} from '../components/sponsor.jsx';
 export class Sponsors extends React.Component {
     componentDidMount() {
         document.title = "Sponsors - TEDxUofW";
+        window.scrollTo(0, 0);
     }
     
 	render() {            

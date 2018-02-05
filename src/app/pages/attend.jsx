@@ -8,6 +8,7 @@ import {Section} from '../components/section.jsx';
 export class Attend extends React.Component {
     componentDidMount() {
         document.title = "Attend - TEDxUofW";
+        window.scrollTo(0, 0)
     }
     
 	render() {            

@@ -19,6 +19,7 @@ export class Speakers extends React.Component {
     
     componentDidMount() {
         document.title = "Speakers - TEDxUofW";
+        window.scrollTo(0, 0);
     }
     
     openModal(image, name, text) {

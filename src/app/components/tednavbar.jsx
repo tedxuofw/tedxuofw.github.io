@@ -14,31 +14,35 @@ export class TEDNavbar extends React.Component {
                       {text: 'Contact', className: 'tednavlink', link: '#/contact'},
                       {text: 'Attend', className: 'tednavlink tednavgold', link: '#/attend'}];
         
-        
+        var fixed = false;
+        if(this.props.fixed) fixed = this.props.fixed;
         
         return (
-            <Navbar className={css(styles.tednav)}>
-                <Navbar.Header>
-                    <Navbar.Brand className={css(styles.tedbrand)} >
-                        <center>
-                            <Link to='/'><img className={css(styles.tednavlogo)} src="/app/resources/images/logo-red.png" /></Link>
-                        </center>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse className={css(styles.navcollapse)}>
-                    <Nav className={css(styles.tednavsection)} pullRight>
-                        { 
-                            links.map((item, index) => { 
-                                if(index == this.props.index) {item.className += ' tedactive'}
-                                return <NavItem eventKey={index}  className={css(styles.tednavlinka)} key={item.text} href={item.link}>
-                                            <center><span className={item.className} to={item.link}>{item.text}</span></center>
-                                    </NavItem> 
-                            }) 
-                        }
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+            <div>
+                <Navbar className={css(styles.tednav)} fixedTop={fixed}>
+                    <Navbar.Header>
+                        <Navbar.Brand className={css(styles.tedbrand)} >
+                            <center>
+                                <Link to='/'><img className={css(styles.tednavlogo)} src="/app/resources/images/logo-red.png" /></Link>
+                            </center>
+                        </Navbar.Brand>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
+                    <Navbar.Collapse>
+                        <Nav className={css(styles.tednavsection)} pullRight>
+                            { 
+                                links.map((item, index) => { 
+                                    if(index == this.props.index) {item.className += ' tedactive'}
+                                    return <NavItem eventKey={index}  className={css(styles.tednavlinka)} key={item.text} href={item.link}>
+                                                <center><span className={item.className} to={item.link}>{item.text}</span></center>
+                                        </NavItem> 
+                                }) 
+                            }
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+                <div className={css(styles.undernav)}></div>
+            </div>
         );
     }
 }
@@ -67,9 +71,14 @@ const styles = StyleSheet.create({
         lineHeight: '90px',
         paddingTop: '20px',
         paddingBottom: '20px',
-        zIndex: '9999',
+        //zIndex: '9999',
         borderRadius: '0',
         MozBorderRadius: '0'
+    },
+    underNav: {
+        height:'90px',
+        width: '100%',
+        color: 'red'
     },
     tedbrand: {
         display: 'flex',
@@ -99,8 +108,5 @@ const styles = StyleSheet.create({
             color: '#ab1814',
             transition: 'color 0.2s ease-out'
         }
-    },
-    navcollapse: {
-        marginRight: '0'
     }
 });
