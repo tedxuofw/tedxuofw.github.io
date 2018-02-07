@@ -10,7 +10,7 @@ export class Profiles extends React.Component {
 		
 		let profs = this.props.profiles;
 		
-		if (typeof this.props.team !== 'undefined') {
+		if (typeof this.props.team !== 'undefined' && this.props.team != "") {
 			var arr = [];
 			for (var i = 0; i < profs.length; i++) {
 				if (profs[i].team == this.props.team) {

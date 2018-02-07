@@ -46754,7 +46754,7 @@ var _section = __webpack_require__(25);
 
 var _slidersection = __webpack_require__(387);
 
-var _roledescriptions = __webpack_require__(388);
+var _meettheteam = __webpack_require__(388);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -46790,7 +46790,7 @@ var About = exports.About = function (_React$Component) {
                 _react2.default.createElement(
                     _section.Section,
                     { title: 'Meet the Team' },
-                    _react2.default.createElement(_roledescriptions.Descriptions, null)
+                    _react2.default.createElement(_meettheteam.Descriptions, null)
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
             );
@@ -47053,6 +47053,10 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var teams = ["", "curators", "design", "finance", "speaker selection", "public relations", "web"];
+
+var profiles = [{ name: "Jenny Liang", role: "Web Lead", team: "web", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "curators", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "finance", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "production", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "public relations", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "web", img: "/app/resources/images/generic.jpg" }];
+
 var Descriptions = exports.Descriptions = function (_React$Component) {
 	_inherits(Descriptions, _React$Component);
 
@@ -47065,8 +47069,6 @@ var Descriptions = exports.Descriptions = function (_React$Component) {
 	_createClass(Descriptions, [{
 		key: 'render',
 		value: function render() {
-			var profiles = [{ name: "Jenny Liang", role: "Web Lead", team: "web", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "curators", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "finance", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "production", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "public relations", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "web", img: "/app/resources/images/generic.jpg" }];
-
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
@@ -47074,84 +47076,44 @@ var Descriptions = exports.Descriptions = function (_React$Component) {
 					Content,
 					null,
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference\'s theme, and representing TEDxUofW in professional inquiries. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'curators' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference\'s theme, and representing TEDxUofW in professional inquiries. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'design' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							'  The finance and sponsorship team ensures that TEDxUofW\u2019s financial needs are always met. They control the organization\u2019s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'finance' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						'  The finance and sponsorship team ensures that TEDxUofW\u2019s financial needs are always met. They control the organization\u2019s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference\'s theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'speaker selection' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference\'s theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'production' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them. '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, \u201Chyping\u201D people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about! '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'public relations' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, \u201Chyping\u201D people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about! '
 					),
 					_react2.default.createElement(
-						Body,
-						null,
-						_react2.default.createElement(
-							'p',
-							{ className: (0, _aphrodite.css)(styles.description) },
-							' The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference. '
-						),
-						_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: 'web' })
+						'p',
+						{ className: (0, _aphrodite.css)(styles.description) },
+						' The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference. '
 					)
 				)
 			);
@@ -47260,7 +47222,12 @@ var Content = function (_React$Component4) {
 	}, {
 		key: 'content',
 		value: function content() {
-			return this.props.children[this.state.index];
+			return _react2.default.createElement(
+				Body,
+				{ teams: teams[this.state.index] },
+				this.props.children[this.state.index],
+				_react2.default.createElement(_tedprofiles.Profiles, { profiles: profiles, team: teams[this.state.index] })
+			);
 		}
 	}, {
 		key: 'render',
@@ -47410,7 +47377,7 @@ var Profiles = exports.Profiles = function (_React$Component) {
 
 			var profs = this.props.profiles;
 
-			if (typeof this.props.team !== 'undefined') {
+			if (typeof this.props.team !== 'undefined' && this.props.team != "") {
 				var arr = [];
 				for (var i = 0; i < profs.length; i++) {
 					if (profs[i].team == this.props.team) {
