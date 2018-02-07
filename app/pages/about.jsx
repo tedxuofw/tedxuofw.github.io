@@ -5,7 +5,7 @@ import {TEDNavbar} from '../components/tednavbar.jsx';
 import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 import {SliderSection} from '../components/slidersection.jsx';
-import {Descriptions} from '../components/roledescriptions.jsx';
+import {Descriptions} from '../components/meettheteam.jsx';
 
 export class About extends React.Component {
     componentDidMount() {
