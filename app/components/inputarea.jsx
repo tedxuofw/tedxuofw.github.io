@@ -3,46 +3,19 @@ import ReactDOM from 'react-dom';
 
 import {StyleSheet, css} from 'aphrodite';
 
+import {Form, Button, FormControl} from 'react-bootstrap';
+
 export class InputArea extends React.Component {
 	
 	constructor(props) {
 		super(props);
-		this.state = {value: this.props.ghostText, touched: 'false', fontStyle: 'italic', fontColor: '#707070'};
+		this.state = {value: ''};
 		
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.handleEnter = this.handleEnter.bind(this);
-	}
-	
-	handleEnter(event) {
-		if (this.state.touched == 'false') {
-			this.setState({touched:'true'});
-			this.setState({fontColor: '#000000'});
-			this.setState({fontStyle: 'normal'});
-			
-			this.setState({value: ''});
-		}
 	}
 	
 	handleChange(event) {
 		this.setState({value: event.target.value});
-	}
-	
-	handleSubmit(event) {
-		//Placeholder until mailing list stuff is working.
-		const value = this.state.value;
-		
-		if (value.includes('@')) {
-			const domain = value.split('@')[1];
-			if (domain.includes('.')) {
-				alert("Signing " + this.state.value + " up to receive mail.");
-			} else {
-				alert("Please input valid email address");
-			}
-		} else {
-			alert("Please input valid email address");
-		}
-		
 	}
 	
 	render() {
@@ -53,14 +26,19 @@ export class InputArea extends React.Component {
 		};
 		
 		return (
-			<div className={css(styles.emailcontainer)}>
-				<form onSubmit={this.handleSubmit} onClick={this.handleEnter}>
-					<label className={css(styles.textbox)}>
-						<input type={this.props.name} value={this.state.value} onChange={this.handleChange} className={css(styles.emailtext)} style={textstyle} />
-					</label>
-					<input type="submit" value={this.props.buttonName} className={css(styles.submitbutton)}/>
-				</form>
-			</div>
+			<Form inline className={css(styles.emailcontainer)}>
+				<FormControl
+					id="formControlsEmail"
+					type="email"
+					placeholder={this.props.ghostText} 
+					value={this.state.value} 
+					onChange={this.handleChange} 
+					className={css(styles.emailtext)} 
+				/>
+				<Button type="submit" className={css(styles.submitbutton)}>
+					{this.props.buttonName}
+				</Button>
+			</Form>
 		);
 	}
 }
@@ -75,19 +53,19 @@ const styles = StyleSheet.create({
 		marginTop:'2vh',
 	},
 	textbox: {
-		display:'inline-block',
-		width:'30vw',
-		border:'none',
+		
 	},
 	emailtext: {
+		display:'inline-block',
+		border:'none',
 		font:'AvenirBlack',
 		fontSize:'1.7vw',
-		border: 'none',
-		width:'100%',
+		width:'75%',
+		height:'5vw',
 	},
 	submitbutton: {
 		display:'inline-block',
-		width:'12vw',
+		width:'25%',
 		height:'5vw',
         lineHeight: '5vw',
         textAlign: 'center',

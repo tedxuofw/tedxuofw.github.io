@@ -19,7 +19,7 @@ export class LinksSection extends React.Component {
 				</LinkSection>
 				
 				<LinkSection title="Stay updated by signing up for our mailing list below!" color="#000000" bgColor="#FFFFFF">
-					<InputArea ghostText="Enter your email here" buttonName="Submit" name="Sign up"/>
+					<InputArea ghostText="Enter your email here" buttonName="Sign up" name="Sign up"/>
 				</LinkSection>
 			</div>
 		);
