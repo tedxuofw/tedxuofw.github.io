@@ -8,17 +8,22 @@ export class Section extends React.Component {
         let title = this.props.title;
 		let borderSize = this.props.border;
         let height = this.props.height;
+		let bgColor = this.props.bgColor;
 		if (typeof height === 'undefined') {
 			height = '75vh';
 		}
 		if (typeof borderSize === 'undefined') {
 			borderSize = '15%';
 		}
+		if (typeof bgColor === 'undefined') {
+			bgColor = 'white';
+		}
         
 		var style = {
 			paddingLeft: borderSize,
 			paddingRight: borderSize,
             minHeight: height,
+			backgroundColor: bgColor,
 		}
 		
         // No title given
@@ -39,7 +44,6 @@ export class Section extends React.Component {
 
 const styles = StyleSheet.create({
     tedsection: {
-        background: 'white',
 		margin:'0px',
         paddingTop: '50px',
         paddingBottom: '50px'
