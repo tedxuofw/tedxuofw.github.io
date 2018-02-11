@@ -9,6 +9,7 @@ import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 import {LinksSection} from '../components/multilinksection.jsx';
 import {FeaturedSpeaker} from '../components/featuredspeaker.jsx';
+import {TedButton} from '../components/tedbutton.jsx';
 
 export class Home extends React.Component {
     constructor(props) {
@@ -49,7 +50,12 @@ export class Home extends React.Component {
                     Section 1
                 </Section>
                 <Section border='10%'>
-					Section 2
+					<FeaturedSpeaker 
+						name=""
+						desc=""
+						img=""
+					/>
+					<TedButton name="View All Speakers" linkTo="/speakers" />
                 </Section>
                 <LinksSection border='0%' />
                 <TEDFooter />
