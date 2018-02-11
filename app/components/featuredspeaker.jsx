@@ -5,13 +5,39 @@ import {StyleSheet, css} from 'aphrodite';
 
 export class FeaturedSpeaker extends React.Component {
 	render() {
+		var descstyle;
+		var picstyle;
+		var textstyle;
+		if (this.props.flipped) {
+			descstyle = {
+				marginLeft:'32vw',
+			};
+			picstyle = {
+				marginLeft:'0vw',
+			};
+			textstyle = {
+				textAlign:'right',
+			};
+		} else {
+			descstyle = {
+				marginLeft:'0vw',
+			};
+			picstyle = {
+				marginLeft:'48vw',
+			};
+			textstyle = {
+				textAlign:'left',
+			};
+		}
+		
 		return (
 			<div className={css(styles.sectioncontainer)}>
-				<div className={css(styles.descriptioncontainer)}>
-					<p className={css(styles.title)}> {this.props.name} </p>
-					<p className={css(styles.description)}> {this.props.desc} </p>
+				<div style={descstyle} className={css(styles.descriptioncontainer)}>
+					<p style={textstyle} className={css(styles.title)}> {this.props.name} </p>
+					<p style={textstyle} className={css(styles.description)}> {this.props.desc} </p>
 				</div>
-				<img src={this.props.img} className={css(styles.picture)} />
+				<span className={css(styles.boderline)} />
+				<img src={this.props.img} style={picstyle} className={css(styles.picture)} />
 			</div>
 		);
 	}
@@ -21,36 +47,41 @@ export class FeaturedSpeaker extends React.Component {
 
 const styles = StyleSheet.create({
 	sectioncontainer: {
-		position:'relative',
 		width: '100%',
-		height: 'auto',
-		margin:'15px, 0px, 15px, 0px',
+		height: '32vw',
+		marginBottom:'7vh',
+		marginTop:'7vh',
 	},
     picture: {
-		
-		width:'320px',
+		position:'absolute',
+		width:'32vw',
 		height:'auto',
-		margin:'0px, 0px, 0px, 10%',
     },
 	title: {
-		textAlign:'center',
-		fontSize: '45px',
+		fontSize: '5vw',
+		color:'white',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
-		margin: '30px, 0px, 10px, 0px',
+		marginTop:'4vh',
 	},
     description: {
-		textAlign:'center',
-        fontSize: '30px',
+        fontSize: '2vw',
+		color:'white',
 		fontWeight: 'normal',
         fontFamily: 'AvenirBlack',
     },
 	descriptioncontainer: {
 		position:'absolute',
-		backgroundColor:'#CBCACD',
 		width: '60%',
 		height: '150px',
-		margin:'85px 0px 0px 40%',
-	}
+		marginTop:'15vw'
+	},
+	boderline: {
+		background: '#CBCACD',
+		position:'absolute',
+        height: '.5vw',
+        width: '100%',
+		marginTop:'31.5vw',
+	},
 });

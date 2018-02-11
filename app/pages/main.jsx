@@ -8,8 +8,7 @@ import {LandingVideo} from '../components/tedvideo.jsx';
 import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 import {LinksSection} from '../components/multilinksection.jsx';
-import {FeaturedSpeaker} from '../components/featuredspeaker.jsx';
-import {TedButton} from '../components/tedbutton.jsx';
+import {Speakers} from '../components/featuredspeakersection.jsx';
 
 export class Home extends React.Component {
     constructor(props) {
@@ -49,13 +48,8 @@ export class Home extends React.Component {
                     <div style={{height: '90px'}}></div>
                     Section 1
                 </Section>
-                <Section border='10%'>
-					<FeaturedSpeaker 
-						name=""
-						desc=""
-						img=""
-					/>
-					<TedButton name="View All Speakers" linkTo="/speakers" />
+                <Section border='10%' bgColor='black'>
+					<Speakers />
                 </Section>
                 <LinksSection border='0%' />
                 <TEDFooter />
