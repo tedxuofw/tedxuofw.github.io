@@ -9,6 +9,16 @@ export class Profile extends React.Component {
 	render() {
 		let company = this.props.company;
 		
+		console.log(this.props.txt);
+		if (!(typeof this.props.txt === 'undefined')) {
+			return (
+				<div className={css(styles.descriptioncontainer)}>
+					<span className={css(styles.teddescriptionbar)} />
+					<p className={css(styles.description)}> {this.props.txt} </p>
+				</div>
+			);
+		}
+		
 		if (this.props.title == "") {
 			return (
 				<div className={css(styles.blank)}>
@@ -83,4 +93,29 @@ const styles = StyleSheet.create({
 	blank: {
 		opacity:'0',
 	},
+	descriptioncontainer: {
+		width: '100%',
+		height:'22vw',
+		minWidth: '70px',
+		maxWidth: '600px',
+		position: 'relative',
+		overflowY:'scroll',
+	},
+	description: {
+		fontWeight: 'normal',
+        fontFamily: 'Avenir',
+		height:'85%',
+		fontSize:'1.34vw',
+		marginTop:'10%',
+		marginBottom:'0px',
+	},
+	teddescriptionbar: {
+        background: '#E62B25',
+		position:'absolute',
+        height: '5%',
+        width: '100%',
+        marginLeft: '0px',
+        marginBottom: '0px',
+		marginTop:'0px',
+    },
 });
