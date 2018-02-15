@@ -48,7 +48,7 @@ export class Home extends React.Component {
                     <div style={{height: '90px'}}></div>
                     Section 1
                 </Section>
-                <Section border='10%' bgColor='black'>
+                <Section border='20%' bgColor='black'>
 					<Speakers />
                 </Section>
                 <LinksSection border='0%' />

@@ -40,9 +40,8 @@ export class Speakers extends React.Component {
 const styles = StyleSheet.create({
 	header: {
         fontFamily: 'AvenirBlack',
-		fontSize:'4vw',
+		fontSize:'3vw',
 		color:'white',
-		border:'solid',
 		display:'inline-block',
 		paddingLeft:'2vw',
 		paddingRight:'2vw',
