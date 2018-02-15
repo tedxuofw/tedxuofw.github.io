@@ -4,6 +4,10 @@
 
 
 /* Misc. CSS */
+@-ms-viewport{
+  width: device-width;
+}
+
 body {
     font-family: 'Avenir';
     overflow-x: hidden;
