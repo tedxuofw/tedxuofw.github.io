@@ -19,13 +19,15 @@ export class Flair extends React.Component {
     
 	render() {
 		return (
-			<div style={{float: this.state.alignment}} className={css(styles.top)}>
-                <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')', marginTop: this.state.offset }} className={css(styles.one)}></div>
-                <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.two)}></div>
-                <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.thr)}></div>
-                <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.fou)}></div>
-                <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.fiv)}></div>
-			</div>
+            <div className="ted-flair">
+                <div style={{float: this.state.alignment}} className={css(styles.top)}>
+                    <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')', marginTop: this.state.offset }} className={css(styles.one)}></div>
+                    <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.two)}></div>
+                    <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.thr)}></div>
+                    <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.fou)}></div>
+                    <div style={{WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')'}} className={css(styles.fiv)}></div>
+                </div>
+            </div>
 		);
 	}
 }
