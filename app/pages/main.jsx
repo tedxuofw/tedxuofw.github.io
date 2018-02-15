@@ -39,9 +39,6 @@ export class Home extends React.Component {
             this.setState({ showVideo: false });
             video.muted = true;
             video.display = 'none';
-        } else {
-            video.load();
-            video.play();
         }
     }
     

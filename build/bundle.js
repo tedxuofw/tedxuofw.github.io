@@ -46346,12 +46346,16 @@ var Flair = exports.Flair = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { style: { float: this.state.alignment }, className: (0, _aphrodite.css)(styles.top) },
-                _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')', marginTop: this.state.offset }, className: (0, _aphrodite.css)(styles.one) }),
-                _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.two) }),
-                _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.thr) }),
-                _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.fou) }),
-                _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.fiv) })
+                { className: 'ted-flair' },
+                _react2.default.createElement(
+                    'div',
+                    { style: { float: this.state.alignment }, className: (0, _aphrodite.css)(styles.top) },
+                    _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')', marginTop: this.state.offset }, className: (0, _aphrodite.css)(styles.one) }),
+                    _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.two) }),
+                    _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.thr) }),
+                    _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.fou) }),
+                    _react2.default.createElement('div', { style: { WebkitTransform: 'skew(' + this.state.degrees + ')', MozTransform: 'skew(' + this.state.degrees + ')', OTransform: 'skew(' + this.state.degrees + ')' }, className: (0, _aphrodite.css)(styles.fiv) })
+                )
             );
         }
     }]);

@@ -17,7 +17,7 @@ export class LandingVideo extends React.Component {
             <div id="houdini-wrapper" className={css(componentClasses)}>
                 <div className={css(styles.videoContent)}>
                     <div className={css(styles.videoOverlay)}></div>
-                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop>
+                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop muted>
                         <source src="./app/resources/videos/seattle.webm" type="video/webm" />
                         <source src="./app/resources/videos/seattle.mp4" type="video/mp4" />
                     </video>
