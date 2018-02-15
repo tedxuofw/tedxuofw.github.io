@@ -10,7 +10,7 @@ export class FeaturedSpeaker extends React.Component {
 		var textstyle;
 		if (this.props.flipped) {
 			descstyle = {
-				marginLeft:'32vw',
+				marginLeft:'35%',
 			};
 			picstyle = {
 				marginLeft:'0vw',
@@ -23,7 +23,7 @@ export class FeaturedSpeaker extends React.Component {
 				marginLeft:'0vw',
 			};
 			picstyle = {
-				marginLeft:'48vw',
+				marginLeft:'65%',
 			};
 			textstyle = {
 				textAlign:'left',
@@ -48,40 +48,41 @@ export class FeaturedSpeaker extends React.Component {
 const styles = StyleSheet.create({
 	sectioncontainer: {
 		width: '100%',
-		height: '32vw',
+		height: '21vw',
 		marginBottom:'7vh',
 		marginTop:'7vh',
 	},
     picture: {
 		position:'absolute',
-		width:'32vw',
+		width:'35%',
 		height:'auto',
     },
 	title: {
-		fontSize: '5vw',
+		fontSize: '3vw',
 		color:'white',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
 		marginTop:'4vh',
+		marginBottom:'0vh',
 	},
     description: {
-        fontSize: '2vw',
+        fontSize: '1.5vw',
 		color:'white',
 		fontWeight: 'normal',
-        fontFamily: 'AvenirBlack',
+        fontFamily: 'Avenir',
     },
 	descriptioncontainer: {
 		position:'absolute',
-		width: '60%',
+		width: '65%',
 		height: '150px',
-		marginTop:'15vw'
+		marginTop:'15%',
 	},
 	boderline: {
 		background: '#CBCACD',
 		position:'absolute',
-        height: '.5vw',
+        height: '0.5%',
         width: '100%',
-		marginTop:'31.5vw',
+		marginTop:'34.5%',
 	},
 });
