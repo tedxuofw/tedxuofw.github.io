@@ -11,26 +11,30 @@ body {
     position: relative;
 }
 
-/** TODO: Add Media Queries for navbar resize **/
-/** Need CSS Selector or pass value in **/
+/* Navbar CSS */
 .tedactive {
-    border-bottom: 3px solid #C7A73D;
+    border-bottom: 4px solid #E62B25;
     border-left: 0;
     border-right: 0;
 }
 .tednavgold {
     border-style: solid;
-    border-width: 3px;
+    border-width: 4px;
     padding: 5px;
-    border-color: #C7A73D;
+    border-color: #E62B25;
     margin: 10;
 }
-
 ul.nav {
     background: #F5F5F5;
 }
 
+/* Hide regular scrollbar */
 ::-webkit-scrollbar {
-    width: 0px;  /* remove scrollbar space */
+    width: 0px; 
     background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* Don't display video on mobile */
+@media screen and (max-width: 750px) { 
+    #houdini-wrapper { display: none; }
 }
