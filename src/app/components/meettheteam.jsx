@@ -13,6 +13,15 @@ const profiles=[{name:"Jenny Liang", role:"Web Lead", team:"web", img:"/app/reso
 				{name:"Name", role:"Role", team:"production", img:"/app/resources/images/generic.jpg"},
 				{name:"Name", role:"Role", team:"public relations", img:"/app/resources/images/generic.jpg"},
 				{name:"Name", role:"Role", team:"web", img:"/app/resources/images/generic.jpg"} ];
+				
+const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
+					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",
+					"The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.",
+					"The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.",
+					"The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.",
+					"The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.",
+					"The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!",
+					"The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
 export class Descriptions extends React.Component {
 	
@@ -20,29 +29,7 @@ export class Descriptions extends React.Component {
 		return (
 			<div className={css(styles.descriptioncontainer)}>
 				<Content>
-					<p className={css(styles.description)}> The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection. </p>
-					<p className={css(styles.description)}> Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries. </p>
-					<p className={css(styles.description)}> The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products. </p>
-					<p className={css(styles.description)}> The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running. </p>
-					<p className={css(styles.description)}> The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience. </p>
-					<p className={css(styles.description)}> The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them. </p>
-					<p className={css(styles.description)}> The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about! </p>
-					<p className={css(styles.description)}> The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference. </p>
 				</Content>
-			</div>
-		);
-	}
-}
-
-class Body extends React.Component {
-	render() {
-		return (
-			<div>
-				<div className={css(styles.descriptioncontainer)}>
-					<span className={css(styles.teddescriptionbar)} />
-						{this.props.children[0]}
-				</div>
-				{this.props.children[1]}
 			</div>
 		);
 	}
@@ -90,11 +77,11 @@ class Content extends React.Component {
 	}
 	
 	content() {
+		var tempArr = profiles.slice(0);
+		tempArr.splice(0, 0, {txt:descriptions[this.state.index], team:teams[this.state.index]});
+		console.log(tempArr);
 		return (
-			<Body teams = {teams[this.state.index]}>
-				{this.props.children[this.state.index]}
-				<Profiles profiles={profiles} team={teams[this.state.index]} />
-			</Body>
+				<Profiles profiles={tempArr} team={teams[this.state.index]} />
 		);
 	}
 	
@@ -117,29 +104,25 @@ class Content extends React.Component {
 }
 
 const styles = StyleSheet.create({
-	descriptioncontainer: {
-		marginBottom:'70px',
-		position:'relative',
-	},
 	tab: {
 		width:'10%',
-		fontSize:'15px',
+		fontSize:'1.3vw',
 		color:'gray',
 		fontWeight: 'bold',
         fontFamily: 'Avenir',
         textTransform: 'uppercase',
 		cursor: 'pointer',
-		
 	},
 	tabcontainer: {
 		display:'inline-block',
 		marginRight:'15px',
 		marginTop:'15px',
+		marginBottom:'4vw',
 	},
 	selectedtab: {
 		width:'10%',
 		color:'#E62B25',
-		fontSize:'15px',
+		fontSize:'1.3vw',
 		fontWeight: 'bold',
         fontFamily: 'Avenir',
         textTransform: 'uppercase',
@@ -148,29 +131,13 @@ const styles = StyleSheet.create({
 	selectedbar: {
 		background: '#E62B25',
 		position:'absolute',
-        height: '3px',
+        height: '0.4vw',
         width: '100%',
         marginLeft: '0px',
         marginBottom: '10px',
-		marginTop:'20px',
+		marginTop:'1.8vw',
 	},
 	selectedtabcontainer: {
 		position:'relative',
 	},
-	description: {
-		fontWeight: 'normal',
-        fontFamily: 'Avenir',
-		fontSize:'15px',
-		marginLeft:'50px',
-		marginTop:'28px',
-	},
-	teddescriptionbar: {
-        background: '#E62B25',
-		position:'absolute',
-        height: '100%',
-        width: '10px',
-        marginLeft: '0px',
-        marginBottom: '0px',
-		marginTop:'0px',
-    },
 });

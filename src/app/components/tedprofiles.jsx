@@ -40,6 +40,7 @@ export class Profiles extends React.Component {
 									img={profile.img} 
 									title={profile.name} 
 									role={profile.role}
+									txt={profile.txt}
 								/>
 							</td>
 						))}
@@ -62,6 +63,7 @@ const styles = StyleSheet.create({
 	},
 	tr: {
 		padding: '1%',
+		height:'1px',
 	},
 	td: {
 		padding: '1%',
