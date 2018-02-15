@@ -14,18 +14,17 @@ export class LandingVideo extends React.Component {
         if(show) { componentClasses.push(styles.show); }
 
         return (
-            <div className={css(componentClasses)}>
-                    <div className={css(styles.videoContent)}>
-                        <div className={css(styles.videoOverlay)}></div>
-                        <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop>
-                            <source src="./app/resources/videos/seattle.webm" type="video/webm" />
-                            <source src="./app/resources/videos/seattle.mp4" type="video/mp4" />
-                        </video>
-                        <div className={css(styles.textCopy)} >
-                            <h1>TEDx University of Washington</h1>
-                            <p>Moonshot</p>
-                        </div>
+            <div id="houdini-wrapper" className={css(componentClasses)}>
+                <div className={css(styles.videoContent)}>
+                    <div className={css(styles.videoOverlay)}></div>
+                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop>
+                        <source src="./app/resources/videos/seattle.webm" type="video/webm" />
+                        <source src="./app/resources/videos/seattle.mp4" type="video/mp4" />
+                    </video>
+                    <div className={css(styles.textCopy)} >
+                        <center><i onClick={this.props.close} className="fa fa-angle-down fa-2x" aria-hidden="true"></i></center>
                     </div>
+                </div>
             </div>
         );    
     }
@@ -82,8 +81,8 @@ const styles = StyleSheet.create({
 
     textCopy: {
         position: 'absolute',
-        top: '5%',
-        left: '5%',
+        top: '75%',
+        width: '100%',
         zIndex: '2',
         color: 'white'
     }

@@ -40,17 +40,17 @@ export class SliderSection extends Section {
                 
                 <div id="tab0" className={css(styles.infotabcontent)}>
                     <p className={css(styles.infocontenttext)}>TED is a nonprofit organization devoted to Ideas Worth Spreading. Started as a four-day conference in California 30 years ago, TED has grown to support its mission with multiple initiatives. The two annual TED Conferences invite the world's leading thinkers and doers to speak for 18 minutes or less. Many of these talks are then made available, free, at TED.com. TED speakers have included Bill Gates, Jane Goodall, Elizabeth Gilbert, Sir Richard Branson, Nandan Nilekani, Philippe Starck, Ngozi Okonjo-Iweala, Sal Khan and Daniel Kahneman.<br/><br/> The annual TED Conference takes place each spring in Vancouver, British Columbia. TED's media initiatives include TED.com, where new TED Talks are posted daily; the Open Translation Project, which provides subtitles and interactive transcripts as well as translations from volunteers worldwide; the educational initiative TED-Ed. TED has established the annual TED Prize, where exceptional individuals with a wish to change the world get help translating their wishes into action; TEDx, which supports individuals or groups in hosting local, self- organized TED-style events around the world, and the TED Fellows program, helping world-changing innovators from around the globe to amplify the impact of their remarkable projects and activities.<br/><br/> Follow TED on Twitter at http://twitter.com/TEDTalks, or on Facebook at http://www.facebook.com/TED.</p>
-                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link1', 'tab1')}><i className="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link1', 'tab1')}><i className="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
                     <div className={css(styles.infocontentclear)}></div>
                 </div>
                 <div id="tab1" className={css(styles.infotabcontent)}>
                     <p className={css(styles.infocontenttext)}>In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized. (Subject to certain rules and regulations.)</p> 
-                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link2', 'tab2')}><i className="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link2', 'tab2')}><i className="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
                     <div className={css(styles.infocontentclear)}></div>
                 </div>
                 <div id="tab2" className={css(styles.infotabcontent)}>
                     <p className={css(styles.infocontenttext)}>TEDxUofW is established to bring inspirational and informative TED style talks to the University of Washington. Since 2012, our organization has sought to give amazing speakers a receptive audience to share their passion. Our all student-run organization has put on a sold-out event for four years in a row, gathering a collection of great creative thinkers, scientific minds, community leaders, and much more.</p>
-                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link0', 'tab0')}><i className="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span className={css(styles.infocontentbutton)} onClick={() => this.open('link0', 'tab0')}><i className="fa fa-angle-right fa-2x" aria-hidden="true"></i></span>
                     <div className={css(styles.infocontentclear)}></div>
                 </div>
             </div>
@@ -68,10 +68,11 @@ const styles = StyleSheet.create({
         paddingTop: '50px',
         paddingLeft: '15%',
         paddingRight: '15%',
-        paddingBottom: '20px'
+        paddingBottom: '20px',
+        zIndex: '1'
     },
     tedsectiontitle: {
-        fontSize: '65px',
+        fontSize: '6vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase'

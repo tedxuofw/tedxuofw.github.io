@@ -5,7 +5,6 @@ import {StyleSheet, css} from 'aphrodite';
 
 export class Modal extends React.Component {
     close(e) {
-        e.preventDefault();
         if(this.props.onClose) {
             this.props.onClose();
         }
@@ -22,6 +21,7 @@ export class Modal extends React.Component {
                     <div className={css(styles.top)}>
                         <div className={css(styles.imagecontainer)}>
                             <img className={css(styles.image)} src={this.props.modalImage}/>
+                            <div className={css(styles.infoname)}>{this.props.modalText}</div>
                         </div>
                         <div className={css(styles.info)}>
                             <span className={css(styles.close)} onClick={() => this.close()}>
@@ -46,10 +46,10 @@ export class Modal extends React.Component {
 const styles = StyleSheet.create({
 	modal: {
         position: 'fixed',
-        top: '10%',
-        bottom: '10%',
-        left: '15%',
-        right: '15%',
+        top: '5%',
+        bottom: '5%',
+        left: '25%',
+        right: '25%',
         zIndex: '9999',
         background: '#fff'
 	},
@@ -70,22 +70,22 @@ const styles = StyleSheet.create({
     bottom: {
         height: '50%',
         overflowY: 'scroll',
-        paddingTop: '5px',
-        paddingLeft: '10px',
-        paddingRight: '10px',
-        paddingBottom: '5px',
+        paddingTop: '25px',
+        paddingLeft: '25px',
+        paddingRight: '25px',
+        paddingBottom: '25px',
         
         "::-webkit-scrollbar": {
-            width: '12px',
+            width: '8px',
             backgroundColor: '#F5F5F5',
         },
         "::-webkit-scrollbar-track": {
             //WebkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.3)',
-            //borderRadius: '6px',
+            borderRadius: '4px',
             backgroundColor: '#F5F5F5',
         },
         "::-webkit-scrollbar-thumb": {
-            //borderRadius: '6px',
+            borderRadius: '4px',
             //WebkitBoxShadow: 'inset 0 0 6px rgba(0,0,0,0.3)',
             backgroundColor: '#CCC',
         }
@@ -100,14 +100,19 @@ const styles = StyleSheet.create({
         float: 'left'
     },
     image: {
-        position: 'absolute',
+        position: 'relative',
+        top: '0',
+        left: '0',
         display: 'block',
-        minWidth: '100%',
-        minHeight: '100%'
+        float: 'left',
+        height: '100%'
     }, 
     info: {
         width: '50%',
         float: 'right'
+    },
+    infoname: {
+        
     },
     close: {
         position: 'absolute',

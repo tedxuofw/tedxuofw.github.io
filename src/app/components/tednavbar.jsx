@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
         lineHeight: '90px',
         paddingTop: '20px',
         paddingBottom: '20px',
-        //zIndex: '9999',
+        zIndex: '10',
         borderRadius: '0',
         MozBorderRadius: '0'
     },
