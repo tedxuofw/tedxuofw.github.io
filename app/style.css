@@ -35,6 +35,6 @@ ul.nav {
 }
 
 /* Don't display video on mobile */
-@media screen and (max-width: 750px) { 
+@media screen and (max-width: 991px) { 
     #houdini-wrapper { display: none; }
 }
