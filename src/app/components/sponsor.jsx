@@ -26,7 +26,7 @@ export class Sponsor extends React.Component {
 
 const styles = StyleSheet.create({
     tedsponsor: {
-        margin: '60px 20px 30px 20px',
+        margin: '6vh 2vw 3vh 2vw',
         overflow: 'auto'
     },
 
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
 
     tedsponsorimage: {
         display: 'block',
-        maxWidth: '160px'
+        maxWidth: '16vw'
     },
 
     tedsponsorcontent: {
-        marginLeft: '215px'
+        marginLeft: '21.5vw'
     },
     
     tedsponsortitle: {
@@ -50,15 +50,15 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase'
     },
     tedsponsorsubtitle: {
-        marginBottom: '15px',
+        marginBottom: '1.5vh',
         fontSize: '22px'
     },
     tedsponsorbar: {
         background: '#E62B25',
-        height: '10px',
-        width: '82px',
-        marginLeft: '215px',
-        marginBottom: '30px'
+        height: '1vh',
+        width: '8.2vw',
+        marginLeft: '21.5vw',
+        marginBottom: '3vh'
     },    
     tedsponsordescr: {}
 });

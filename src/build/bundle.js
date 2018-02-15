@@ -33386,9 +33386,6 @@ var Home = exports.Home = function (_React$Component) {
                 this.setState({ showVideo: false });
                 video.muted = true;
                 video.display = 'none';
-            } else {
-                video.load();
-                video.play();
             }
         }
     }, {
@@ -33416,7 +33413,7 @@ var Home = exports.Home = function (_React$Component) {
                         null,
                         _react2.default.createElement(
                             'div',
-                            { style: { fontSize: '32px', width: '475px' } },
+                            { style: { fontSize: '32px', maxWidth: '475px' } },
                             _react2.default.createElement(
                                 'b',
                                 null,
@@ -33429,7 +33426,7 @@ var Home = exports.Home = function (_React$Component) {
                                 ', we are building a community inspired to shape the future.'
                             )
                         ),
-                        _react2.default.createElement('div', { style: { background: '#E62B25', height: '10px', width: '91px', marginTop: '35px', marginBottom: '35px' } }),
+                        _react2.default.createElement('div', { style: { background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw' } }),
                         _react2.default.createElement(
                             'div',
                             { style: { fontSize: '24px' } },
@@ -46465,7 +46462,7 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                     _react2.default.createElement('div', { className: (0, _aphrodite.css)(styles.videoOverlay) }),
                     _react2.default.createElement(
                         'video',
-                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, loop: true },
+                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, loop: true, muted: true },
                         _react2.default.createElement('source', { src: './app/resources/videos/seattle.webm', type: 'video/webm' }),
                         _react2.default.createElement('source', { src: './app/resources/videos/seattle.mp4', type: 'video/mp4' })
                     ),
@@ -47311,10 +47308,10 @@ var styles = _noImportant.StyleSheet.create({
         background: 'white',
         position: 'relative',
 
-        paddingTop: '50px',
+        paddingTop: '5vh',
         paddingLeft: '15%',
         paddingRight: '15%',
-        paddingBottom: '20px',
+        paddingBottom: '2vh',
         zIndex: '1'
     },
     tedsectiontitle: {
@@ -47325,7 +47322,7 @@ var styles = _noImportant.StyleSheet.create({
     },
     infocontenttext: {
         display: 'table-cell',
-        paddingRight: '90px'
+        paddingRight: '9vw'
     },
     infotab: {
         color: '#C5C5C5',
@@ -47340,7 +47337,7 @@ var styles = _noImportant.StyleSheet.create({
         display: 'table-cell',
         background: '#E62B25',
         color: 'white',
-        width: '40px',
+        width: '4vw',
         textAlign: 'center',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
@@ -48077,7 +48074,7 @@ var Sponsor = exports.Sponsor = function (_React$Component) {
 
 var styles = _aphrodite.StyleSheet.create({
     tedsponsor: {
-        margin: '60px 20px 30px 20px',
+        margin: '6vh 2vw 3vh 2vw',
         overflow: 'auto'
     },
 
@@ -48087,11 +48084,11 @@ var styles = _aphrodite.StyleSheet.create({
 
     tedsponsorimage: {
         display: 'block',
-        maxWidth: '160px'
+        maxWidth: '16vw'
     },
 
     tedsponsorcontent: {
-        marginLeft: '215px'
+        marginLeft: '21.5vw'
     },
 
     tedsponsortitle: {
@@ -48101,15 +48098,15 @@ var styles = _aphrodite.StyleSheet.create({
         textTransform: 'uppercase'
     },
     tedsponsorsubtitle: {
-        marginBottom: '15px',
+        marginBottom: '1.5vh',
         fontSize: '22px'
     },
     tedsponsorbar: {
         background: '#E62B25',
-        height: '10px',
-        width: '82px',
-        marginLeft: '215px',
-        marginBottom: '30px'
+        height: '1vh',
+        width: '8.2vw',
+        marginLeft: '21.5vw',
+        marginBottom: '3vh'
     },
     tedsponsordescr: {}
 });

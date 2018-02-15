@@ -65,10 +65,10 @@ const styles = StyleSheet.create({
         background: 'white',
         position: 'relative',
 
-        paddingTop: '50px',
+        paddingTop: '5vh',
         paddingLeft: '15%',
         paddingRight: '15%',
-        paddingBottom: '20px',
+        paddingBottom: '2vh',
         zIndex: '1'
     },
     tedsectiontitle: {
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     },
     infocontenttext: {
         display: 'table-cell',
-        paddingRight: '90px'
+        paddingRight: '9vw'
     },
     infotab: {
         color: '#C5C5C5',
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
         display: 'table-cell',
         background: '#E62B25',
         color: 'white',
-        width: '40px', 
+        width: '4vw', 
         textAlign: 'center',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
