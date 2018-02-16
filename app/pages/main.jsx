@@ -43,9 +43,8 @@ export class Home extends React.Component {
     }
     
     closeVideo() {
-        console.log("Close!");
-        $('houdini').animate({
-            scrollTop: $("#topSection").offset().top
+        $('html, body').animate({
+            scrollTop: $("#topSection").offset().top - 90
         }, 1200);
     }
     

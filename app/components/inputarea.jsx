@@ -45,33 +45,31 @@ export class InputArea extends React.Component {
 
 const styles = StyleSheet.create({
     emailcontainer: {
-		width:'42vw',
-		height:'5vw',
-		marginLeft:'28vw',
-		marginRight:'30vw',
-		marginBottom:'10vh',
-		marginTop:'2vh',
+		height:'5vh',
+        textAlign: 'center'
 	},
-	textbox: {
-		
-	},
+	textbox: {},
 	emailtext: {
 		display:'inline-block',
 		border:'none',
-		font:'AvenirBlack',
 		fontSize:'1.7vw',
-		width:'75%',
-		height:'5vw',
+		height:'5vh',
+        marginLeft: '10px',
+        outline: 'none',
+        WebkitAppearance: 'none',
+        WebkitBoxShadow: 'none',
+        MozBoxShadow: 'none',
+        boxShadow: 'none'
 	},
 	submitbutton: {
+        userSelect: 'none',
+        border: 'none',
+        borderRadius: '0px',
 		display:'inline-block',
-		width:'25%',
-		height:'5vw',
-        lineHeight: '5vw',
         textAlign: 'center',
 		color:'#FFFFFF',
 		backgroundColor:'#E62B25',
-		fontSize: '2vw',
+		fontSize: '1.5vw',
         fontFamily: 'AvenirBlack',
         transition: 'opacity 0.2s ease-out',
 		textTransform:'uppercase',

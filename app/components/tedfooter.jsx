@@ -14,16 +14,16 @@ export class TEDFooter extends React.Component {
                 <img className={css(styles.tedfooterlogo)} src="/app/resources/images/logo-red.png" />
                 <h4 className={css(styles.tedfooterh4)}><b>Envision the Future</b></h4>
                 <div className={css(styles.tedfootergroup)}>
-                    <a href="https://www.facebook.com/TEDxUofW/">
+                    <a target="_blank" href="https://www.facebook.com/TEDxUofW/">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-facebook.png" />
                     </a>
-                    <a href="https://www.instagram.com/tedxuofw/">
+                    <a target="_blank" href="https://twitter.com/tedxuofw?lang=en">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
                     </a>
-                    <a href="https://twitter.com/tedxuofw?lang=en">
+                    <a target="_blank" href="https://www.instagram.com/tedxuofw/">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-instagram.png" />
                     </a>
-                    <a href="https://www.youtube.com/user/TEDxUofWashington">
+                    <a target="_blank" href="https://www.youtube.com/user/TEDxUofWashington">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-youtube.png" />
                     </a>
                 </div>

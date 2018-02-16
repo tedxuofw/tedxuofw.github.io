@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {StyleSheet, css} from 'aphrodite';
+import {StyleSheet, css} from 'aphrodite/no-important';
 
 import {Link} from 'react-router-dom';
 
@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
 		textAlign:'center',
 	},
 	linkButton : {
+        border: 'none',
+        userSelect: 'none',
+        cursor: 'pointer',
 		display:'inline-block',
 		minWidth:'10vw',
 		height:'5vw',

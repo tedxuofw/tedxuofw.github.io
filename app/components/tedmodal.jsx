@@ -30,9 +30,7 @@ export class Modal extends React.Component {
                         </div>
                     </div>
                     <div className={css(styles.bottom)}>
-                        {this.props.modalText}
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                        
+                        {this.props.modalText}                    
                     </div>
                 </div>
                 <div className={css(styles.backdrop)} onClick={e => this.close(e)}/>
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
         bottom: '5%',
         left: '25%',
         right: '25%',
-        zIndex: '9999',
+        zIndex: '9099',
         background: '#fff'
 	},
     backdrop: {
@@ -59,7 +57,7 @@ const styles = StyleSheet.create({
         height: '100%',
         top: '0px',
         left: '0px',
-        zIndex: '9998',
+        zIndex: '9098',
         background: 'rgba(0, 0, 0, 0.3)'
     },
     top: {
@@ -91,13 +89,13 @@ const styles = StyleSheet.create({
         }
     },
     imagecontainer: {
-        width: '50%',
+        maxWidth: '100%',
         height: '100%',
         position: 'relative',
         display: 'inline-block',
         overflow: 'hidden',
         margin: '0',
-        float: 'left'
+        float: 'left',
     },
     image: {
         position: 'relative',
@@ -105,14 +103,16 @@ const styles = StyleSheet.create({
         left: '0',
         display: 'block',
         float: 'left',
-        height: '100%'
+        height: '100%',
+        zIndex: '9998'
     }, 
     info: {
         width: '50%',
         float: 'right'
     },
     infoname: {
-        
+        float: 'right',
+        zIndex: '9999'
     },
     close: {
         position: 'absolute',
