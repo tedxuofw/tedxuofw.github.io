@@ -2223,22 +2223,22 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.tedfootergroup) },
                     _react2.default.createElement(
                         'a',
-                        { href: 'https://www.facebook.com/TEDxUofW/' },
+                        { target: '_blank', href: 'https://www.facebook.com/TEDxUofW/' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-facebook.png' })
                     ),
                     _react2.default.createElement(
                         'a',
-                        { href: 'https://www.instagram.com/tedxuofw/' },
+                        { target: '_blank', href: 'https://twitter.com/tedxuofw?lang=en' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-twitter.png' })
                     ),
                     _react2.default.createElement(
                         'a',
-                        { href: 'https://twitter.com/tedxuofw?lang=en' },
+                        { target: '_blank', href: 'https://www.instagram.com/tedxuofw/' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-instagram.png' })
                     ),
                     _react2.default.createElement(
                         'a',
-                        { href: 'https://www.youtube.com/user/TEDxUofWashington' },
+                        { target: '_blank', href: 'https://www.youtube.com/user/TEDxUofWashington' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-youtube.png' })
                     )
                 ),
@@ -47625,7 +47625,7 @@ var styles = _aphrodite.StyleSheet.create({
 		textAlign: 'center',
 		color: '#FFFFFF',
 		backgroundColor: '#E62B25',
-		fontSize: '2vw',
+		fontSize: '1.5vw',
 		fontFamily: 'AvenirBlack',
 		transition: 'opacity 0.2s ease-out',
 		textTransform: 'uppercase',
@@ -49009,11 +49009,22 @@ var Contact = exports.Contact = function (_React$Component) {
             };
 
             if (parameters.from_name || parameters.reply_to || parameters.subject || parameters.message) {
+                $("#ted-fieldset").prop("disabled", true);
                 emailjs.send("default_service", "tedxuofw_default_template", parameters).then(function (response) {
                     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                    $("#from_name").val("");
+                    $("#reply_to").val("");
+                    $("#subject").val("");
+                    $("#message").val("");
+                    $("#ted-fieldset").prop("disabled", false);
+                    window.Materialize.toast('Email Sent!', 4000, 'green');
                 }, function (err) {
                     console.log("FAILED. error=", err);
+                    $("#ted-fieldset").prop("disabled", false, 'red');
+                    window.Materialize.toast('Uh oh! Try again?', 4000);
                 });
+            } else {
+                window.Materialize.toast('Please fill out some fields', 4000);
             }
         }
     }, {
@@ -49054,17 +49065,21 @@ var Contact = exports.Contact = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactMaterialize.Row,
                                 { className: (0, _noImportant.css)(styles.row) },
-                                _react2.default.createElement(_reactMaterialize.Input, { id: 'from_name', s: 6, label: 'Name' }),
-                                _react2.default.createElement(_reactMaterialize.Input, { id: 'reply_to', s: 6, type: 'tedmail', label: 'Email' }),
-                                _react2.default.createElement(_reactMaterialize.Input, { id: 'subject', s: 12, label: 'Subject' }),
-                                _react2.default.createElement(_reactMaterialize.Input, { id: 'message', s: 12, type: 'textarea', label: 'Message' }),
                                 _react2.default.createElement(
-                                    'center',
-                                    null,
+                                    'fieldset',
+                                    { id: 'ted-fieldset' },
+                                    _react2.default.createElement(_reactMaterialize.Input, { id: 'from_name', s: 6, label: 'Name' }),
+                                    _react2.default.createElement(_reactMaterialize.Input, { id: 'reply_to', s: 6, type: 'tedmail', label: 'Email' }),
+                                    _react2.default.createElement(_reactMaterialize.Input, { id: 'subject', s: 12, label: 'Subject' }),
+                                    _react2.default.createElement(_reactMaterialize.Input, { id: 'message', s: 12, type: 'textarea', label: 'Message' }),
                                     _react2.default.createElement(
-                                        'div',
-                                        { onClick: this.sendEmail, className: (0, _noImportant.css)(styles.button) },
-                                        'Send'
+                                        'center',
+                                        null,
+                                        _react2.default.createElement(
+                                            'div',
+                                            { onClick: this.sendEmail, className: (0, _noImportant.css)(styles.button) },
+                                            'Send'
+                                        )
                                     )
                                 )
                             )
