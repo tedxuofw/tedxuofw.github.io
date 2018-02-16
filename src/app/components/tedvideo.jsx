@@ -21,8 +21,8 @@ export class LandingVideo extends React.Component {
                         <source src="./app/resources/videos/seattle.webm" type="video/webm" />
                         <source src="./app/resources/videos/seattle.mp4" type="video/mp4" />
                     </video>
-                    <div className={css(styles.textCopy)} >
-                        <center><i onClick={this.props.close} className="fa fa-angle-down fa-2x" aria-hidden="true"></i></center>
+                    <div className={css(styles.textCopy)} onClick={() => this.props.close()} >
+                        <center><i className="fa fa-angle-down fa-2x" aria-hidden="true"></i></center>
                     </div>
                 </div>
             </div>
