@@ -2146,11 +2146,11 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  -webkit-text-size-adjust: 100%;
+  /* -webkit-text-size-adjust: 100%; */
   /* 2 */
 }
 
@@ -2539,22 +2539,21 @@ html {
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
+  it; */
 }
 
 ul:not(.browser-default) {
-  padding-left: 0;
-  list-style-type: none;
+  /* padding-left: 0; */
+  /* list-style-type: none; */
 }
 
 ul:not(.browser-default) li {
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 
 a {
-  color: #039be5;
   text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .valign-wrapper {
@@ -3318,9 +3317,9 @@ nav ul a span.badge {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1280px;
-  width: 90%;
+  /* margin: 0 auto; */
+  /* max-width: 1280px; */
+  /* width: 90%; */
 }
 
 @media only screen and (min-width: 601px) {
@@ -4014,15 +4013,15 @@ a {
 }
 
 html {
-  line-height: 1.5;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.87);
+  /* line-height: 1.5; */
+  /* font-family: "Roboto", sans-serif; */
+  /* font-weight: normal; */
+  /* color: rgba(0, 0, 0, 0.87); */
 }
 
 @media only screen and (min-width: 0) {
   html {
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 }
 

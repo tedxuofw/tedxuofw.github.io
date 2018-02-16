@@ -24,12 +24,24 @@ export class Contact extends React.Component {
         };
     
         if(parameters.from_name || parameters.reply_to || parameters.subject || parameters.message) {
+            $("#ted-fieldset").prop("disabled", true);
             emailjs.send("default_service","tedxuofw_default_template", parameters)
                 .then(function(response) {
                     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                    $("#from_name").val("");
+                    $("#reply_to").val("");
+                    $("#subject").val("");
+                    $("#message").val("");
+                    $("#ted-fieldset").prop("disabled", false);
+                    window.Materialize.toast('Email Sent!', 4000, 'green')
+
                 }, function(err) {
                     console.log("FAILED. error=", err);
+                    $("#ted-fieldset").prop("disabled", false, 'red');
+                    window.Materialize.toast('Uh oh! Try again?', 4000)
                 });
+        } else {
+            window.Materialize.toast('Please fill out some fields', 4000)
         }
     }
     
@@ -48,13 +60,15 @@ export class Contact extends React.Component {
                         </div>
                         <div className={css(styles.bottom)}>
                             <Row className={css(styles.row)}>
-                                <Input id="from_name" s={6} label="Name" />
-                                <Input id="reply_to" s={6} type="tedmail" label="Email" />
-                                <Input id="subject" s={12} label="Subject" />
-                                <Input id="message" s={12} type="textarea" label="Message"/>
-                                <center>
-                                    <div onClick={this.sendEmail} className={css(styles.button)}>Send</div>
-                                </center>
+                                <fieldset id="ted-fieldset">
+                                    <Input id="from_name" s={6} label="Name" />
+                                    <Input id="reply_to" s={6} type="tedmail" label="Email" />
+                                    <Input id="subject" s={12} label="Subject" />
+                                    <Input id="message" s={12} type="textarea" label="Message"/>
+                                    <center>
+                                        <div onClick={this.sendEmail} className={css(styles.button)}>Send</div>
+                                    </center>
+                                </fieldset>
                             </Row>
                         </div>
                     </div>
