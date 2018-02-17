@@ -4139,7 +4139,7 @@ var styles = _noImportant.StyleSheet.create({
 		marginRight: '0px',
 		marginLeft: '0px',
 		marginBottom: '10vh',
-		marginTop: '2vh',
+		marginTop: '3vw',
 		lineHeight: '5vw',
 		textAlign: 'center',
 		color: '#FFFFFF',
@@ -47451,8 +47451,8 @@ var styles = _aphrodite.StyleSheet.create({
 		minHeight: '75vh',
 		background: 'white',
 		margin: '0px',
-		paddingTop: '50px',
-		paddingBottom: '50px'
+		paddingTop: '0px',
+		paddingBottom: '0px'
 	}
 });
 
@@ -47496,17 +47496,19 @@ var LinkSection = function (_React$Component2) {
 
 var linkStyles = _aphrodite.StyleSheet.create({
 	section: {
-		minHeight: '50vh',
+		minHeight: '5vh',
+		height: '35vw',
 		margin: '0px',
-		paddingTop: '50px',
-		paddingBottom: '50px'
+		paddingTop: '11.5vw',
+		paddingBottom: '15vw'
 	},
 	title: {
 		fontSize: '3vw',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
-		marginTop: '8vw',
-		textAlign: 'center'
+		marginTop: '0vw',
+		textAlign: 'center',
+		minHeight: '0vh'
 	},
 	textcontainer: {
 		marginLeft: '30vw',
@@ -47862,14 +47864,16 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
-		marginTop: '4vh',
+		marginTop: '0vw',
 		marginBottom: '0vh'
 	},
 	description: {
-		fontSize: '1.5vw',
+		fontSize: '1.7vw',
 		color: 'white',
 		fontWeight: 'normal',
-		fontFamily: 'Avenir'
+		fontFamily: 'Avenir',
+		marginTop: '1vw',
+		marginBottom: '0vh'
 	},
 	descriptioncontainer: {
 		position: 'absolute',

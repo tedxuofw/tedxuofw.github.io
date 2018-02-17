@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 		marginRight:'0px',
 		marginLeft:'0px',
 		marginBottom:'10vh',
-		marginTop:'2vh',
+		marginTop:'3vw',
         lineHeight: '5vw',
         textAlign: 'center',
 		color:'#FFFFFF',
