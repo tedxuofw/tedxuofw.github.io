@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
         minHeight: '75vh',
         background: 'white',
 		margin:'0px',
-        paddingTop: '50px',
-        paddingBottom: '50px'
+        paddingTop: '0px',
+        paddingBottom: '0px'
     },
 });
 
@@ -59,17 +59,19 @@ class LinkSection extends React.Component {
 
 const linkStyles = StyleSheet.create({
 	section: {
-        minHeight: '50vh',
+        minHeight: '5vh',
+		height:'35vw',
 		margin:'0px',
-        paddingTop: '50px',
-        paddingBottom: '50px'
+        paddingTop: '11.5vw',
+        paddingBottom: '15vw'
     },
     title: {
         fontSize: '3vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
-		marginTop:'8vw',
+		marginTop:'0vw',
 		textAlign: 'center',
+		minHeight: '0vh',
     },
 	textcontainer: {
 		marginLeft:'30vw',

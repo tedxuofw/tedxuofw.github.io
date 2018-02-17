@@ -63,14 +63,16 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
-		marginTop:'4vh',
+		marginTop:'0vw',
 		marginBottom:'0vh',
 	},
     description: {
-        fontSize: '1.5vw',
+        fontSize: '1.7vw',
 		color:'white',
 		fontWeight: 'normal',
         fontFamily: 'Avenir',
+		marginTop:'1vw',
+		marginBottom:'0vh',
     },
 	descriptioncontainer: {
 		position:'absolute',
