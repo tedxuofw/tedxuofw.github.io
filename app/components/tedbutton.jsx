@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
 		color:'#FFFFFF',
 		backgroundColor:'#E62B25',
-		fontSize: '2vw',
+		fontSize: '14px',
         fontFamily: 'AvenirBlack',
         transition: 'opacity 0.2s ease-out',
 		textTransform:'uppercase',

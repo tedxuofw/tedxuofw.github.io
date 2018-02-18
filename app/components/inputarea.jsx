@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
 	emailtext: {
 		display:'inline-block',
 		border:'none',
+		font:'Avenir',
 		fontSize:'1.7vw',
 		height:'5vh',
         marginLeft: '10px',
@@ -59,7 +60,13 @@ const styles = StyleSheet.create({
         WebkitAppearance: 'none',
         WebkitBoxShadow: 'none',
         MozBoxShadow: 'none',
-        boxShadow: 'none'
+        boxShadow: 'none',
+		"::-webkit-input-placeholder" : {
+			fontStyle:'italic',
+		},
+		"::-moz-placeholder" : {
+			fontStyle:'italic',
+		},
 	},
 	submitbutton: {
         userSelect: 'none',
