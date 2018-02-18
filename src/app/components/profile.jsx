@@ -33,7 +33,7 @@ export class Profile extends React.Component {
 			return (
 				<div className={css(styles.tedprofile)}>
 					<p className={css(styles.title)}> {this.props.title} </p>
-					<p className={css(styles.subtitleone)}> {this.props.role} </p>
+					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
 					<img src={this.props.img} className={css(styles.profilepicture)} />
 				</div>
 			);
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
 		margin:'10% 0px 0px 7%',
+		color:'white',
 	},
     subtitleone: {
 		position: 'absolute',
@@ -82,13 +83,15 @@ const styles = StyleSheet.create({
 		fontWeight: 'normal',
         fontFamily: 'AvenirBlack',
 		margin:'75% 0px 0px 7%',
+		color:'white',
     },
 	subtitletwo: {
 		position: 'absolute',
         fontSize: '1.5vw',
 		fontWeight: 'normal',
-        fontFamily: 'AvenirBlack',
+        fontFamily: 'Avenir',
 		margin:'85% 0px 0px 7%',
+		color:'white',
 	},
 	blank: {
 		opacity:'0',
@@ -105,7 +108,7 @@ const styles = StyleSheet.create({
 		fontWeight: 'normal',
         fontFamily: 'Avenir',
 		height:'85%',
-		fontSize:'1.34vw',
+		fontSize:'14px',
 		marginTop:'10%',
 		marginBottom:'0px',
 	},

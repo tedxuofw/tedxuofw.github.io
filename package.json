@@ -11,6 +11,7 @@
   "author": "TedxUofW Webdev Team",
   "license": "UNLICENSED",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "aphrodite": "^1.2.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

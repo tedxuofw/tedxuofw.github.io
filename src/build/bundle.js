@@ -4144,7 +4144,7 @@ var styles = _noImportant.StyleSheet.create({
 		textAlign: 'center',
 		color: '#FFFFFF',
 		backgroundColor: '#E62B25',
-		fontSize: '2vw',
+		fontSize: '14px',
 		fontFamily: 'AvenirBlack',
 		transition: 'opacity 0.2s ease-out',
 		textTransform: 'uppercase',
@@ -12502,7 +12502,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						'p',
-						{ className: (0, _aphrodite.css)(styles.subtitleone) },
+						{ className: (0, _aphrodite.css)(styles.subtitletwo) },
 						' ',
 						this.props.role,
 						' '
@@ -12569,21 +12569,24 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
-		margin: '10% 0px 0px 7%'
+		margin: '10% 0px 0px 7%',
+		color: 'white'
 	},
 	subtitleone: {
 		position: 'absolute',
 		fontSize: '1.5vw',
 		fontWeight: 'normal',
 		fontFamily: 'AvenirBlack',
-		margin: '75% 0px 0px 7%'
+		margin: '75% 0px 0px 7%',
+		color: 'white'
 	},
 	subtitletwo: {
 		position: 'absolute',
 		fontSize: '1.5vw',
 		fontWeight: 'normal',
-		fontFamily: 'AvenirBlack',
-		margin: '85% 0px 0px 7%'
+		fontFamily: 'Avenir',
+		margin: '85% 0px 0px 7%',
+		color: 'white'
 	},
 	blank: {
 		opacity: '0'
@@ -12600,7 +12603,7 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'normal',
 		fontFamily: 'Avenir',
 		height: '85%',
-		fontSize: '1.34vw',
+		fontSize: '14px',
 		marginTop: '10%',
 		marginBottom: '0px'
 	},
@@ -47610,6 +47613,7 @@ var styles = _aphrodite.StyleSheet.create({
 	emailtext: {
 		display: 'inline-block',
 		border: 'none',
+		font: 'Avenir',
 		fontSize: '1.7vw',
 		height: '5vh',
 		marginLeft: '10px',
@@ -47617,7 +47621,13 @@ var styles = _aphrodite.StyleSheet.create({
 		WebkitAppearance: 'none',
 		WebkitBoxShadow: 'none',
 		MozBoxShadow: 'none',
-		boxShadow: 'none'
+		boxShadow: 'none',
+		"::-webkit-input-placeholder": {
+			fontStyle: 'italic'
+		},
+		"::-moz-placeholder": {
+			fontStyle: 'italic'
+		}
 	},
 	submitbutton: {
 		userSelect: 'none',
@@ -48198,6 +48208,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Descriptions = undefined;
 
+var _selectedtabcontainer;
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
@@ -48213,6 +48225,8 @@ var _aphrodite = __webpack_require__(17);
 var _tedprofiles = __webpack_require__(401);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -48372,12 +48386,17 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'bold',
 		fontFamily: 'Avenir',
 		textTransform: 'uppercase',
-		cursor: 'pointer'
+		marginTop: '0px',
+		cursor: 'pointer',
+		':hover': {
+			color: 'black'
+		}
 	},
 	tabcontainer: {
 		display: 'inline-block',
+		height: '2vw',
 		marginRight: '15px',
-		marginTop: '15px',
+		marginTop: '0px',
 		marginBottom: '4vw'
 	},
 	selectedtab: {
@@ -48385,8 +48404,10 @@ var styles = _aphrodite.StyleSheet.create({
 		color: '#E62B25',
 		fontSize: '1.3vw',
 		fontWeight: 'bold',
-		fontFamily: 'Avenir',
+		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
+		marginTop: '0px',
+		lineHeight: '0px',
 		cursor: 'pointer'
 	},
 	selectedbar: {
@@ -48395,12 +48416,14 @@ var styles = _aphrodite.StyleSheet.create({
 		height: '0.4vw',
 		width: '100%',
 		marginLeft: '0px',
-		marginBottom: '10px',
-		marginTop: '1.8vw'
+		marginBottom: '0px',
+		marginTop: '19.2px'
 	},
-	selectedtabcontainer: {
-		position: 'relative'
-	}
+	selectedtabcontainer: (_selectedtabcontainer = {
+		position: 'relative',
+		height: '2vw',
+		display: 'inline-block'
+	}, _defineProperty(_selectedtabcontainer, 'height', '2vw'), _defineProperty(_selectedtabcontainer, 'marginTop', '0px'), _defineProperty(_selectedtabcontainer, 'marginBottom', '4vw'), _selectedtabcontainer)
 });
 
 /***/ }),

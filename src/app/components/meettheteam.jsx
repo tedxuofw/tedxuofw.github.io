@@ -111,12 +111,17 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
         fontFamily: 'Avenir',
         textTransform: 'uppercase',
+		marginTop:'0px',
 		cursor: 'pointer',
+		':hover': {
+			color:'black',
+        }
 	},
 	tabcontainer: {
 		display:'inline-block',
+		height:'2vw',
 		marginRight:'15px',
-		marginTop:'15px',
+		marginTop:'0px',
 		marginBottom:'4vw',
 	},
 	selectedtab: {
@@ -124,8 +129,10 @@ const styles = StyleSheet.create({
 		color:'#E62B25',
 		fontSize:'1.3vw',
 		fontWeight: 'bold',
-        fontFamily: 'Avenir',
+        fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
+		marginTop:'0px',
+		lineHeight:'0px',
 		cursor: 'pointer',
 	},
 	selectedbar: {
@@ -134,10 +141,15 @@ const styles = StyleSheet.create({
         height: '0.4vw',
         width: '100%',
         marginLeft: '0px',
-        marginBottom: '10px',
-		marginTop:'1.8vw',
+        marginBottom: '0px',
+		marginTop:'19.2px',
 	},
 	selectedtabcontainer: {
 		position:'relative',
+		height:'2vw',
+		display:'inline-block',
+		height:'2vw',
+		marginTop:'0px',
+		marginBottom:'4vw',
 	},
 });
