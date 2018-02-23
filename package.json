@@ -12,6 +12,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "animate.css": "^3.6.1",
+    "aos": "^2.2.0",
     "aphrodite": "^1.2.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
