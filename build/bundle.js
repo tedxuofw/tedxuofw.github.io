@@ -34199,6 +34199,8 @@ var Home = exports.Home = function (_React$Component) {
             document.title = "TEDx - University of Washington";
             window.scrollTo(0, 0);
             window.addEventListener('scroll', this.handleScroll);
+
+            AOS.init();
         }
     }, {
         key: 'componentWillUnmount',
@@ -47792,10 +47794,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 	_inherits(FeaturedSpeaker, _React$Component);
 
-	function FeaturedSpeaker() {
+	function FeaturedSpeaker(props) {
 		_classCallCheck(this, FeaturedSpeaker);
 
-		return _possibleConstructorReturn(this, (FeaturedSpeaker.__proto__ || Object.getPrototypeOf(FeaturedSpeaker)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (FeaturedSpeaker.__proto__ || Object.getPrototypeOf(FeaturedSpeaker)).call(this, props));
+
+		var k = "";
+		for (var i = 0; i < 10; i++) {
+			var n = Math.floor(Math.random() * 26);
+			k += String.fromCharCode(97 + n);
+		}
+		_this.state = { key: k }; //Key is set because scrolling anchors are global, so each FeaturedSpeaker needs a unique name.
+		return _this;
 	}
 
 	_createClass(FeaturedSpeaker, [{
@@ -47804,6 +47814,8 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 			var descstyle;
 			var picstyle;
 			var textstyle;
+			var direction1;
+			var direction2;
 			if (this.props.flipped) {
 				descstyle = {
 					marginLeft: '35%'
@@ -47814,6 +47826,8 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 				textstyle = {
 					textAlign: 'right'
 				};
+				direction1 = 'left';
+				direction2 = 'right';
 			} else {
 				descstyle = {
 					marginLeft: '0vw'
@@ -47824,14 +47838,17 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 				textstyle = {
 					textAlign: 'left'
 				};
+				direction1 = 'right';
+				direction2 = 'left';
 			}
 
 			return _react2.default.createElement(
 				'div',
-				{ className: (0, _aphrodite.css)(styles.sectioncontainer) },
+				{ className: (0, _aphrodite.css)(styles.sectioncontainer), id: "trigger-appear-" + this.state.key },
 				_react2.default.createElement(
 					'div',
-					{ style: descstyle, className: (0, _aphrodite.css)(styles.descriptioncontainer) },
+					{ style: descstyle, className: (0, _aphrodite.css)(styles.descriptioncontainer),
+						'data-aos': "fade-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' },
 					_react2.default.createElement(
 						'p',
 						{ style: textstyle, className: (0, _aphrodite.css)(styles.title) },
@@ -47847,8 +47864,10 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 						' '
 					)
 				),
-				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.boderline) }),
-				_react2.default.createElement('img', { src: this.props.img, style: picstyle, className: (0, _aphrodite.css)(styles.picture) })
+				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.boderline),
+					'data-aos': "flip-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' }),
+				_react2.default.createElement('img', { src: this.props.img, style: picstyle, className: (0, _aphrodite.css)(styles.picture),
+					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' })
 			);
 		}
 	}]);

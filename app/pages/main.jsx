@@ -24,6 +24,8 @@ export class Home extends React.Component {
         document.title = "TEDx - University of Washington";
         window.scrollTo(0, 0);
         window.addEventListener('scroll', this.handleScroll);
+		
+		AOS.init();
     }
 
     componentWillUnmount() {
