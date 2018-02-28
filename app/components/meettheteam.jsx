@@ -79,7 +79,6 @@ class Content extends React.Component {
 	content() {
 		var tempArr = profiles.slice(0);
 		tempArr.splice(0, 0, {txt:descriptions[this.state.index], team:teams[this.state.index]});
-		console.log(tempArr);
 		return (
 				<Profiles profiles={tempArr} team={teams[this.state.index]} />
 		);

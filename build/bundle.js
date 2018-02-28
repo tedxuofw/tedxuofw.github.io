@@ -12461,7 +12461,6 @@ var Profile = exports.Profile = function (_React$Component) {
 
 			var company = this.props.company;
 
-			console.log(this.props.txt);
 			if (!(typeof this.props.txt === 'undefined')) {
 				return _react2.default.createElement(
 					'div',
@@ -48354,7 +48353,6 @@ var Content = function (_React$Component3) {
 		value: function content() {
 			var tempArr = profiles.slice(0);
 			tempArr.splice(0, 0, { txt: descriptions[this.state.index], team: teams[this.state.index] });
-			console.log(tempArr);
 			return _react2.default.createElement(_tedprofiles.Profiles, { profiles: tempArr, team: teams[this.state.index] });
 		}
 	}, {
@@ -48482,12 +48480,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Profiles = exports.Profiles = function (_React$Component) {
 	_inherits(Profiles, _React$Component);
 
-	function Profiles() {
-		_classCallCheck(this, Profiles);
-
-		return _possibleConstructorReturn(this, (Profiles.__proto__ || Object.getPrototypeOf(Profiles)).apply(this, arguments));
-	}
-
 	_createClass(Profiles, [{
 		key: 'render',
 		value: function render() {
@@ -48506,16 +48498,21 @@ var Profiles = exports.Profiles = function (_React$Component) {
 
 			var rows = [];
 
-			for (var i = 0; i < profs.length; i += 3) {
+			var tWidth = this.state.width < 768 ? 1 : 3;
+
+			for (var i = 0; i < profs.length; i += tWidth) {
+				//Create the row data
 				var row;
-				if (i + 3 < profs.length) {
-					row = profs.slice(i, i + 3);
+				if (i + tWidth < profs.length) {
+					row = profs.slice(i, i + tWidth);
 				} else {
 					row = profs.slice(i);
-					for (var j = 0; j < 3 - (profs.length - i); j++) {
+
+					for (var j = 0; j < tWidth - (profs.length - i); j++) {
 						row.push({ name: "", role: "", team: "", img: "/app/resources/images/generic.jpg" });
 					}
 				}
+				//Use row data to create row and push to table
 				rows.push(_react2.default.createElement(
 					'tr',
 					{ className: (0, _aphrodite.css)(styles.tr), key: "tr" + i },
@@ -48543,6 +48540,37 @@ var Profiles = exports.Profiles = function (_React$Component) {
 					rows
 				)
 			);
+		}
+
+		//Below here is just handling window size, even after resize
+
+	}]);
+
+	function Profiles(props) {
+		_classCallCheck(this, Profiles);
+
+		var _this = _possibleConstructorReturn(this, (Profiles.__proto__ || Object.getPrototypeOf(Profiles)).call(this, props));
+
+		_this.state = { width: 0, height: 0 };
+		_this.updateWindowDimensions = _this.updateWindowDimensions.bind(_this);
+		return _this;
+	}
+
+	_createClass(Profiles, [{
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			this.updateWindowDimensions();
+			window.addEventListener('resize', this.updateWindowDimensions);
+		}
+	}, {
+		key: 'componentWillUnmount',
+		value: function componentWillUnmount() {
+			window.removeEventListener('resize', this.updateWindowDimensions);
+		}
+	}, {
+		key: 'updateWindowDimensions',
+		value: function updateWindowDimensions() {
+			this.setState({ width: window.innerWidth, height: window.innerHeight });
 		}
 	}]);
 
