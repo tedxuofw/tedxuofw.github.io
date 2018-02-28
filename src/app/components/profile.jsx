@@ -9,7 +9,6 @@ export class Profile extends React.Component {
 	render() {
 		let company = this.props.company;
 		
-		console.log(this.props.txt);
 		if (!(typeof this.props.txt === 'undefined')) {
 			return (
 				<div className={css(styles.descriptioncontainer)}>
