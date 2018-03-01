@@ -5,14 +5,28 @@ import {StyleSheet, css} from 'aphrodite';
 
 import {Profiles} from '../components/tedprofiles.jsx'
 
-const teams = ["", "curators", "design", "finance", "speaker selection", "public relations", "web"];
+const teams = ["", "curators", "design", "finance", "speaker selection", "production", "public relations", "web"];
 
-const profiles=[{name:"Jenny Liang", role:"Web Lead", team:"web", img:"/app/resources/images/generic.jpg"}, 
-				{name:"Name", role:"Role", team:"curators", img:"/app/resources/images/generic.jpg"}, 
-				{name:"Name", role:"Role", team:"finance", img:"/app/resources/images/generic.jpg"},
-				{name:"Name", role:"Role", team:"production", img:"/app/resources/images/generic.jpg"},
-				{name:"Name", role:"Role", team:"public relations", img:"/app/resources/images/generic.jpg"},
-				{name:"Name", role:"Role", team:"web", img:"/app/resources/images/generic.jpg"} ];
+const profiles=[{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curators", 	img:"/app/resources/images/Dummy Data/1.jpg"}, 
+				{name:"Jimmy Three Shoes", 	role:"Dorito Approver", 		team:"curators", 	img:"/app/resources/images/Dummy Data/2.jpg"},
+				{name:"[Redacted]", 		role:"Fashion Judger", 			team:"curators", 	img:"/app/resources/images/Dummy Data/3.jpg"},
+				{name:"Squirtle", 			role:"Doing his best", 			team:"design", 		img:"/app/resources/images/Dummy Data/19.jpg"},
+				{name:"Weirdly tall guy", 	role:"Two midgets in a coat",	team:"design", 		img:"/app/resources/images/Dummy Data/5.jpg"},
+				{name:"Monty Python", 		role:"making good movies", 		team:"design", 		img:"/app/resources/images/Dummy Data/6.jpg"},
+	{name:"Detective Richard D Johnson", 	role:"Existing", 				team:"finance", 	img:"/app/resources/images/Dummy Data/7.jpg"},
+				{name:"Tony Hawk", 			role:"Being too old to skate", 	team:"finance", 	img:"/app/resources/images/Dummy Data/8.jpg"},
+				{name:"Jeff Kaplan", 	role:"Fair and Balanced Gameplay", 	team:"finance", 	img:"/app/resources/images/Dummy Data/9.jpg"},
+				{name:"Namey Namington", 	role:"Classified", 				team:"production", 	img:"/app/resources/images/Dummy Data/10.jpg"},
+				{name:"Smellborp", 			role:"Not sure yet", 			team:"production", 	img:"/app/resources/images/Dummy Data/11.jpg"},
+				{name:"Coolguy98", 			role:"Shoulder to cry on", 		team:"production", 	img:"/app/resources/images/Dummy Data/12.jpg"},
+				{name:"Barack Obama", 		role:"Moral Compass", 			team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
+			{name:"His holiness, bill", 	role:"Emoji Translator", 		team:"public relations", img:"/app/resources/images/Dummy Data/13.jpg"},
+				{name:"Spongebob's uncle", 	role:"Door closer", 			team:"public relations", img:"/app/resources/images/Dummy Data/14.jpg"},
+				{name:"Barack Obama (2)", 	role:"Moral Compass, but again",team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
+				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
+				{name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
+				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},
+				{name:"John Stewart", 		role:"Being Exasperated", 		team:"web", img:"/app/resources/images/Dummy Data/1.jpg"} ];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",

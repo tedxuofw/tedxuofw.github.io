@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
 		color:'white',
 		fontWeight: 'normal',
         fontFamily: 'Avenir',
+		textTransform:'normal',
 		marginTop:'1vw',
 		marginBottom:'0vh',
     },

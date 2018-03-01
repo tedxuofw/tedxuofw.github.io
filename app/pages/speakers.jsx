@@ -69,19 +69,19 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg" 
-							title="Erin Jones" 
-							role="Superintendent"
-							company="Office of Public Instruction"
+							img="/app/resources/images/Dummy Data/18.jpg" 
+							title="Barry Bington" 
+							role="Bouncer"
+							company="The Bureau of Braniacs"
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg" 
-							title="Name" 
-							role="Role" 
-							company="Company"
+							img="/app/resources/images/Dummy Data/5.jpg" 
+							title="Danny D. Daniels" 
+							role="Designer" 
+							company="Deployable Dedicated Designs"
                             openModal={this.props.openModal}
 						/>
 					</td>
@@ -89,28 +89,28 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg" 
-							title="Name" 
-							role="Role" 
-							company="Company"
+							img="/app/resources/images/Dummy Data/17.jpg" 
+							title="Iggy Irena" 
+							role="Irrigator" 
+							company="Illustrations Incorporated"
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg"  
-							title="Name" 
-							role="Role" 
-							company="Company"
+							img="/app/resources/images/Dummy Data/10.jpg"  
+							title="Rodger Rabbit" 
+							role="Realtor" 
+							company="Relativistic Relations llc"
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg" 
-							title="Name" 
-							role="Role" 
-							company="Company"
+							img="/app/resources/images/Dummy Data/14.jpg" 
+							title="Connor Cadewack" 
+							role="Carrot Carver" 
+							company="The Crystal Cutting Company"
                             openModal={this.props.openModal}
 						/>
 					</td>
