@@ -92,11 +92,15 @@ const styles = StyleSheet.create({
 	},
 	td: {
 		padding: '1%',
+		width:'34%',
 		':first-child': {
 			paddingLeft: '0px',
+			width:'33%',
 		},
 		':last-child': {
 			paddingRight: '0px',
+			width:'33%',
 		},
+		
 	},
 });

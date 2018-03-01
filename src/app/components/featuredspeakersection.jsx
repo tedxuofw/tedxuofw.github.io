@@ -16,19 +16,19 @@ export class Speakers extends React.Component {
 				<FeaturedSpeaker 
 					name="Erin Jones"
 					desc="Office of Public Education"
-					img="/app/resources/images/generic.jpg"
+					img="/app/resources/images/erin-jones.jpg"
 					flipped={true}
 				/>
 				<FeaturedSpeaker 
 					name="Jasmine Samy"
 					desc="Council of Islamic American Relations"
-					img="/app/resources/images/generic.jpg"
+					img="/app/resources/images/Dummy Data/5.jpg"
 					flipped={false}
 				/>
 				<FeaturedSpeaker 
 					name="Jeannie Berwick"
 					desc="One Equal Heart Foundation"
-					img="/app/resources/images/generic.jpg"
+					img="/app/resources/images/Dummy Data/10.jpg"
 					flipped={true}
 				/>
 				<TedButton name="View All Speakers" linkTo="/speakers" />
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
 	},
 	container: {
 		position:'relative',
-		textTransform: 'uppercase',
 		width: '100%',
 		height: 'auto',
 		margin:'0px, 0px, 0px, 0px',

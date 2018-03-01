@@ -12569,7 +12569,8 @@ var styles = _aphrodite.StyleSheet.create({
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
 		margin: '10% 0px 0px 7%',
-		color: 'white'
+		color: 'white',
+		textShadow: '2px 2px #000000'
 	},
 	subtitleone: {
 		position: 'absolute',
@@ -12577,7 +12578,8 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'normal',
 		fontFamily: 'AvenirBlack',
 		margin: '75% 0px 0px 7%',
-		color: 'white'
+		color: 'white',
+		textShadow: '2px 2px #000000'
 	},
 	subtitletwo: {
 		position: 'absolute',
@@ -12585,7 +12587,8 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'normal',
 		fontFamily: 'Avenir',
 		margin: '85% 0px 0px 7%',
-		color: 'white'
+		color: 'white',
+		textShadow: '2px 2px #000000'
 	},
 	blank: {
 		opacity: '0'
@@ -47712,19 +47715,19 @@ var Speakers = exports.Speakers = function (_React$Component) {
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Erin Jones',
 					desc: 'Office of Public Education',
-					img: '/app/resources/images/generic.jpg',
+					img: '/app/resources/images/erin-jones.jpg',
 					flipped: true
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jasmine Samy',
 					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/generic.jpg',
+					img: '/app/resources/images/Dummy Data/5.jpg',
 					flipped: false
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jeannie Berwick',
 					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/generic.jpg',
+					img: '/app/resources/images/Dummy Data/10.jpg',
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
@@ -47751,7 +47754,6 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	container: {
 		position: 'relative',
-		textTransform: 'uppercase',
 		width: '100%',
 		height: 'auto',
 		margin: '0px, 0px, 0px, 0px'
@@ -47900,6 +47902,7 @@ var styles = _aphrodite.StyleSheet.create({
 		color: 'white',
 		fontWeight: 'normal',
 		fontFamily: 'Avenir',
+		textTransform: 'normal',
 		marginTop: '1vw',
 		marginBottom: '0vh'
 	},
@@ -48252,9 +48255,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var teams = ["", "curators", "design", "finance", "speaker selection", "public relations", "web"];
+var teams = ["", "curators", "design", "finance", "speaker selection", "production", "public relations", "web"];
 
-var profiles = [{ name: "Jenny Liang", role: "Web Lead", team: "web", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "curators", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "finance", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "production", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "public relations", img: "/app/resources/images/generic.jpg" }, { name: "Name", role: "Role", team: "web", img: "/app/resources/images/generic.jpg" }];
+var profiles = [{ name: "Jimmy Two Shoes", role: "Dorito Tester", team: "curators", img: "/app/resources/images/Dummy Data/1.jpg" }, { name: "Jimmy Three Shoes", role: "Dorito Approver", team: "curators", img: "/app/resources/images/Dummy Data/2.jpg" }, { name: "[Redacted]", role: "Fashion Judger", team: "curators", img: "/app/resources/images/Dummy Data/3.jpg" }, { name: "Squirtle", role: "Doing his best", team: "design", img: "/app/resources/images/Dummy Data/19.jpg" }, { name: "Weirdly tall guy", role: "Two midgets in a coat", team: "design", img: "/app/resources/images/Dummy Data/5.jpg" }, { name: "Monty Python", role: "making good movies", team: "design", img: "/app/resources/images/Dummy Data/6.jpg" }, { name: "Detective Richard D Johnson", role: "Existing", team: "finance", img: "/app/resources/images/Dummy Data/7.jpg" }, { name: "Tony Hawk", role: "Being too old to skate", team: "finance", img: "/app/resources/images/Dummy Data/8.jpg" }, { name: "Jeff Kaplan", role: "Fair and Balanced Gameplay", team: "finance", img: "/app/resources/images/Dummy Data/9.jpg" }, { name: "Namey Namington", role: "Classified", team: "production", img: "/app/resources/images/Dummy Data/10.jpg" }, { name: "Smellborp", role: "Not sure yet", team: "production", img: "/app/resources/images/Dummy Data/11.jpg" }, { name: "Coolguy98", role: "Shoulder to cry on", team: "production", img: "/app/resources/images/Dummy Data/12.jpg" }, { name: "Barack Obama", role: "Moral Compass", team: "public relations", img: "/app/resources/images/Dummy Data/18.jpg" }, { name: "His holiness, bill", role: "Emoji Translator", team: "public relations", img: "/app/resources/images/Dummy Data/13.jpg" }, { name: "Spongebob's uncle", role: "Door closer", team: "public relations", img: "/app/resources/images/Dummy Data/14.jpg" }, { name: "Barack Obama (2)", role: "Moral Compass, but again", team: "public relations", img: "/app/resources/images/Dummy Data/18.jpg" }, { name: "Boaty McBoatface", role: "Obama Coordinator", team: "web", img: "/app/resources/images/Dummy Data/15.jpg" }, { name: "Danny Devito", role: "Funny bone tickler", team: "web", img: "/app/resources/images/Dummy Data/16.jpg" }, { name: "Boaty McBoatface", role: "Obama Coordinator", team: "web", img: "/app/resources/images/Dummy Data/4.jpg" }, { name: "John Stewart", role: "Being Exasperated", team: "web", img: "/app/resources/images/Dummy Data/1.jpg" }];
 
 var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
@@ -48587,12 +48590,16 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	td: {
 		padding: '1%',
+		width: '34%',
 		':first-child': {
-			paddingLeft: '0px'
+			paddingLeft: '0px',
+			width: '33%'
 		},
 		':last-child': {
-			paddingRight: '0px'
+			paddingRight: '0px',
+			width: '33%'
 		}
+
 	}
 });
 
@@ -48734,10 +48741,10 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Erin Jones',
-								role: 'Superintendent',
-								company: 'Office of Public Instruction',
+								img: '/app/resources/images/Dummy Data/18.jpg',
+								title: 'Barry Bington',
+								role: 'Bouncer',
+								company: 'The Bureau of Braniacs',
 								openModal: this.props.openModal
 							})
 						),
@@ -48745,10 +48752,10 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role',
-								company: 'Company',
+								img: '/app/resources/images/Dummy Data/5.jpg',
+								title: 'Danny D. Daniels',
+								role: 'Designer',
+								company: 'Deployable Dedicated Designs',
 								openModal: this.props.openModal
 							})
 						)
@@ -48760,10 +48767,10 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role',
-								company: 'Company',
+								img: '/app/resources/images/Dummy Data/17.jpg',
+								title: 'Iggy Irena',
+								role: 'Irrigator',
+								company: 'Illustrations Incorporated',
 								openModal: this.props.openModal
 							})
 						),
@@ -48771,10 +48778,10 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role',
-								company: 'Company',
+								img: '/app/resources/images/Dummy Data/10.jpg',
+								title: 'Rodger Rabbit',
+								role: 'Realtor',
+								company: 'Relativistic Relations llc',
 								openModal: this.props.openModal
 							})
 						),
@@ -48782,10 +48789,10 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Name',
-								role: 'Role',
-								company: 'Company',
+								img: '/app/resources/images/Dummy Data/14.jpg',
+								title: 'Connor Cadewack',
+								role: 'Carrot Carver',
+								company: 'The Crystal Cutting Company',
 								openModal: this.props.openModal
 							})
 						)
