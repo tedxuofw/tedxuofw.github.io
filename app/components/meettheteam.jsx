@@ -7,7 +7,7 @@ import {Profiles} from '../components/tedprofiles.jsx'
 
 const teams = ["", "curators", "design", "finance", "speaker selection", "production", "public relations", "web"];
 
-const profiles=[{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curators", 	img:"/app/resources/images/Dummy Data/1.jpg"}, 
+const profiles=[/*{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curators", 	img:"/app/resources/images/Dummy Data/1.jpg"}, 
 				{name:"Jimmy Three Shoes", 	role:"Dorito Approver", 		team:"curators", 	img:"/app/resources/images/Dummy Data/2.jpg"},
 				{name:"[Redacted]", 		role:"Fashion Judger", 			team:"curators", 	img:"/app/resources/images/Dummy Data/3.jpg"},
 				{name:"Squirtle", 			role:"Doing his best", 			team:"design", 		img:"/app/resources/images/Dummy Data/19.jpg"},
@@ -25,8 +25,8 @@ const profiles=[{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curator
 				{name:"Barack Obama (2)", 	role:"Moral Compass, but again",team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
 				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
 				{name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
-				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},
-				{name:"John Stewart", 		role:"Being Exasperated", 		team:"web", img:"/app/resources/images/Dummy Data/1.jpg"} ];
+				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},*/
+				{name:"Jenny Liang", 		role:"Team Lead", 		team:"web", img:"/app/resources/images/Dummy Data/1.jpg"} ];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",

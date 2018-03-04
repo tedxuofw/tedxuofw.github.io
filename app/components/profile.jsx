@@ -5,48 +5,113 @@ import {StyleSheet, css} from 'aphrodite';
 import {Modal} from './tedmodal.jsx';
 
 export class Profile extends React.Component {
+	
+	constructor(props) {
+		super(props);
+		
+		this.state = { x: 0, y: 0, rect:null, mouseInside:false};
+		this.mouseLeave = this.mouseLeave.bind(this);
+		this.mouseEnter = this.mouseEnter.bind(this);
+	}
+	
+	_onMouseMove(e) {
+		this.setState({ x: e.clientX, y: e.clientY, rect:ReactDOM.findDOMNode(this.obj).getBoundingClientRect()});
+		
+	}
+	
+	mouseLeave() {
+		this.setState({x:this.state.x, y:this.state.y, rect:this.state.rect, mouseInside:false});
+	}
+	
+	mouseEnter() {
+		this.setState({x:this.state.x, y:this.state.y, rect:this.state.rect, mouseInside:true});
+	}
+	
+	descriptionProfile() {
+		return (
+			<div className={css(styles.descriptioncontainer)}>
+				<span className={css(styles.teddescriptionbar)} />
+				<p className={css(styles.description)}> {this.props.txt} </p>
+			</div>
+		);
+	}
+	
+	blankProfile() {
+		return (
+			<div className={css(styles.blank)}>
+				<div className={css(styles.tedprofile)}>
+					<img src={this.props.img} className={css(styles.profilepicture)} />
+				</div>
+			</div>
+		);
+	}
+	
+	teamProfile() {
+		const leftTolerance = 35;
+		const middleTolerance = 30;
+		const rightTolerance = 35;
+		
+		var xPercent = 50;
+		var withinY = false;
+		var img = "/app/resources/images/team/" + this.props.title.toLowerCase();
+		if (this.state.rect != null && this.state.mouseInside) {
+			
+			var rect = this.state.rect;
+			
+			const relXPos = this.state.x - rect.x;
+			const relYPos = this.state.y - rect.y;
+		
+			xPercent = Math.trunc(relXPos / rect.width * 100);
+			withinY = relYPos > 0 && relYPos < rect.height;
+			
+			if (withinY) {
+				if (xPercent < leftTolerance) {
+					img += "-left";
+				} else if (xPercent < leftTolerance + middleTolerance) {
+					img += "-front";
+				} else if (xPercent < leftTolerance + middleTolerance + rightTolerance){
+					img += "-right";
+				}
+			}
+		}
+		img += ".jpg";
+		
+		return (
+			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
+				<p className={css(styles.title)}> {this.props.title} </p>
+				<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				<img src={img} className={css(styles.profilepicture)} />
+			</div>
+		);
+	}
+	
+	speakerProfile() {
+		return (
+			<div className={css(styles.tedprofile)}>
+				<p className={css(styles.title)}> {this.props.title} </p>
+				<p className={css(styles.subtitleone)}> {this.props.company} </p>
+				<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				<img src={this.props.img} 
+                       onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
+                       className={css(styles.profilepicture)} />
+			</div>
+		);
+	}
 
 	render() {
-		let company = this.props.company;
 		
 		if (!(typeof this.props.txt === 'undefined')) {
-			return (
-				<div className={css(styles.descriptioncontainer)}>
-					<span className={css(styles.teddescriptionbar)} />
-					<p className={css(styles.description)}> {this.props.txt} </p>
-				</div>
-			);
+			return this.descriptionProfile();
 		}
 		
 		if (this.props.title == "") {
-			return (
-				<div className={css(styles.blank)}>
-					<div className={css(styles.tedprofile)}>
-						<img src={this.props.img} className={css(styles.profilepicture)} />
-					</div>
-				</div>
-			);
+			return this.blankProfile();
 		}
 		
-		if (typeof company === 'undefined') {
-			return (
-				<div className={css(styles.tedprofile)}>
-					<p className={css(styles.title)}> {this.props.title} </p>
-					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
-					<img src={this.props.img} className={css(styles.profilepicture)} />
-				</div>
-			);
+		if (typeof this.props.company === 'undefined') {
+			return this.teamProfile();
 		} else {
-			return (
-				<div className={css(styles.tedprofile)}>
-					<p className={css(styles.title)}> {this.props.title} </p>
-					<p className={css(styles.subtitleone)}> {this.props.company} </p>
-					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
-					<img src={this.props.img} 
-                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
-                        className={css(styles.profilepicture)} />
-				</div>
-			);
+			return this.speakerProfile();
 		}
 	}
 }
@@ -95,9 +160,11 @@ const styles = StyleSheet.create({
 		color:'white',
 		textShadow:'2px 2px #000000',
 	},
+	
 	blank: {
 		opacity:'0',
 	},
+	
 	descriptioncontainer: {
 		width: '100%',
 		height:'22vw',

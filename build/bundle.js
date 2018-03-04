@@ -12448,97 +12448,169 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Profile = exports.Profile = function (_React$Component) {
 	_inherits(Profile, _React$Component);
 
-	function Profile() {
+	function Profile(props) {
 		_classCallCheck(this, Profile);
 
-		return _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this, props));
+
+		_this.state = { x: 0, y: 0, rect: null, mouseInside: false };
+		_this.mouseLeave = _this.mouseLeave.bind(_this);
+		_this.mouseEnter = _this.mouseEnter.bind(_this);
+		return _this;
 	}
 
 	_createClass(Profile, [{
-		key: 'render',
-		value: function render() {
+		key: '_onMouseMove',
+		value: function _onMouseMove(e) {
+			this.setState({ x: e.clientX, y: e.clientY, rect: _reactDom2.default.findDOMNode(this.obj).getBoundingClientRect() });
+		}
+	}, {
+		key: 'mouseLeave',
+		value: function mouseLeave() {
+			this.setState({ x: this.state.x, y: this.state.y, rect: this.state.rect, mouseInside: false });
+		}
+	}, {
+		key: 'mouseEnter',
+		value: function mouseEnter() {
+			this.setState({ x: this.state.x, y: this.state.y, rect: this.state.rect, mouseInside: true });
+		}
+	}, {
+		key: 'descriptionProfile',
+		value: function descriptionProfile() {
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
+				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.teddescriptionbar) }),
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.description) },
+					' ',
+					this.props.txt,
+					' '
+				)
+			);
+		}
+	}, {
+		key: 'blankProfile',
+		value: function blankProfile() {
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.blank) },
+				_react2.default.createElement(
+					'div',
+					{ className: (0, _aphrodite.css)(styles.tedprofile) },
+					_react2.default.createElement('img', { src: this.props.img, className: (0, _aphrodite.css)(styles.profilepicture) })
+				)
+			);
+		}
+	}, {
+		key: 'teamProfile',
+		value: function teamProfile() {
 			var _this2 = this;
 
-			var company = this.props.company;
+			var leftTolerance = 35;
+			var middleTolerance = 30;
+			var rightTolerance = 35;
+
+			var xPercent = 50;
+			var withinY = false;
+			var img = "/app/resources/images/team/" + this.props.title.toLowerCase();
+			if (this.state.rect != null && this.state.mouseInside) {
+
+				var rect = this.state.rect;
+
+				var relXPos = this.state.x - rect.x;
+				var relYPos = this.state.y - rect.y;
+
+				xPercent = Math.trunc(relXPos / rect.width * 100);
+				withinY = relYPos > 0 && relYPos < rect.height;
+
+				if (withinY) {
+					if (xPercent < leftTolerance) {
+						img += "-left";
+					} else if (xPercent < leftTolerance + middleTolerance) {
+						img += "-front";
+					} else if (xPercent < leftTolerance + middleTolerance + rightTolerance) {
+						img += "-right";
+					}
+				}
+			}
+			img += ".jpg";
+
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.tedprofile), onMouseMove: this._onMouseMove.bind(this), onMouseEnter: this.mouseEnter, onMouseLeave: this.mouseLeave, ref: function ref(input) {
+						_this2.obj = input;
+					} },
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.title) },
+					' ',
+					this.props.title,
+					' '
+				),
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.subtitletwo) },
+					' ',
+					this.props.role,
+					' '
+				),
+				_react2.default.createElement('img', { src: img, className: (0, _aphrodite.css)(styles.profilepicture) })
+			);
+		}
+	}, {
+		key: 'speakerProfile',
+		value: function speakerProfile() {
+			var _this3 = this;
+
+			return _react2.default.createElement(
+				'div',
+				{ className: (0, _aphrodite.css)(styles.tedprofile) },
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.title) },
+					' ',
+					this.props.title,
+					' '
+				),
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.subtitleone) },
+					' ',
+					this.props.company,
+					' '
+				),
+				_react2.default.createElement(
+					'p',
+					{ className: (0, _aphrodite.css)(styles.subtitletwo) },
+					' ',
+					this.props.role,
+					' '
+				),
+				_react2.default.createElement('img', { src: this.props.img,
+					onClick: function onClick() {
+						return _this3.props.openModal(_this3.props.img, _this3.props.title, _this3.props.role);
+					},
+					className: (0, _aphrodite.css)(styles.profilepicture) })
+			);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
 
 			if (!(typeof this.props.txt === 'undefined')) {
-				return _react2.default.createElement(
-					'div',
-					{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
-					_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.teddescriptionbar) }),
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.description) },
-						' ',
-						this.props.txt,
-						' '
-					)
-				);
+				return this.descriptionProfile();
 			}
 
 			if (this.props.title == "") {
-				return _react2.default.createElement(
-					'div',
-					{ className: (0, _aphrodite.css)(styles.blank) },
-					_react2.default.createElement(
-						'div',
-						{ className: (0, _aphrodite.css)(styles.tedprofile) },
-						_react2.default.createElement('img', { src: this.props.img, className: (0, _aphrodite.css)(styles.profilepicture) })
-					)
-				);
+				return this.blankProfile();
 			}
 
-			if (typeof company === 'undefined') {
-				return _react2.default.createElement(
-					'div',
-					{ className: (0, _aphrodite.css)(styles.tedprofile) },
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.title) },
-						' ',
-						this.props.title,
-						' '
-					),
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.subtitletwo) },
-						' ',
-						this.props.role,
-						' '
-					),
-					_react2.default.createElement('img', { src: this.props.img, className: (0, _aphrodite.css)(styles.profilepicture) })
-				);
+			if (typeof this.props.company === 'undefined') {
+				return this.teamProfile();
 			} else {
-				return _react2.default.createElement(
-					'div',
-					{ className: (0, _aphrodite.css)(styles.tedprofile) },
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.title) },
-						' ',
-						this.props.title,
-						' '
-					),
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.subtitleone) },
-						' ',
-						this.props.company,
-						' '
-					),
-					_react2.default.createElement(
-						'p',
-						{ className: (0, _aphrodite.css)(styles.subtitletwo) },
-						' ',
-						this.props.role,
-						' '
-					),
-					_react2.default.createElement('img', { src: this.props.img,
-						onClick: function onClick() {
-							return _this2.props.openModal(_this2.props.img, _this2.props.title, _this2.props.role);
-						},
-						className: (0, _aphrodite.css)(styles.profilepicture) })
-				);
+				return this.speakerProfile();
 			}
 		}
 	}]);
@@ -12590,9 +12662,11 @@ var styles = _aphrodite.StyleSheet.create({
 		color: 'white',
 		textShadow: '2px 2px #000000'
 	},
+
 	blank: {
 		opacity: '0'
 	},
+
 	descriptioncontainer: {
 		width: '100%',
 		height: '22vw',
@@ -48257,7 +48331,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var teams = ["", "curators", "design", "finance", "speaker selection", "production", "public relations", "web"];
 
-var profiles = [{ name: "Jimmy Two Shoes", role: "Dorito Tester", team: "curators", img: "/app/resources/images/Dummy Data/1.jpg" }, { name: "Jimmy Three Shoes", role: "Dorito Approver", team: "curators", img: "/app/resources/images/Dummy Data/2.jpg" }, { name: "[Redacted]", role: "Fashion Judger", team: "curators", img: "/app/resources/images/Dummy Data/3.jpg" }, { name: "Squirtle", role: "Doing his best", team: "design", img: "/app/resources/images/Dummy Data/19.jpg" }, { name: "Weirdly tall guy", role: "Two midgets in a coat", team: "design", img: "/app/resources/images/Dummy Data/5.jpg" }, { name: "Monty Python", role: "making good movies", team: "design", img: "/app/resources/images/Dummy Data/6.jpg" }, { name: "Detective Richard D Johnson", role: "Existing", team: "finance", img: "/app/resources/images/Dummy Data/7.jpg" }, { name: "Tony Hawk", role: "Being too old to skate", team: "finance", img: "/app/resources/images/Dummy Data/8.jpg" }, { name: "Jeff Kaplan", role: "Fair and Balanced Gameplay", team: "finance", img: "/app/resources/images/Dummy Data/9.jpg" }, { name: "Namey Namington", role: "Classified", team: "production", img: "/app/resources/images/Dummy Data/10.jpg" }, { name: "Smellborp", role: "Not sure yet", team: "production", img: "/app/resources/images/Dummy Data/11.jpg" }, { name: "Coolguy98", role: "Shoulder to cry on", team: "production", img: "/app/resources/images/Dummy Data/12.jpg" }, { name: "Barack Obama", role: "Moral Compass", team: "public relations", img: "/app/resources/images/Dummy Data/18.jpg" }, { name: "His holiness, bill", role: "Emoji Translator", team: "public relations", img: "/app/resources/images/Dummy Data/13.jpg" }, { name: "Spongebob's uncle", role: "Door closer", team: "public relations", img: "/app/resources/images/Dummy Data/14.jpg" }, { name: "Barack Obama (2)", role: "Moral Compass, but again", team: "public relations", img: "/app/resources/images/Dummy Data/18.jpg" }, { name: "Boaty McBoatface", role: "Obama Coordinator", team: "web", img: "/app/resources/images/Dummy Data/15.jpg" }, { name: "Danny Devito", role: "Funny bone tickler", team: "web", img: "/app/resources/images/Dummy Data/16.jpg" }, { name: "Boaty McBoatface", role: "Obama Coordinator", team: "web", img: "/app/resources/images/Dummy Data/4.jpg" }, { name: "John Stewart", role: "Being Exasperated", team: "web", img: "/app/resources/images/Dummy Data/1.jpg" }];
+var profiles = [/*{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curators", 	img:"/app/resources/images/Dummy Data/1.jpg"}, 
+                {name:"Jimmy Three Shoes", 	role:"Dorito Approver", 		team:"curators", 	img:"/app/resources/images/Dummy Data/2.jpg"},
+                {name:"[Redacted]", 		role:"Fashion Judger", 			team:"curators", 	img:"/app/resources/images/Dummy Data/3.jpg"},
+                {name:"Squirtle", 			role:"Doing his best", 			team:"design", 		img:"/app/resources/images/Dummy Data/19.jpg"},
+                {name:"Weirdly tall guy", 	role:"Two midgets in a coat",	team:"design", 		img:"/app/resources/images/Dummy Data/5.jpg"},
+                {name:"Monty Python", 		role:"making good movies", 		team:"design", 		img:"/app/resources/images/Dummy Data/6.jpg"},
+                {name:"Detective Richard D Johnson", 	role:"Existing", 				team:"finance", 	img:"/app/resources/images/Dummy Data/7.jpg"},
+                {name:"Tony Hawk", 			role:"Being too old to skate", 	team:"finance", 	img:"/app/resources/images/Dummy Data/8.jpg"},
+                {name:"Jeff Kaplan", 	role:"Fair and Balanced Gameplay", 	team:"finance", 	img:"/app/resources/images/Dummy Data/9.jpg"},
+                {name:"Namey Namington", 	role:"Classified", 				team:"production", 	img:"/app/resources/images/Dummy Data/10.jpg"},
+                {name:"Smellborp", 			role:"Not sure yet", 			team:"production", 	img:"/app/resources/images/Dummy Data/11.jpg"},
+                {name:"Coolguy98", 			role:"Shoulder to cry on", 		team:"production", 	img:"/app/resources/images/Dummy Data/12.jpg"},
+                {name:"Barack Obama", 		role:"Moral Compass", 			team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
+                {name:"His holiness, bill", 	role:"Emoji Translator", 		team:"public relations", img:"/app/resources/images/Dummy Data/13.jpg"},
+                {name:"Spongebob's uncle", 	role:"Door closer", 			team:"public relations", img:"/app/resources/images/Dummy Data/14.jpg"},
+                {name:"Barack Obama (2)", 	role:"Moral Compass, but again",team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
+                {name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
+                {name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
+                {name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},*/
+{ name: "Jenny Liang", role: "Team Lead", team: "web", img: "/app/resources/images/Dummy Data/1.jpg" }];
 
 var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
