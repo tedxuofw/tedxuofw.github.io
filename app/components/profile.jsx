@@ -74,7 +74,7 @@ export class Profile extends React.Component {
 				}
 			}
 		}
-		img += ".jpg";
+		img += ".JPG";
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
