@@ -23,8 +23,8 @@ export class Profile extends React.Component {
 		this.setState({x:this.state.x, y:this.state.y, rect:this.state.rect, mouseInside:false});
 	}
 	
-	mouseEnter() {
-		this.setState({x:this.state.x, y:this.state.y, rect:this.state.rect, mouseInside:true});
+	mouseEnter(e) {
+		this.setState({x: e.clientX, y: e.clientY, rect:this.state.rect, mouseInside:true});
 	}
 	
 	descriptionProfile() {
@@ -52,26 +52,21 @@ export class Profile extends React.Component {
 		const rightTolerance = 35;
 		
 		var xPercent = 50;
-		var withinY = false;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase();
 		if (this.state.rect != null && this.state.mouseInside) {
 			
 			var rect = this.state.rect;
 			
 			const relXPos = this.state.x - rect.x;
-			const relYPos = this.state.y - rect.y;
 		
 			xPercent = Math.trunc(relXPos / rect.width * 100);
-			withinY = relYPos > 0 && relYPos < rect.height;
 			
-			if (withinY) {
-				if (xPercent < leftTolerance) {
-					img += "-left";
-				} else if (xPercent < leftTolerance + middleTolerance) {
-					img += "-front";
-				} else if (xPercent < leftTolerance + middleTolerance + rightTolerance){
-					img += "-right";
-				}
+			if (xPercent < leftTolerance) {
+				img += "-left";
+			} else if (xPercent < leftTolerance + middleTolerance) {
+				img += "-front";
+			} else if (xPercent < leftTolerance + middleTolerance + rightTolerance){
+				img += "-right";
 			}
 		}
 		img += ".JPG";
