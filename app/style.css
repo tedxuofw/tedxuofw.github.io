@@ -1,0 +1,45 @@
+@font-face { font-family: Avenir; src: url('resources/fonts/Avenir-Medium.ttf'); }
+@font-face { font-family: AvenirBlack; src: url('resources/fonts/AvenirBlack.otf'); } 
+@font-face { font-family: Futura; src: url('resources/fonts/Futura.ttf'); } 
+
+
+/* Misc. CSS */
+@-ms-viewport{
+  width: device-width;
+}
+
+body {
+    font-family: 'Avenir';
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+}
+
+/* Navbar CSS */
+.tedactive {
+    border-bottom: 4px solid #E62B25;
+    border-left: 0;
+    border-right: 0;
+}
+.tednavgold {
+    border-style: solid;
+    border-width: 4px;
+    padding: 5px;
+    border-color: #E62B25;
+    margin: 10;
+}
+ul.nav {
+    background: #F5F5F5;
+}
+
+/* Hide regular scrollbar */
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+/* Don't display video on mobile */
+@media screen and (max-width: 991px) { 
+    #houdini-wrapper { display: none; }
+    .ted-flair { display: none; }
+}
