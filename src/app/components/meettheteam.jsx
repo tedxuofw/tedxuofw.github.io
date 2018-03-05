@@ -26,7 +26,7 @@ const profiles=[/*{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curat
 				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
 				{name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
 				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},*/
-				{name:"Jenny Liang", 		role:"Team Lead", 		team:"web", img:"/app/resources/images/Dummy Data/1.jpg"} ];
+				{name:"Jenny Liang", 		role:"Team Lead", 		team:"web", img:"/app/resources/images/Dummy Data/1.JPG"} ];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",

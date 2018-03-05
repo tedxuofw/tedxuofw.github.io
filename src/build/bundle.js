@@ -12535,7 +12535,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					}
 				}
 			}
-			img += ".jpg";
+			img += ".JPG";
 
 			return _react2.default.createElement(
 				'div',
@@ -48350,7 +48350,7 @@ var profiles = [/*{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curat
                 {name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
                 {name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
                 {name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},*/
-{ name: "Jenny Liang", role: "Team Lead", team: "web", img: "/app/resources/images/Dummy Data/1.jpg" }];
+{ name: "Jenny Liang", role: "Team Lead", team: "web", img: "/app/resources/images/Dummy Data/1.JPG" }];
 
 var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
