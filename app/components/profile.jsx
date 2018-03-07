@@ -50,7 +50,7 @@ export class Profile extends React.Component {
 		const leftTolerance = 35;
 		const middleTolerance = 30;
 		const rightTolerance = 35;
-		const defaultImg = "/app/resources/images/generic.JPG";
+		const defaultImg = "/app/resources/images/generic.jpg";
 		
 		var xPercent = 50;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -71,7 +71,7 @@ export class Profile extends React.Component {
 				img += "-right";
 			}
 		}
-		img += ".JPG";
+		img += ".jpg";
 		
 		if (!this.fileExists(img)) img = defaultImg;
 		

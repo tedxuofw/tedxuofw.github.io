@@ -34,7 +34,7 @@ ul.nav {
 
 /* Hide regular scrollbar */
 ::-webkit-scrollbar {
-    width: 0px; 
+    width: 0px;
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 

@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
 	},
 	textbox: {},
 	emailtext: {
+        background: '#ecf0f1',
 		display:'inline-block',
 		border:'none',
 		font:'Avenir',
