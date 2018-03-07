@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {TEDNavbar} from '../components/tednavbar.jsx';
 import {TEDFooter} from '../components/tedfooter.jsx';
+import {InputArea} from '../components/inputarea.jsx';
 import {Section} from '../components/section.jsx';
 import {Row, Input} from 'react-materialize';
 import {StyleSheet, css} from 'aphrodite/no-important';
@@ -74,6 +75,12 @@ export class Contact extends React.Component {
                     </div>
                     <br/>
                 </Section>
+                <Section height="20vh">
+                    <center>
+                        <div class={css(styles.inputtext)}>Stay updated by signing up for our mailing list below!</div>
+                    </center>
+                    <InputArea ghostText="Enter your email here" buttonName="Sign up" name="Sign up"/>
+                </Section>
                 <TEDFooter />
             </div>
         );
@@ -126,5 +133,11 @@ const styles = StyleSheet.create({
             opacity: ".8",
             transition: 'opacity 0.2s ease-out'
         },
+    },
+    inputtext: {
+        fontSize: '32px',
+        marginTop: '-10vh',
+        maxWidth: '40vw',
+        marginBottom: '5vh'
     }
 });
