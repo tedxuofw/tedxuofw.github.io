@@ -5,28 +5,47 @@ import {StyleSheet, css} from 'aphrodite';
 
 import {Profiles} from '../components/tedprofiles.jsx'
 
-const teams = ["", "curators", "design", "finance", "speaker selection", "production", "public relations", "web"];
+const teams = ["", "curators", "design", "speaker selection", "finance", "production", "public relations", "web"];
 
-const profiles=[/*{name:"Jimmy Two Shoes", 	role:"Dorito Tester", 			team:"curators", 	img:"/app/resources/images/Dummy Data/1.jpg"}, 
-				{name:"Jimmy Three Shoes", 	role:"Dorito Approver", 		team:"curators", 	img:"/app/resources/images/Dummy Data/2.jpg"},
-				{name:"[Redacted]", 		role:"Fashion Judger", 			team:"curators", 	img:"/app/resources/images/Dummy Data/3.jpg"},
-				{name:"Squirtle", 			role:"Doing his best", 			team:"design", 		img:"/app/resources/images/Dummy Data/19.jpg"},
-				{name:"Weirdly tall guy", 	role:"Two midgets in a coat",	team:"design", 		img:"/app/resources/images/Dummy Data/5.jpg"},
-				{name:"Monty Python", 		role:"making good movies", 		team:"design", 		img:"/app/resources/images/Dummy Data/6.jpg"},
-	{name:"Detective Richard D Johnson", 	role:"Existing", 				team:"finance", 	img:"/app/resources/images/Dummy Data/7.jpg"},
-				{name:"Tony Hawk", 			role:"Being too old to skate", 	team:"finance", 	img:"/app/resources/images/Dummy Data/8.jpg"},
-				{name:"Jeff Kaplan", 	role:"Fair and Balanced Gameplay", 	team:"finance", 	img:"/app/resources/images/Dummy Data/9.jpg"},
-				{name:"Namey Namington", 	role:"Classified", 				team:"production", 	img:"/app/resources/images/Dummy Data/10.jpg"},
-				{name:"Smellborp", 			role:"Not sure yet", 			team:"production", 	img:"/app/resources/images/Dummy Data/11.jpg"},
-				{name:"Coolguy98", 			role:"Shoulder to cry on", 		team:"production", 	img:"/app/resources/images/Dummy Data/12.jpg"},
-				{name:"Barack Obama", 		role:"Moral Compass", 			team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
-			{name:"His holiness, bill", 	role:"Emoji Translator", 		team:"public relations", img:"/app/resources/images/Dummy Data/13.jpg"},
-				{name:"Spongebob's uncle", 	role:"Door closer", 			team:"public relations", img:"/app/resources/images/Dummy Data/14.jpg"},
-				{name:"Barack Obama (2)", 	role:"Moral Compass, but again",team:"public relations", img:"/app/resources/images/Dummy Data/18.jpg"},
-				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/15.jpg"},
-				{name:"Danny Devito", 		role:"Funny bone tickler", 		team:"web", img:"/app/resources/images/Dummy Data/16.jpg"},
-				{name:"Boaty McBoatface", 	role:"Obama Coordinator", 		team:"web", img:"/app/resources/images/Dummy Data/4.jpg"},*/
-				{name:"Jenny Liang", 		role:"Team Lead", 		team:"web", img:"/app/resources/images/Dummy Data/1.JPG"} ];
+const profiles=[ 
+				{name:"Jamie Housen", 		role:"Curator", 				team:"curators"},
+				{name:"Ryan Washburne", 	role:"Curator", 				team:"curators"},
+				{name:"Sierra Simmerman", 	role:"Curator", 				team:"curators"},
+				
+				{name:"Ian Yu", 			role:"Design Manager", 			team:"design"},
+				{name:"Marie Danilychev", 	role:"Photographer", 			team:"design"},
+				{name:"Sarah Strickler", 	role:"Graphic Designer",		team:"design"},
+				
+				{name:"Katie Chun", 		role:"Speaker Selection Manager",team:"speaker selection"},
+				{name:"Sara Gustafson", 	role:"Speaker Selection", 		team:"speaker selection"},
+				{name:"Maren Anderson", 	role:"Speaker Selection", 		team:"speaker selection"},
+				{name:"Tien Vo", 			role:"Speaker Selection", 		team:"speaker selection"},
+				{name:"Julia Pettere", 		role:"Speaker Selection", 		team:"speaker selection"},
+				{name:"Sneha", 				role:"Speaker Selection", 		team:"speaker selection"},
+				
+				{name:"Celia Schlekewey", 	role:"Finance Manager", 		team:"finance"},
+				{name:"Michael Jacobson", 	role:"Financial Analyst", 		team:"finance"},
+				{name:"Keren Zhang", 		role:"Financial Logistics", 	team:"finance"},
+				{name:"Maya Yamaguchi Sullivan", role:"Financial Analyst", 	team:"finance"},
+				{name:"Maya Gopalan", 		role:"Sponsorship", 			team:"finance"},
+				
+				{name:"TJ Gascho", 			role:"Production Manager", 		team:"production"},
+				{name:"Jessie Ma", 			role:"Stage Design", 			team:"production"},
+				{name:"Sean Chronister", 	role:"Tech Lead", 				team:"production"},
+				{name:"Chistopher S. Gerken",role:"Tech Lead", 				team:"production"},
+				{name:"Miranda Reisman",	role:"Conference Facilitator", 	team:"production"},
+				{name:"Jed Kwek",			role:"Guest Experience", 		team:"production"},
+				
+				{name:"Hanna Choi", 		role:"PR Manager", 				team:"public relations"},
+				{name:"Rahul Prasad", 		role:"Internal Manager", 		team:"public relations"},
+				{name:"Emma Rose Hurring", 	role:"Public Relations", 		team:"public relations"},
+				{name:"Sehel Tahir", 		role:"External Outreach", 		team:"public relations"},
+				{name:"Natasha Lau", 		role:"Internal Manager",		team:"public relations"},
+				
+				{name:"Jenny Liang", 		role:"Web Manager", 			team:"web"},
+				{name:"Sara Tieu", 			role:"UX/UI Designer", 			team:"web"},
+				{name:"Soham Pardeshi", 	role:"Web Developer", 			team:"web"},
+				{name:"Nikolas Gaub", 		role:"Web Developer (cool)", 	team:"web"}];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",
