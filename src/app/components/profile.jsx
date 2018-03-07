@@ -50,9 +50,11 @@ export class Profile extends React.Component {
 		const leftTolerance = 35;
 		const middleTolerance = 30;
 		const rightTolerance = 35;
+		const defaultImg = "/app/resources/images/generic.JPG";
 		
 		var xPercent = 50;
-		var img = "/app/resources/images/team/" + this.props.title.toLowerCase();
+		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
+		
 		if (this.state.rect != null && this.state.mouseInside) {
 			
 			var rect = this.state.rect;
@@ -71,6 +73,8 @@ export class Profile extends React.Component {
 		}
 		img += ".JPG";
 		
+		if (!this.fileExists(img)) img = defaultImg;
+		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
 				<p className={css(styles.title)}> {this.props.title} </p>
@@ -78,6 +82,14 @@ export class Profile extends React.Component {
 				<img src={img} className={css(styles.profilepicture)} />
 			</div>
 		);
+	}
+	
+	fileExists(name) {
+		var http = new XMLHttpRequest();
+		var websiteAddress = 'http://localhost:8080';//'https://tedxuofw.github.io';
+		http.open('HEAD', websiteAddress+name, false);
+		http.send();
+		return http.status!=404;
 	}
 	
 	speakerProfile() {
@@ -124,7 +136,7 @@ const styles = StyleSheet.create({
 		height:'auto',
 		opacity:'1',
 		':hover': {
-			opacity: '0.7'
+			//opacity: '0.7'
         }
     },
 	title: {
