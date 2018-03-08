@@ -22,13 +22,13 @@ export class Speakers extends React.Component {
 				<FeaturedSpeaker 
 					name="Jasmine Samy"
 					desc="Council of Islamic American Relations"
-					img="/app/resources/images/Dummy Data/5.jpg"
+					img="/app/resources/images/generic.JPG"
 					flipped={false}
 				/>
 				<FeaturedSpeaker 
 					name="Jeannie Berwick"
 					desc="One Equal Heart Foundation"
-					img="/app/resources/images/Dummy Data/10.jpg"
+					img="/app/resources/images/generic.JPG"
 					flipped={true}
 				/>
 				<TedButton name="View All Speakers" linkTo="/speakers" />
