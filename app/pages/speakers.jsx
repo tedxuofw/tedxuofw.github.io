@@ -60,7 +60,7 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/erin-jones.jpg" 
+							img="/app/resources/images/erin-jones.JPG" 
 							title="Erin Jones" 
 							role="Superintendent"
 							company="Office of Public Instruction"
@@ -69,7 +69,7 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/Dummy Data/18.jpg" 
+							img="/app/resources/images/generic.JPG" 
 							title="Barry Bington" 
 							role="Bouncer"
 							company="The Bureau of Braniacs"
@@ -78,7 +78,7 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/Dummy Data/5.jpg" 
+							img="/app/resources/images/generic.JPG" 
 							title="Danny D. Daniels" 
 							role="Designer" 
 							company="Deployable Dedicated Designs"
@@ -89,7 +89,7 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/Dummy Data/17.jpg" 
+							img="/app/resources/images/generic.JPG" 
 							title="Iggy Irena" 
 							role="Irrigator" 
 							company="Illustrations Incorporated"
@@ -98,7 +98,7 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/Dummy Data/10.jpg"  
+							img="/app/resources/images/generic.JPG"  
 							title="Rodger Rabbit" 
 							role="Realtor" 
 							company="Relativistic Relations llc"
@@ -107,7 +107,7 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/Dummy Data/14.jpg" 
+							img="/app/resources/images/generic.JPG" 
 							title="Connor Cadewack" 
 							role="Carrot Carver" 
 							company="The Crystal Cutting Company"

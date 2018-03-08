@@ -47804,13 +47804,13 @@ var Speakers = exports.Speakers = function (_React$Component) {
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jasmine Samy',
 					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/Dummy Data/5.jpg',
+					img: '/app/resources/images/generic.JPG',
 					flipped: false
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jeannie Berwick',
 					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/Dummy Data/10.jpg',
+					img: '/app/resources/images/generic.JPG',
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
@@ -48846,7 +48846,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/erin-jones.jpg',
+								img: '/app/resources/images/erin-jones.JPG',
 								title: 'Erin Jones',
 								role: 'Superintendent',
 								company: 'Office of Public Instruction',
@@ -48857,7 +48857,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/Dummy Data/18.jpg',
+								img: '/app/resources/images/generic.JPG',
 								title: 'Barry Bington',
 								role: 'Bouncer',
 								company: 'The Bureau of Braniacs',
@@ -48868,7 +48868,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/Dummy Data/5.jpg',
+								img: '/app/resources/images/generic.JPG',
 								title: 'Danny D. Daniels',
 								role: 'Designer',
 								company: 'Deployable Dedicated Designs',
@@ -48883,7 +48883,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/Dummy Data/17.jpg',
+								img: '/app/resources/images/generic.JPG',
 								title: 'Iggy Irena',
 								role: 'Irrigator',
 								company: 'Illustrations Incorporated',
@@ -48894,7 +48894,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/Dummy Data/10.jpg',
+								img: '/app/resources/images/generic.JPG',
 								title: 'Rodger Rabbit',
 								role: 'Realtor',
 								company: 'Relativistic Relations llc',
@@ -48905,7 +48905,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/Dummy Data/14.jpg',
+								img: '/app/resources/images/generic.JPG',
 								title: 'Connor Cadewack',
 								role: 'Carrot Carver',
 								company: 'The Crystal Cutting Company',
@@ -49359,7 +49359,7 @@ var styles = _noImportant.StyleSheet.create({
         fontSize: '32px',
         marginTop: '-10vh',
         maxWidth: '40vw',
-        marginBottom: '10vh'
+        marginBottom: '5vh'
     }
 });
 
