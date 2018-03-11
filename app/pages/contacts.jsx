@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 
 import {TEDNavbar} from '../components/tednavbar.jsx';
 import {TEDFooter} from '../components/tedfooter.jsx';
-<<<<<<< HEAD:app/pages/contact.jsx
 import {InputArea} from '../components/inputarea.jsx';
 import {Section} from '../components/section.jsx';
 import {Row, Input} from 'react-materialize';
@@ -48,29 +47,10 @@ export class Contact extends React.Component {
     }
     
 	render() {            
-=======
-import {Section} from '../components/section.jsx';
-import {Contact} from '../components/contact.jsx';
-
-
-
-export class Contacts extends React.Component {
-
-    
-   
-    
-    componentDidMount() {
-        document.title = "Contact - TEDx";
-    }
-    
-	render() {
-                
->>>>>>> 47dc419016d94a63196f5acc5b45f1c18ebb79ac:app/pages/contacts.jsx
 		return (
             <div>
                 <TEDNavbar index='3'/>
                 <Section title='Contact'>
-<<<<<<< HEAD:app/pages/contact.jsx
                     <br/>
                     <div className={css(styles.wrapper)}>
                         <div className={css(styles.top)}>
@@ -101,19 +81,10 @@ export class Contacts extends React.Component {
                     </center>
                     <InputArea ghostText="Enter your email here" buttonName="Sign up" name="Sign up"/>
                 </Section>
-=======
-                   <Contact title = ' We would love to hear from you' subtitle = 'Get in touch by sending us a message below' />
-                      
-                                        
-                </Section>
-                                
-                
->>>>>>> 47dc419016d94a63196f5acc5b45f1c18ebb79ac:app/pages/contacts.jsx
                 <TEDFooter />
             </div>
         );
 	}
-<<<<<<< HEAD:app/pages/contact.jsx
 }
 
 const styles = StyleSheet.create({
@@ -170,6 +141,3 @@ const styles = StyleSheet.create({
         marginBottom: '5vh'
     }
 });
-=======
-}
->>>>>>> 47dc419016d94a63196f5acc5b45f1c18ebb79ac:app/pages/contacts.jsx
