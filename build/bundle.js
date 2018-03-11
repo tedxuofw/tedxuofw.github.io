@@ -12641,7 +12641,7 @@ var Profile = exports.Profile = function (_React$Component) {
 			var leftTolerance = 35;
 			var middleTolerance = 30;
 			var rightTolerance = 35;
-			var defaultImg = "https://tedxuofw.github.io//app/resources/images/generic.jpg";
+			var defaultImg = "/app/resources/images/generic.jpg";
 
 			var xPercent = 50;
 			var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -47804,13 +47804,13 @@ var Speakers = exports.Speakers = function (_React$Component) {
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jasmine Samy',
 					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/generic.JPG',
+					img: '/app/resources/images/generic.jpg',
 					flipped: false
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jeannie Berwick',
 					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/generic.JPG',
+					img: '/app/resources/images/generic.jpg',
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
