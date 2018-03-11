@@ -60,7 +60,7 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/erin-jones.JPG" 
+							img="/app/resources/images/erin-jones.jpg" 
 							title="Erin Jones" 
 							role="Superintendent"
 							company="Office of Public Instruction"
@@ -69,7 +69,7 @@ class ProfileList extends React.Component {
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.JPG" 
+							img="/app/resources/images/generic.jpg" 
 							title="Barry Bington" 
 							role="Bouncer"
 							company="The Bureau of Braniacs"
