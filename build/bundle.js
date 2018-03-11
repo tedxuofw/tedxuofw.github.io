@@ -12641,7 +12641,7 @@ var Profile = exports.Profile = function (_React$Component) {
 			var leftTolerance = 35;
 			var middleTolerance = 30;
 			var rightTolerance = 35;
-			var defaultImg = "/app/resources/images/generic.JPG";
+			var defaultImg = "https://tedxuofw.github.io//app/resources/images/generic.jpg";
 
 			var xPercent = 50;
 			var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -12663,7 +12663,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					img += "-right";
 				}
 			}
-			img += ".JPG";
+			img += ".jpg";
 
 			return _react2.default.createElement(
 				'div',
@@ -12698,7 +12698,7 @@ var Profile = exports.Profile = function (_React$Component) {
 		value: function speakerProfile() {
 			var _this3 = this;
 
-			var defaultImg = "/app/resources/images/generic.JPG";
+			var defaultImg = "/app/resources/images/generic.jpg";
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.tedprofile) },

@@ -50,7 +50,7 @@ export class Profile extends React.Component {
 		const leftTolerance = 35;
 		const middleTolerance = 30;
 		const rightTolerance = 35;
-		const defaultImg = "/app/resources/images/generic.JPG";
+		const defaultImg = "/app/resources/images/generic.jpg";
 		
 		var xPercent = 50;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -72,7 +72,7 @@ export class Profile extends React.Component {
 				img += "-right";
 			}
 		}
-		img += ".JPG";
+		img += ".jpg";
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
@@ -86,7 +86,7 @@ export class Profile extends React.Component {
 	}
 	
 	speakerProfile() {
-		const defaultImg = "/app/resources/images/generic.JPG";
+		const defaultImg = "/app/resources/images/generic.jpg";
 		return (
 			<div className={css(styles.tedprofile)}>
 				<p className={css(styles.title)}> {this.props.title} </p>
