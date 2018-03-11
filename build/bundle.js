@@ -12641,10 +12641,11 @@ var Profile = exports.Profile = function (_React$Component) {
 			var leftTolerance = 35;
 			var middleTolerance = 30;
 			var rightTolerance = 35;
-			var defaultImg = "/app/resources/images/generic.jpg";
+			var defaultImg = "/app/resources/images/generic.JPG";
 
 			var xPercent = 50;
 			var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
+			var textstyle = { color: '#000000', opacity: this.state.mouseInside ? '0' : '1' };
 
 			if (this.state.rect != null && this.state.mouseInside) {
 
@@ -12662,9 +12663,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					img += "-right";
 				}
 			}
-			img += ".jpg";
-
-			if (!this.fileExists(img)) img = defaultImg;
+			img += ".JPG";
 
 			return _react2.default.createElement(
 				'div',
@@ -12672,36 +12671,34 @@ var Profile = exports.Profile = function (_React$Component) {
 						_this2.obj = input;
 					} },
 				_react2.default.createElement(
-					'p',
-					{ className: (0, _aphrodite.css)(styles.title) },
-					' ',
-					this.props.title,
-					' '
+					'div',
+					{ style: textstyle },
+					_react2.default.createElement(
+						'p',
+						{ className: (0, _aphrodite.css)(styles.title) },
+						' ',
+						this.props.title,
+						' '
+					),
+					_react2.default.createElement(
+						'p',
+						{ className: (0, _aphrodite.css)(styles.subtitletwo) },
+						' ',
+						this.props.role,
+						' '
+					)
 				),
-				_react2.default.createElement(
-					'p',
-					{ className: (0, _aphrodite.css)(styles.subtitletwo) },
-					' ',
-					this.props.role,
-					' '
-				),
-				_react2.default.createElement('img', { src: img, className: (0, _aphrodite.css)(styles.profilepicture) })
+				_react2.default.createElement('img', { src: img, className: (0, _aphrodite.css)(styles.profilepicture), onError: function onError(e) {
+						e.target.src = defaultImg;
+					} })
 			);
-		}
-	}, {
-		key: 'fileExists',
-		value: function fileExists(name) {
-			var http = new XMLHttpRequest();
-			var websiteAddress = 'http://localhost:8080'; //'https://tedxuofw.github.io';
-			http.open('HEAD', websiteAddress + name, false);
-			http.send();
-			return http.status != 404;
 		}
 	}, {
 		key: 'speakerProfile',
 		value: function speakerProfile() {
 			var _this3 = this;
 
+			var defaultImg = "/app/resources/images/generic.JPG";
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.tedprofile) },
@@ -12729,6 +12726,9 @@ var Profile = exports.Profile = function (_React$Component) {
 				_react2.default.createElement('img', { src: this.props.img,
 					onClick: function onClick() {
 						return _this3.props.openModal(_this3.props.img, _this3.props.title, _this3.props.role);
+					},
+					onError: function onError(e) {
+						e.target.src = defaultImg;
 					},
 					className: (0, _aphrodite.css)(styles.profilepicture) })
 			);
