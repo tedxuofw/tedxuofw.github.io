@@ -7,8 +7,9 @@ import { Home } from './pages/main.jsx';
 import { About } from './pages/about.jsx';
 import { Speakers } from './pages/speakers.jsx';
 import { Sponsors } from './pages/sponsors.jsx';
-import { Contacts } from './pages/contacts.jsx';
+import { Contact } from './pages/contact.jsx';
 import { Attend } from './pages/attend.jsx';
+
 
 class App extends React.Component {
 	render() {
@@ -19,9 +20,8 @@ class App extends React.Component {
 					<Route path='/about' component={About}/>
                     <Route path='/speakers' component={Speakers}/>
                     <Route path='/sponsors' component={Sponsors}/>
-                    <Route path='/contacts'  component={Contacts}/>
+                    <Route path='/contact'  component={Contact}/>
                     <Route path='/attend'   component={Attend}/>
-                    
                 </Switch>
 			</HashRouter>
         );
@@ -29,4 +29,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
