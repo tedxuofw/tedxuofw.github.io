@@ -50,7 +50,7 @@ export class Profile extends React.Component {
 		const leftTolerance = 35;
 		const middleTolerance = 30;
 		const rightTolerance = 35;
-		const defaultImg = "/app/resources/images/generic.jpg";
+		const defaultImg = "/app/resources/images/generic.JPG";
 		
 		var xPercent = 50;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -72,9 +72,7 @@ export class Profile extends React.Component {
 				img += "-right";
 			}
 		}
-		img += ".jpg";
-		
-		if (!this.fileExists(img)) img = defaultImg;
+		img += ".JPG";
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
@@ -82,20 +80,13 @@ export class Profile extends React.Component {
 					<p className={css(styles.title)}> {this.props.title} </p>
 					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
 				</div>
-				<img src={img} className={css(styles.profilepicture)} />
+				<img src={img} className={css(styles.profilepicture)} onError={(e)=>{e.target.src=defaultImg}}/>
 			</div>
 		);
 	}
 	
-	fileExists(name) {
-		var http = new XMLHttpRequest();
-		var websiteAddress = 'https://tedxuofw.github.io';
-		http.open('HEAD', websiteAddress+name, false);
-		http.send();
-		return http.status!=404;
-	}
-	
 	speakerProfile() {
+		const defaultImg = "/app/resources/images/generic.JPG";
 		return (
 			<div className={css(styles.tedprofile)}>
 				<p className={css(styles.title)}> {this.props.title} </p>
@@ -103,6 +94,7 @@ export class Profile extends React.Component {
 				<p className={css(styles.subtitletwo)}> {this.props.role} </p>
 				<img src={this.props.img} 
                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
+					   onError={(e)=>{e.target.src=defaultImg}}
                        className={css(styles.profilepicture)} />
 			</div>
 		);
