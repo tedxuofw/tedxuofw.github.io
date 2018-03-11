@@ -54,6 +54,7 @@ export class Profile extends React.Component {
 		
 		var xPercent = 50;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
+		var textstyle = {color:'#000000', opacity: this.state.mouseInside?'0':'1'};
 		
 		if (this.state.rect != null && this.state.mouseInside) {
 			
@@ -77,8 +78,10 @@ export class Profile extends React.Component {
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
-				<p className={css(styles.title)}> {this.props.title} </p>
-				<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				<div style={textstyle}>
+					<p className={css(styles.title)}> {this.props.title} </p>
+					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				</div>
 				<img src={img} className={css(styles.profilepicture)} />
 			</div>
 		);
