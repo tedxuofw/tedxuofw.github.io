@@ -89,7 +89,7 @@ export class Profile extends React.Component {
 	
 	fileExists(name) {
 		var http = new XMLHttpRequest();
-		var websiteAddress = 'http://localhost:8080';//'https://tedxuofw.github.io';
+		var websiteAddress = 'https://tedxuofw.github.io';
 		http.open('HEAD', websiteAddress+name, false);
 		http.send();
 		return http.status!=404;
