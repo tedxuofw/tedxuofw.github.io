@@ -44,6 +44,7 @@ export class TEDNavbar extends React.Component {
                 <div className={css(styles.undernav)}></div>
             </div>
         );
+        AOS.refresh();
     }
 }
 

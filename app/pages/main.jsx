@@ -15,7 +15,7 @@ import {Speakers} from '../components/featuredspeakersection.jsx';
 export class Home extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { showVideo: true };
+        this.state = { hideVideo: false, fixedBar: false };
         this.handleScroll = this.handleScroll.bind(this); // Also Important!
         this.closeVideo = this.closeVideo.bind(this);
     }
@@ -24,8 +24,6 @@ export class Home extends React.Component {
         document.title = "TEDx - University of Washington";
         window.scrollTo(0, 0);
         window.addEventListener('scroll', this.handleScroll);
-		
-		AOS.init();
     }
 
     componentWillUnmount() {
@@ -33,28 +31,35 @@ export class Home extends React.Component {
     }
 
     handleScroll(event) {
-        let scrollTop = window.pageYOffset;
-        const video = document.getElementById('tedvideo');
-        const h = video.offsetTop + video.offsetHeight;
-        
-        if(scrollTop > (h)) {
-            this.setState({ showVideo: false });
-            video.muted = true;
-            video.display = 'none';
+        if(!this.hideVideo) {
+            let scrollTop = window.pageYOffset;
+            let video = document.getElementById('tedvideo');
+            if(video) {
+                
+                let h = video.offsetTop + video.offsetHeight;
+                console.log(h);
+                if(scrollTop > (h)) {
+                    this.setState({ hideVideo: true, fixedBar: true });
+                    AOS.refresh();
+                }
+            }
         }
     }
     
     closeVideo() {
-        $('html, body').animate({
-            scrollTop: $("#topSection").offset().top - 90
-        }, 1200);
+        this.setState({ hideVideo: true, fixedBar: false });
+        AOS.refresh();
+        setTimeout(function(){
+            this.setState({ hideVideo: true, fixedBar: true });
+            AOS.refresh();
+        }.bind(this), 1000);
     }
     
 	render() {
 		return (
             <div>
-                <LandingVideo id="houdini" show={this.state.showVideo} close={this.closeVideo}/>
-                <TEDNavbar fixed={!this.state.showVideo} />
+                <LandingVideo id="houdini" hide={this.state.hideVideo} close={this.closeVideo}/>
+                <TEDNavbar fixed={this.state.fixedBar} />
                 <Section border='10%'>
                     <div id="topSection" style={{height: '90px'}}></div>
                     <center>

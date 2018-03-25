@@ -1924,6 +1924,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
                 ),
                 _react2.default.createElement('div', { className: (0, _noImportant.css)(styles.undernav) })
             );
+            AOS.refresh();
         }
     }]);
 
@@ -12641,7 +12642,7 @@ var Profile = exports.Profile = function (_React$Component) {
 			var leftTolerance = 35;
 			var middleTolerance = 30;
 			var rightTolerance = 35;
-			var defaultImg = "https://tedxuofw.github.io//app/resources/images/generic.jpg";
+			var defaultImg = "/app/resources/images/generic.jpg";
 
 			var xPercent = 50;
 			var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
@@ -34401,7 +34402,7 @@ var Home = exports.Home = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
 
-        _this.state = { showVideo: true };
+        _this.state = { hideVideo: false, fixedBar: false };
         _this.handleScroll = _this.handleScroll.bind(_this); // Also Important!
         _this.closeVideo = _this.closeVideo.bind(_this);
         return _this;
@@ -34413,8 +34414,6 @@ var Home = exports.Home = function (_React$Component) {
             document.title = "TEDx - University of Washington";
             window.scrollTo(0, 0);
             window.addEventListener('scroll', this.handleScroll);
-
-            AOS.init();
         }
     }, {
         key: 'componentWillUnmount',
@@ -34424,22 +34423,29 @@ var Home = exports.Home = function (_React$Component) {
     }, {
         key: 'handleScroll',
         value: function handleScroll(event) {
-            var scrollTop = window.pageYOffset;
-            var video = document.getElementById('tedvideo');
-            var h = video.offsetTop + video.offsetHeight;
+            if (!this.hideVideo) {
+                var scrollTop = window.pageYOffset;
+                var video = document.getElementById('tedvideo');
+                if (video) {
 
-            if (scrollTop > h) {
-                this.setState({ showVideo: false });
-                video.muted = true;
-                video.display = 'none';
+                    var h = video.offsetTop + video.offsetHeight;
+                    console.log(h);
+                    if (scrollTop > h) {
+                        this.setState({ hideVideo: true, fixedBar: true });
+                        AOS.refresh();
+                    }
+                }
             }
         }
     }, {
         key: 'closeVideo',
         value: function closeVideo() {
-            $('html, body').animate({
-                scrollTop: $("#topSection").offset().top - 90
-            }, 1200);
+            this.setState({ hideVideo: true, fixedBar: false });
+            AOS.refresh();
+            setTimeout(function () {
+                this.setState({ hideVideo: true, fixedBar: true });
+                AOS.refresh();
+            }.bind(this), 1000);
         }
     }, {
         key: 'render',
@@ -34447,8 +34453,8 @@ var Home = exports.Home = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_tedvideo.LandingVideo, { id: 'houdini', show: this.state.showVideo, close: this.closeVideo }),
-                _react2.default.createElement(_tednavbar.TEDNavbar, { fixed: !this.state.showVideo }),
+                _react2.default.createElement(_tedvideo.LandingVideo, { id: 'houdini', hide: this.state.hideVideo, close: this.closeVideo }),
+                _react2.default.createElement(_tednavbar.TEDNavbar, { fixed: this.state.fixedBar }),
                 _react2.default.createElement(
                     _section.Section,
                     { border: '10%' },
@@ -47494,10 +47500,10 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
             var _this2 = this;
 
             var componentClasses = [styles.houdini];
-            var show = this.props.show;
+            var hide = this.props.hide;
 
-            if (show) {
-                componentClasses.push(styles.show);
+            if (hide) {
+                componentClasses.push(styles.hide);
             }
 
             return _react2.default.createElement(
@@ -47506,12 +47512,10 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                 _react2.default.createElement(
                     'div',
                     { className: (0, _aphrodite.css)(styles.videoContent) },
-                    _react2.default.createElement('div', { className: (0, _aphrodite.css)(styles.videoOverlay) }),
                     _react2.default.createElement(
                         'video',
                         { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, loop: true, muted: true },
-                        _react2.default.createElement('source', { src: './app/resources/videos/seattle.webm', type: 'video/webm' }),
-                        _react2.default.createElement('source', { src: './app/resources/videos/seattle.mp4', type: 'video/mp4' })
+                        _react2.default.createElement('source', { src: './app/resources/videos/moonshot.mp4', type: 'video/mp4' })
                     ),
                     _react2.default.createElement(
                         'div',
@@ -47526,6 +47530,7 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                     )
                 )
             );
+            AOS.refresh();
         }
     }]);
 
@@ -47533,47 +47538,31 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
 }(_react2.default.Component);
 
 LandingVideo.propTypes = {
-    show: _propTypes2.default.bool.isRequired
+    hide: _propTypes2.default.bool.isRequired
 };
 
 var styles = _aphrodite.StyleSheet.create({
     houdini: {
-        width: '0',
-        height: '0',
-        WebkitTransition: '0.5s',
-        MozTransition: '0.5s',
-        OTransition: '0.5s',
-        transition: ' 0.5s',
-        opacity: '0',
-        visibility: 'hidden'
-    },
-    show: {
-        opacity: '1',
-        visibility: 'visible',
         width: '100%',
-        height: '100%'
+        height: 'auto',
+        overflow: 'hidden',
+        maxHeight: '100vh',
+        transition: 'max-height 0.5s ease-in-out'
+    },
+    hide: {
+        maxHeight: '0vh'
     },
     videoContent: {
         position: 'relative',
         zIndex: '5'
-    },
-    videoOverlay: {
-        top: '0%',
-        left: '0%',
-        height: '100%',
-        width: '100%',
-        overflow: 'hidden',
-        position: 'absolute',
-        zIndex: '2',
-        backgroundColor: 'rgba(0, 0, 0, 0.6)'
     },
 
     video: {
         top: '0%',
         left: '0%',
         position: 'relative',
-        minWidth: '100%',
-        minHeight: '100%',
+        maxWidth: '100%',
+        maxHeight: '100%',
         width: 'auto',
         height: 'auto',
         objectFit: 'fill',
@@ -47804,13 +47793,13 @@ var Speakers = exports.Speakers = function (_React$Component) {
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jasmine Samy',
 					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/generic.JPG',
+					img: '/app/resources/images/generic.jpg',
 					flipped: false
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
 					name: 'Jeannie Berwick',
 					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/generic.JPG',
+					img: '/app/resources/images/generic.jpg',
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
@@ -48846,7 +48835,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/erin-jones.JPG',
+								img: '/app/resources/images/erin-jones.jpg',
 								title: 'Erin Jones',
 								role: 'Superintendent',
 								company: 'Office of Public Instruction',
@@ -48857,7 +48846,7 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
+								img: '/app/resources/images/generic.jpg',
 								title: 'Barry Bington',
 								role: 'Bouncer',
 								company: 'The Bureau of Braniacs',
