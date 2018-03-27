@@ -16,7 +16,7 @@ export class LandingVideo extends React.Component {
         return (
             <div id="houdini-wrapper" className={css(componentClasses)}>
                 <div className={css(styles.videoContent)}>
-                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop muted>
+                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay onEnded={() => this.props.close()} muted>
                         <source src="./app/resources/videos/moonshot.mp4" type="video/mp4" />
                     </video>
                     <div className={css(styles.textCopy)} onClick={() => this.props.close()} >

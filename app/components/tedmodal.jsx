@@ -18,18 +18,20 @@ export class Modal extends React.Component {
         return (
             <div>
                 <div className={css(styles.modal)}>
-                    <div className={css(styles.top)}>
+                    <div className={css(styles.one)}>
                         <div className={css(styles.imagecontainer)}>
                             <img className={css(styles.image)} src={this.props.modalImage}/>
-                            <div className={css(styles.infoname)}>{this.props.modalText}</div>
                         </div>
+                    </div>
+                    <div className={css(styles.two)}>
                         <div className={css(styles.info)}>
                             <span className={css(styles.close)} onClick={() => this.close()}>
                                 <i className="fa fa-times-circle-o" aria-hidden="true"></i>
                             </span>
                         </div>
+                        <div className={css(styles.infoname)}>{this.props.modalText}</div>
                     </div>
-                    <div className={css(styles.bottom)}>
+                    <div className={css(styles.three)}>
                         {this.props.modalText}                    
                     </div>
                 </div>
@@ -43,6 +45,10 @@ export class Modal extends React.Component {
 
 const styles = StyleSheet.create({
 	modal: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        
         position: 'fixed',
         top: '5%',
         bottom: '5%',
@@ -60,12 +66,18 @@ const styles = StyleSheet.create({
         zIndex: '9098',
         background: 'rgba(0, 0, 0, 0.3)'
     },
-    top: {
-        background: '#E62B1E',
+    one: {
+        flex: '1 1 0',
         height: '50%',
         color: 'white'
     },
-    bottom: {
+    two: {
+        flex: '1 1 0',
+        background: '#E62B1E',
+    },
+    three: {
+        flex: '100%',
+        order: '3',
         height: '50%',
         overflowY: 'scroll',
         paddingTop: '25px',
@@ -112,6 +124,8 @@ const styles = StyleSheet.create({
     },
     infoname: {
         float: 'right',
+        color: 'white',
+        fontSize: '24px',
         zIndex: '9999'
     },
     close: {
