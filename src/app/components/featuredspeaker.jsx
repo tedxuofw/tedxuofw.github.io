@@ -50,15 +50,15 @@ export class FeaturedSpeaker extends React.Component {
 		return (
 			<div className={css(styles.sectioncontainer)} id={"trigger-appear-"+this.state.key} >
 				<div style={descstyle} className={css(styles.descriptioncontainer)} 
-						data-aos={"fade-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="bottom-bottom">
+						data-aos={"fade-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom">
 						
 					<p style={textstyle} className={css(styles.title)}> {this.props.name} </p>
 					<p style={textstyle} className={css(styles.description)}> {this.props.desc} </p>
 				</div>
 				<span className={css(styles.boderline)}  
-						data-aos={"flip-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="bottom-bottom" />
+						data-aos={"flip-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
 				<img src={this.props.img} style={picstyle} className={css(styles.picture)} 
-						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="bottom-bottom" />
+						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
 			</div>
 		);
 	}
