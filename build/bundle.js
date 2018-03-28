@@ -1866,7 +1866,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Attend', className: 'tednavlink tednavgold', link: '#/attend' }];
+            var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Attend', className: 'tednavlink tednavgold', target: '_blank', link: 'https://tedxuofw.ticketleap.com/2018/' }];
 
             var fixed = false;
             if (this.props.fixed) fixed = this.props.fixed;
@@ -1907,7 +1907,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
                                 }
                                 return _react2.default.createElement(
                                     _reactBootstrap.NavItem,
-                                    { eventKey: index, className: (0, _noImportant.css)(styles.tednavlinka), key: item.text, href: item.link },
+                                    { eventKey: index, target: item.target, className: (0, _noImportant.css)(styles.tednavlinka), key: item.text, href: item.link },
                                     _react2.default.createElement(
                                         'center',
                                         null,
@@ -12608,9 +12608,10 @@ var Profile = exports.Profile = function (_React$Component) {
 	}, {
 		key: 'descriptionProfile',
 		value: function descriptionProfile() {
+			var style = { height: this.props.large ? '' : '22vw', overflow: 'auto' };
 			return _react2.default.createElement(
 				'div',
-				{ className: (0, _aphrodite.css)(styles.descriptioncontainer) },
+				{ style: style, className: (0, _aphrodite.css)(styles.descriptioncontainer) },
 				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.teddescriptionbar) }),
 				_react2.default.createElement(
 					'p',
@@ -12646,7 +12647,6 @@ var Profile = exports.Profile = function (_React$Component) {
 
 			var xPercent = 50;
 			var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
-			var textstyle = { color: '#000000', opacity: this.state.mouseInside ? '0' : '1' };
 
 			if (this.state.rect != null && this.state.mouseInside) {
 
@@ -12666,6 +12666,10 @@ var Profile = exports.Profile = function (_React$Component) {
 			}
 			img += ".jpg";
 
+			var textContainerStyle = { color: '#000000', opacity: this.state.mouseInside ? '0' : '1' };
+			var titleStyle = { fontSize: this.props.large ? '6vw' : '2vw' };
+			var descStyle = { fontSize: this.props.large ? '4.5vw' : '1.5vw' };
+
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.tedprofile), onMouseMove: this._onMouseMove.bind(this), onMouseEnter: this.mouseEnter, onMouseLeave: this.mouseLeave, ref: function ref(input) {
@@ -12673,17 +12677,17 @@ var Profile = exports.Profile = function (_React$Component) {
 					} },
 				_react2.default.createElement(
 					'div',
-					{ style: textstyle },
+					{ style: textContainerStyle },
 					_react2.default.createElement(
 						'p',
-						{ className: (0, _aphrodite.css)(styles.title) },
+						{ style: titleStyle, className: (0, _aphrodite.css)(styles.title) },
 						' ',
 						this.props.title,
 						' '
 					),
 					_react2.default.createElement(
 						'p',
-						{ className: (0, _aphrodite.css)(styles.subtitletwo) },
+						{ style: descStyle, className: (0, _aphrodite.css)(styles.subtitletwo) },
 						' ',
 						this.props.role,
 						' '
@@ -12700,26 +12704,28 @@ var Profile = exports.Profile = function (_React$Component) {
 			var _this3 = this;
 
 			var defaultImg = "/app/resources/images/generic.jpg";
+			var titleStyle = { fontSize: '2vw' };
+			var descStyle = { fontSize: '1.5vw' };
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.tedprofile) },
 				_react2.default.createElement(
 					'p',
-					{ className: (0, _aphrodite.css)(styles.title) },
+					{ style: titleStyle, className: (0, _aphrodite.css)(styles.title) },
 					' ',
 					this.props.title,
 					' '
 				),
 				_react2.default.createElement(
 					'p',
-					{ className: (0, _aphrodite.css)(styles.subtitleone) },
+					{ style: descStyle, className: (0, _aphrodite.css)(styles.subtitleone) },
 					' ',
 					this.props.company,
 					' '
 				),
 				_react2.default.createElement(
 					'p',
-					{ className: (0, _aphrodite.css)(styles.subtitletwo) },
+					{ style: descStyle, className: (0, _aphrodite.css)(styles.subtitletwo) },
 					' ',
 					this.props.role,
 					' '
@@ -12775,7 +12781,6 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	title: {
 		position: 'absolute',
-		fontSize: '2vw',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
@@ -12785,7 +12790,6 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	subtitleone: {
 		position: 'absolute',
-		fontSize: '1.5vw',
 		fontWeight: 'normal',
 		fontFamily: 'AvenirBlack',
 		margin: '75% 0px 0px 7%',
@@ -12794,7 +12798,6 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	subtitletwo: {
 		position: 'absolute',
-		fontSize: '1.5vw',
 		fontWeight: 'normal',
 		fontFamily: 'Avenir',
 		margin: '85% 0px 0px 7%',
@@ -12808,11 +12811,9 @@ var styles = _aphrodite.StyleSheet.create({
 
 	descriptioncontainer: {
 		width: '100%',
-		height: '22vw',
 		minWidth: '70px',
 		maxWidth: '600px',
-		position: 'relative',
-		overflowY: 'scroll'
+		position: 'relative'
 	},
 	description: {
 		fontWeight: 'normal',
@@ -12898,17 +12899,16 @@ var Modal = exports.Modal = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.modal) },
                     _react2.default.createElement(
                         'div',
-                        { className: (0, _aphrodite.css)(styles.top) },
+                        { className: (0, _aphrodite.css)(styles.one) },
                         _react2.default.createElement(
                             'div',
                             { className: (0, _aphrodite.css)(styles.imagecontainer) },
-                            _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.image), src: this.props.modalImage }),
-                            _react2.default.createElement(
-                                'div',
-                                { className: (0, _aphrodite.css)(styles.infoname) },
-                                this.props.modalText
-                            )
-                        ),
+                            _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.image), src: this.props.modalImage })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        { className: (0, _aphrodite.css)(styles.two) },
                         _react2.default.createElement(
                             'div',
                             { className: (0, _aphrodite.css)(styles.info) },
@@ -12919,11 +12919,16 @@ var Modal = exports.Modal = function (_React$Component) {
                                     } },
                                 _react2.default.createElement('i', { className: 'fa fa-times-circle-o', 'aria-hidden': 'true' })
                             )
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            { className: (0, _aphrodite.css)(styles.infoname) },
+                            this.props.modalText
                         )
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: (0, _aphrodite.css)(styles.bottom) },
+                        { className: (0, _aphrodite.css)(styles.three) },
                         this.props.modalText
                     )
                 ),
@@ -12939,6 +12944,10 @@ var Modal = exports.Modal = function (_React$Component) {
 
 var styles = _aphrodite.StyleSheet.create({
     modal: {
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+
         position: 'fixed',
         top: '5%',
         bottom: '5%',
@@ -12956,12 +12965,18 @@ var styles = _aphrodite.StyleSheet.create({
         zIndex: '9098',
         background: 'rgba(0, 0, 0, 0.3)'
     },
-    top: {
-        background: '#E62B1E',
+    one: {
+        flex: '1 1 0',
         height: '50%',
         color: 'white'
     },
-    bottom: {
+    two: {
+        flex: '1 1 0',
+        background: '#E62B1E'
+    },
+    three: {
+        flex: '100%',
+        order: '3',
         height: '50%',
         overflowY: 'scroll',
         paddingTop: '25px',
@@ -13008,6 +13023,8 @@ var styles = _aphrodite.StyleSheet.create({
     },
     infoname: {
         float: 'right',
+        color: 'white',
+        fontSize: '24px',
         zIndex: '9999'
     },
     close: {
@@ -47514,7 +47531,9 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.videoContent) },
                     _react2.default.createElement(
                         'video',
-                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, loop: true, muted: true },
+                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, onEnded: function onEnded() {
+                                return _this2.props.close();
+                            }, muted: true },
                         _react2.default.createElement('source', { src: './app/resources/videos/moonshot.mp4', type: 'video/mp4' })
                     ),
                     _react2.default.createElement(
@@ -47921,7 +47940,7 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 				_react2.default.createElement(
 					'div',
 					{ style: descstyle, className: (0, _aphrodite.css)(styles.descriptioncontainer),
-						'data-aos': "fade-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' },
+						'data-aos': "fade-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' },
 					_react2.default.createElement(
 						'p',
 						{ style: textstyle, className: (0, _aphrodite.css)(styles.title) },
@@ -47938,9 +47957,9 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 					)
 				),
 				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.boderline),
-					'data-aos': "flip-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' }),
+					'data-aos': "flip-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' }),
 				_react2.default.createElement('img', { src: this.props.img, style: picstyle, className: (0, _aphrodite.css)(styles.picture),
-					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'bottom-bottom' })
+					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' })
 			);
 		}
 	}]);
@@ -48632,7 +48651,8 @@ var Profiles = exports.Profiles = function (_React$Component) {
 								img: profile.img,
 								title: profile.name,
 								role: profile.role,
-								txt: profile.txt
+								txt: profile.txt,
+								large: tWidth == 1
 							})
 						);
 					})
