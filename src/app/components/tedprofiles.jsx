@@ -46,6 +46,7 @@ export class Profiles extends React.Component {
 									title={profile.name} 
 									role={profile.role}
 									txt={profile.txt}
+									large={tWidth == 1}
 								/>
 							</td>
 						))}
