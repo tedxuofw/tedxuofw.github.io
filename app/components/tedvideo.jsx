@@ -9,17 +9,15 @@ import {StyleSheet, css} from 'aphrodite';
 export class LandingVideo extends React.Component {
     render() {
         const componentClasses = [styles.houdini];
-        const show = this.props.show;
+        const hide = this.props.hide;
         
-        if(show) { componentClasses.push(styles.show); }
-
+        if(hide) { componentClasses.push(styles.hide); }
+        
         return (
             <div id="houdini-wrapper" className={css(componentClasses)}>
                 <div className={css(styles.videoContent)}>
-                    <div className={css(styles.videoOverlay)}></div>
-                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay loop muted>
-                        <source src="./app/resources/videos/seattle.webm" type="video/webm" />
-                        <source src="./app/resources/videos/seattle.mp4" type="video/mp4" />
+                    <video className={css(styles.video)} id='tedvideo' poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoPlay onEnded={() => this.props.close()} muted>
+                        <source src="./app/resources/videos/moonshot.mp4" type="video/mp4" />
                     </video>
                     <div className={css(styles.textCopy)} onClick={() => this.props.close()} >
                         <center><i className="fa fa-angle-down fa-2x" aria-hidden="true"></i></center>
@@ -27,52 +25,37 @@ export class LandingVideo extends React.Component {
                 </div>
             </div>
         );    
+        AOS.refresh();
     }
 }
 
 LandingVideo.propTypes = {
-    show: PropTypes.bool.isRequired
+    hide: PropTypes.bool.isRequired
 };
 
 
 const styles = StyleSheet.create({
     houdini: {
-        width: '0',
-        height: '0', 
-        WebkitTransition: '0.5s',
-        MozTransition: '0.5s',
-        OTransition: '0.5s',
-        transition:' 0.5s',
-        opacity: '0',
-        visibility: 'hidden',
-    },
-    show: {
-        opacity: '1',
-        visibility: 'visible',
         width: '100%',
-        height: '100%',
+        height: 'auto',
+        overflow: 'hidden',
+        maxHeight: '100vh',
+        transition: 'max-height 0.5s ease-in-out'
+    },
+    hide: {
+        maxHeight: '0vh',
     },
     videoContent : {
         position: 'relative',
         zIndex: '5',
-    },
-    videoOverlay: {
-        top: '0%',
-        left: '0%',
-        height: '100%',
-        width: '100%',
-        overflow: 'hidden',
-        position: 'absolute',
-        zIndex: '2',
-        backgroundColor: 'rgba(0, 0, 0, 0.6)'
     },
 
     video: {
         top: '0%',
         left: '0%',
         position: 'relative',
-        minWidth: '100%', 
-        minHeight: '100%',
+        maxWidth: '100%', 
+        maxHeight: '100%',
         width: 'auto', 
         height: 'auto',
         objectFit: 'fill',

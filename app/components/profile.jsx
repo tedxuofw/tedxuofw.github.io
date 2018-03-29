@@ -28,8 +28,9 @@ export class Profile extends React.Component {
 	}
 	
 	descriptionProfile() {
+		var style = {height:this.props.large? '' : '22vw', overflow:'auto',};
 		return (
-			<div className={css(styles.descriptioncontainer)}>
+			<div style={style} className={css(styles.descriptioncontainer)}>
 				<span className={css(styles.teddescriptionbar)} />
 				<p className={css(styles.description)}> {this.props.txt} </p>
 			</div>
@@ -54,7 +55,6 @@ export class Profile extends React.Component {
 		
 		var xPercent = 50;
 		var img = "/app/resources/images/team/" + this.props.title.toLowerCase().replace(/\s+/g, '-');
-		var textstyle = {color:'#000000', opacity: this.state.mouseInside?'0':'1'};
 		
 		if (this.state.rect != null && this.state.mouseInside) {
 			
@@ -74,11 +74,15 @@ export class Profile extends React.Component {
 		}
 		img += ".jpg";
 		
+		var textContainerStyle = {color:'#000000', opacity: this.state.mouseInside?'0':'1'};
+		var titleStyle = {fontSize: this.props.large ? '6vw' : '2vw'};
+		var descStyle = {fontSize: this.props.large ? '4.5vw' : '1.5vw'};
+		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
-				<div style={textstyle}>
-					<p className={css(styles.title)}> {this.props.title} </p>
-					<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				<div style={textContainerStyle}>
+					<p style={titleStyle} className={css(styles.title)}> {this.props.title} </p>
+					<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				</div>
 				<img src={img} className={css(styles.profilepicture)} onError={(e)=>{e.target.src=defaultImg}}/>
 			</div>
@@ -87,11 +91,13 @@ export class Profile extends React.Component {
 	
 	speakerProfile() {
 		const defaultImg = "/app/resources/images/generic.jpg";
+		var titleStyle = {fontSize: '2vw'};
+		var descStyle = {fontSize: '1.5vw'};
 		return (
 			<div className={css(styles.tedprofile)}>
-				<p className={css(styles.title)}> {this.props.title} </p>
-				<p className={css(styles.subtitleone)}> {this.props.company} </p>
-				<p className={css(styles.subtitletwo)}> {this.props.role} </p>
+				<p style={titleStyle} className={css(styles.title)}> {this.props.title} </p>
+				<p style={descStyle} className={css(styles.subtitleone)}> {this.props.company} </p>
+				<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				<img src={this.props.img} 
                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
 					   onError={(e)=>{e.target.src=defaultImg}}
@@ -136,7 +142,6 @@ const styles = StyleSheet.create({
     },
 	title: {
 		position: 'absolute',
-		fontSize: '2vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',
@@ -146,7 +151,6 @@ const styles = StyleSheet.create({
 	},
     subtitleone: {
 		position: 'absolute',
-        fontSize: '1.5vw',
 		fontWeight: 'normal',
         fontFamily: 'AvenirBlack',
 		margin:'75% 0px 0px 7%',
@@ -155,7 +159,6 @@ const styles = StyleSheet.create({
     },
 	subtitletwo: {
 		position: 'absolute',
-        fontSize: '1.5vw',
 		fontWeight: 'normal',
         fontFamily: 'Avenir',
 		margin:'85% 0px 0px 7%',
@@ -169,11 +172,9 @@ const styles = StyleSheet.create({
 	
 	descriptioncontainer: {
 		width: '100%',
-		height:'22vw',
 		minWidth: '70px',
 		maxWidth: '600px',
 		position: 'relative',
-		overflowY:'scroll',
 	},
 	description: {
 		fontWeight: 'normal',

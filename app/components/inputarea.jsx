@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
 	submitbutton: {
         userSelect: 'none',
         border: 'none',
+        height: '5vh',
         borderRadius: '0px',
 		display:'inline-block',
         textAlign: 'center',

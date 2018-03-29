@@ -12,7 +12,7 @@ export class TEDNavbar extends React.Component {
                       {text: 'Speakers', className: 'tednavlink', link: '#/speakers'},
                       {text: 'Sponsors', className: 'tednavlink', link: '#/sponsors'},
                       {text: 'Contact', className: 'tednavlink', link: '#/contact'},
-                      {text: 'Attend', className: 'tednavlink tednavgold', link: '#/attend'}];
+                      {text: 'Attend', className: 'tednavlink tednavgold', target:'_blank', link: 'https://tedxuofw.ticketleap.com/2018/'}];
         
         var fixed = false;
         if(this.props.fixed) fixed = this.props.fixed;
@@ -33,7 +33,7 @@ export class TEDNavbar extends React.Component {
                             { 
                                 links.map((item, index) => { 
                                     if(index == this.props.index) {item.className += ' tedactive'}
-                                    return <NavItem eventKey={index}  className={css(styles.tednavlinka)} key={item.text} href={item.link}>
+                                    return <NavItem eventKey={index}  target={item.target} className={css(styles.tednavlinka)} key={item.text} href={item.link}>
                                                 <center><span className={item.className} to={item.link}>{item.text}</span></center>
                                         </NavItem> 
                                 }) 
@@ -44,6 +44,7 @@ export class TEDNavbar extends React.Component {
                 <div className={css(styles.undernav)}></div>
             </div>
         );
+        AOS.refresh();
     }
 }
 
