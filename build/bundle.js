@@ -48539,7 +48539,7 @@ var styles = _aphrodite.StyleSheet.create({
 	tabcontainer: {
 		display: 'inline-block',
 		height: '2vw',
-		marginRight: '15px',
+		marginRight: '1.7vw',
 		marginTop: '0px',
 		marginBottom: '4vw'
 	},
