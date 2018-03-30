@@ -48,7 +48,7 @@ export class CountdownSection extends React.Component {
 					<NumberSlot num={this.getSeconds()} label='seconds' />
 				</div>
 				<TedButton name="Get Now" linkTo="/attend"/>
-				<p className={css(styles.subtext)}> Promotion ends April 9th at 8 pm PST </p>
+				<p className={css(styles.subtext)}> Promotion ends April 8th at 8 pm PST </p>
 			</div>
 		);
     }
