@@ -10,6 +10,7 @@ import {LandingVideo} from '../components/tedvideo.jsx';
 import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 import {LinksSection} from '../components/linkssection.jsx';
+import {CountdownSection} from '../components/countdownsection.jsx';
 import {Speakers} from '../components/featuredspeakersection.jsx';
 
 export class Home extends React.Component {
@@ -73,6 +74,7 @@ export class Home extends React.Component {
                     </center>
                 </Section>
                 <Flair right/>
+				<CountdownSection />
                 <Section border='20%' bgColor='black'>
 					<Speakers />
                 </Section>
