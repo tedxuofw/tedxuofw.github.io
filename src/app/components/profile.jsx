@@ -48,9 +48,9 @@ export class Profile extends React.Component {
 	}
 	
 	teamProfile() {
-		const leftTolerance = 35;
-		const middleTolerance = 30;
-		const rightTolerance = 35;
+		const leftTolerance = 0;
+		const middleTolerance = 100;
+		const rightTolerance = 0;
 		const defaultImg = "/app/resources/images/generic.jpg";
 		
 		var xPercent = 50;
