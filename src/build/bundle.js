@@ -1925,7 +1925,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Attend', className: 'tednavlink tednavgold', target: '_blank', link: 'https://tedxuofw.ticketleap.com/2018/' }];
+            var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Volunteer', className: 'tednavlink', target: '_blank', link: 'https://goo.gl/forms/HRSudBJVvVqHBcwF2' }, { text: 'Attend', className: 'tednavlink tednavgold', target: '_blank', link: 'https://tedxuofw.ticketleap.com/2018/' }];
 
             var fixed = false;
             if (this.props.fixed) fixed = this.props.fixed;
@@ -12641,9 +12641,9 @@ var Profile = exports.Profile = function (_React$Component) {
 		value: function teamProfile() {
 			var _this2 = this;
 
-			var leftTolerance = 35;
-			var middleTolerance = 30;
-			var rightTolerance = 35;
+			var leftTolerance = 0;
+			var middleTolerance = 100;
+			var rightTolerance = 0;
 			var defaultImg = "/app/resources/images/generic.jpg";
 
 			var xPercent = 50;
@@ -47535,7 +47535,7 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.videoContent) },
                     _react2.default.createElement(
                         'video',
-                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, onEnded: function onEnded() {
+                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', autoPlay: true, onEnded: function onEnded() {
                                 return _this2.props.close();
                             }, muted: true },
                         _react2.default.createElement('source', { src: './app/resources/videos/moonshot.mp4', type: 'video/mp4' })
@@ -47849,11 +47849,23 @@ var CountdownSection = exports.CountdownSection = function (_React$Component) {
 					_react2.default.createElement(NumberSlot, { num: this.getMinutes(), label: 'minutes' }),
 					_react2.default.createElement(NumberSlot, { num: this.getSeconds(), label: 'seconds' })
 				),
-				_react2.default.createElement(_tedbutton.TedButton, { name: 'Get Now', linkTo: '/attend' }),
+				_react2.default.createElement(
+					'div',
+					{ className: (0, _aphrodite.css)(styles.container) },
+					_react2.default.createElement(
+						'div',
+						{ className: (0, _aphrodite.css)(styles.linkButton) },
+						_react2.default.createElement(
+							'a',
+							{ className: (0, _aphrodite.css)(styles.link), target: '_blank', href: 'https://tedxuofw.ticketleap.com/2018/' },
+							'Get Now'
+						)
+					)
+				),
 				_react2.default.createElement(
 					'p',
 					{ className: (0, _aphrodite.css)(styles.subtext) },
-					' Promotion ends April 9th at 8 pm PST '
+					' Promotion ends April 8th at 8 pm PST '
 				)
 			);
 		}
@@ -47994,6 +48006,40 @@ var styles = _aphrodite.StyleSheet.create({
 		fontWeight: 'normal',
 		fontFamily: 'Avenir',
 		color: 'black'
+	},
+
+	container: {
+		textAlign: 'center'
+	},
+	linkButton: {
+		border: 'none',
+		userSelect: 'none',
+		cursor: 'pointer',
+		display: 'inline-block',
+		minWidth: '10vw',
+		height: '5vw',
+		paddingRight: '1.5vw',
+		paddingLeft: '1.5vw',
+		marginRight: '0px',
+		marginLeft: '0px',
+		marginBottom: '10vh',
+		marginTop: '3vw',
+		lineHeight: '5vw',
+		textAlign: 'center',
+		color: '#FFFFFF',
+		backgroundColor: '#E62B25',
+		fontSize: '14px',
+		fontFamily: 'AvenirBlack',
+		transition: 'opacity 0.2s ease-out',
+		textTransform: 'uppercase',
+		":hover": {
+			opacity: ".8",
+			transition: 'opacity 0.2s ease-out'
+		}
+	},
+	link: {
+		color: 'white',
+		textDecoration: 'none'
 	}
 });
 
@@ -48635,7 +48681,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var teams = ["", "curators", "design", "speaker selection", "finance", "production", "public relations", "web"];
 
-var profiles = [{ name: "Jamie Housen", role: "Curator", team: "curators" }, { name: "Ryan Washburne", role: "Curator", team: "curators" }, { name: "Sierra Simmerman", role: "Curator", team: "curators" }, { name: "Ian Yu", role: "Design Manager", team: "design" }, { name: "Marie Danilychev", role: "Photographer", team: "design" }, { name: "Sarah Strickler", role: "Graphic Designer", team: "design" }, { name: "Katie Chun", role: "Speaker Selection Manager", team: "speaker selection" }, { name: "Sara Gustafson", role: "Speaker Selection", team: "speaker selection" }, { name: "Maren Anderson", role: "Speaker Selection", team: "speaker selection" }, { name: "Tien Vo", role: "Speaker Selection", team: "speaker selection" }, { name: "Julia Pettere", role: "Speaker Selection", team: "speaker selection" }, { name: "Sneha", role: "Speaker Selection", team: "speaker selection" }, { name: "Celia Schlekewey", role: "Finance Manager", team: "finance" }, { name: "Michael Jacobson", role: "Financial Analyst", team: "finance" }, { name: "Keren Zhang", role: "Financial Logistics", team: "finance" }, { name: "Maya Yamaguchi Sullivan", role: "Financial Analyst", team: "finance" }, { name: "Maya Gopalan", role: "Sponsorship", team: "finance" }, { name: "TJ Gascho", role: "Production Manager", team: "production" }, { name: "Jessie Ma", role: "Stage Design", team: "production" }, { name: "Sean Chronister", role: "Tech Lead", team: "production" }, { name: "Chistopher S. Gerken", role: "Tech Lead", team: "production" }, { name: "Miranda Reisman", role: "Conference Facilitator", team: "production" }, { name: "Jed Kwek", role: "Guest Experience", team: "production" }, { name: "Hanna Choi", role: "PR Manager", team: "public relations" }, { name: "Rahul Prasad", role: "Internal Manager", team: "public relations" }, { name: "Emma Rose Hurring", role: "Public Relations", team: "public relations" }, { name: "Sehel Tahir", role: "External Outreach", team: "public relations" }, { name: "Natasha Lau", role: "Internal Manager", team: "public relations" }, { name: "Jenny Liang", role: "Web Manager", team: "web" }, { name: "Sara Tieu", role: "UX/UI Designer", team: "web" }, { name: "Soham Pardeshi", role: "Web Developer", team: "web" }, { name: "Nikolas Gaub", role: "Web Developer (cool)", team: "web" }];
+var profiles = [{ name: "Jamie Housen", role: "Curator", team: "curators" }, { name: "Ryan Washburne", role: "Curator", team: "curators" }, { name: "Sierra Simmerman", role: "Curator", team: "curators" }, { name: "Ian Yu", role: "Design Manager", team: "design" }, { name: "Marie Danilychev", role: "Photographer", team: "design" }, { name: "Sarah Strickler", role: "Graphic Designer", team: "design" }, { name: "Katie Chun", role: "Speaker Selection Manager", team: "speaker selection" }, { name: "Sara Gustafson", role: "Speaker Selection", team: "speaker selection" }, { name: "Maren Anderson", role: "Speaker Selection", team: "speaker selection" }, { name: "Tien Vo", role: "Speaker Selection", team: "speaker selection" }, { name: "Julia Pettere", role: "Speaker Selection", team: "speaker selection" }, { name: "Sneha Mohidekar", role: "Speaker Selection", team: "speaker selection" }, { name: "Celia Schlekewey", role: "Finance Manager", team: "finance" }, { name: "Michael Jacobson", role: "Financial Analyst", team: "finance" }, { name: "Keren Zhang", role: "Financial Logistics", team: "finance" }, { name: "Maya Sullivan", role: "Financial Analyst", team: "finance" }, { name: "Maya Gopalan", role: "Sponsorship", team: "finance" }, { name: "TJ Gascho", role: "Production Manager", team: "production" }, { name: "Jay Ma", role: "Stage Design", team: "production" }, { name: "Sean Chronister", role: "Tech Lead", team: "production" }, { name: "Christopher Gerken", role: "Tech Lead", team: "production" }, { name: "Miranda Reisman", role: "Conference Facilitator", team: "production" }, { name: "Jed Kwek", role: "Guest Experience", team: "production" }, { name: "Hanna Choi", role: "PR Manager", team: "public relations" }, { name: "Rahul Prasad", role: "Internal Manager", team: "public relations" }, { name: "Emma Hurring", role: "Public Relations", team: "public relations" }, { name: "Sehel Tahir", role: "External Outreach", team: "public relations" }, { name: "Natasha Lau", role: "Internal Manager", team: "public relations" }, { name: "Jenny Liang", role: "Web Manager", team: "web" }, { name: "Sara Tieu", role: "UX/UI Designer", team: "web" }, { name: "Soham Pardeshi", role: "Web Developer", team: "web" }, { name: "Nikolas Gaub", role: "Web Developer (cool)", team: "web" }];
 
 var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 

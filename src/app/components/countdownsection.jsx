@@ -47,7 +47,13 @@ export class CountdownSection extends React.Component {
 					<NumberSlot num={this.getMinutes()} label='minutes' />
 					<NumberSlot num={this.getSeconds()} label='seconds' />
 				</div>
-				<TedButton name="Get Now" linkTo="/attend"/>
+                
+                <div className={css(styles.container)}>
+                    <div className={css(styles.linkButton)}>
+                        <a className={css(styles.link)} target="_blank" href="https://tedxuofw.ticketleap.com/2018/">Get Now</a>
+                    </div>
+                </div>
+                
 				<p className={css(styles.subtext)}> Promotion ends April 8th at 8 pm PST </p>
 			</div>
 		);
@@ -157,4 +163,38 @@ const styles = StyleSheet.create({
         fontFamily: 'Avenir',
 		color:'black',
 	},
+    
+    container : {
+		textAlign:'center',
+	},
+	linkButton : {
+        border: 'none',
+        userSelect: 'none',
+        cursor: 'pointer',
+		display:'inline-block',
+		minWidth:'10vw',
+		height:'5vw',
+		paddingRight:'1.5vw',
+		paddingLeft:'1.5vw',
+		marginRight:'0px',
+		marginLeft:'0px',
+		marginBottom:'10vh',
+		marginTop:'3vw',
+        lineHeight: '5vw',
+        textAlign: 'center',
+		color:'#FFFFFF',
+		backgroundColor:'#E62B25',
+		fontSize: '14px',
+        fontFamily: 'AvenirBlack',
+        transition: 'opacity 0.2s ease-out',
+		textTransform:'uppercase',
+        ":hover" : {
+            opacity: ".8",
+            transition: 'opacity 0.2s ease-out'
+        },
+	},
+    link : {
+        color: 'white',
+        textDecoration: 'none',
+    },
 });
