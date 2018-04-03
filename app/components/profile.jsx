@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
 		margin:'10% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #555',
 	},
     subtitleone: {
 		position: 'absolute',
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
         fontFamily: 'AvenirBlack',
 		margin:'75% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #666',
     },
 	subtitletwo: {
 		position: 'absolute',
@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Avenir',
 		margin:'85% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #666',
 	},
 	
 	blank: {

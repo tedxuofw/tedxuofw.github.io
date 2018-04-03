@@ -90,7 +90,7 @@ export class Contact extends React.Component {
 const styles = StyleSheet.create({
     row: { margin: '0' },
     wrapper: {
-        width: '90%',
+        width: '100%',
         margin: '0 auto'
     },
     top: {
