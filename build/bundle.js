@@ -12667,7 +12667,7 @@ var Profile = exports.Profile = function (_React$Component) {
 			}
 			img += ".jpg";
 
-			var textContainerStyle = { color: '#000000', opacity: this.state.mouseInside ? '0' : '1' };
+			var textContainerStyle = { color: '#000000' };
 			var titleStyle = { fontSize: this.props.large ? '6vw' : '2vw' };
 			var descStyle = { fontSize: this.props.large ? '4.5vw' : '1.5vw' };
 
