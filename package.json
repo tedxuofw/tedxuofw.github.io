@@ -6,7 +6,7 @@
   "scripts": {
     "test": "start",
     "start": "webpack && webpack-dev-server",
-    "deploy": "git checkout dev && git add src && git commit -m 'Deploying src from dev' &&  git subtree push --prefix src origin master --force"
+    "deploy": "git push origin `git subtree split --prefix src dev`:master --force"
   },
   "author": "TedxUofW Webdev Team",
   "license": "UNLICENSED",

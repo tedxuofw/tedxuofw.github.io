@@ -2275,7 +2275,7 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     _react2.default.createElement(
                         'b',
                         null,
-                        'Envision the Future'
+                        'Moonshot'
                     )
                 ),
                 _react2.default.createElement(
@@ -12787,7 +12787,7 @@ var styles = _aphrodite.StyleSheet.create({
 		textTransform: 'uppercase',
 		margin: '10% 0px 0px 7%',
 		color: 'white',
-		textShadow: '2px 2px #000000'
+		textShadow: '1px 1px #555'
 	},
 	subtitleone: {
 		position: 'absolute',
@@ -12795,7 +12795,7 @@ var styles = _aphrodite.StyleSheet.create({
 		fontFamily: 'AvenirBlack',
 		margin: '75% 0px 0px 7%',
 		color: 'white',
-		textShadow: '2px 2px #000000'
+		textShadow: '1px 1px #666'
 	},
 	subtitletwo: {
 		position: 'absolute',
@@ -12803,7 +12803,7 @@ var styles = _aphrodite.StyleSheet.create({
 		fontFamily: 'Avenir',
 		margin: '85% 0px 0px 7%',
 		color: 'white',
-		textShadow: '2px 2px #000000'
+		textShadow: '1px 1px #666'
 	},
 
 	blank: {
@@ -49620,7 +49620,7 @@ var Contact = exports.Contact = function (_React$Component) {
 var styles = _noImportant.StyleSheet.create({
     row: { margin: '0' },
     wrapper: {
-        width: '90%',
+        width: '100%',
         margin: '0 auto'
     },
     top: {
