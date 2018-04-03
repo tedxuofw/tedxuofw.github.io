@@ -12,7 +12,7 @@ export class TEDFooter extends React.Component {
                 <p className={css(styles.tedfooterp)}>May 5, 2018</p>
                 <p className={css(styles.tedfooterp)}>Kane Hall, Room 130</p>
                 <img className={css(styles.tedfooterlogo)} src="/app/resources/images/logo-red.png" />
-                <h4 className={css(styles.tedfooterh4)}><b>Envision the Future</b></h4>
+                <h4 className={css(styles.tedfooterh4)}><b>Moonshot</b></h4>
                 <div className={css(styles.tedfootergroup)}>
                     <a target="_blank" href="https://www.facebook.com/TEDxUofW/">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-facebook.png" />
