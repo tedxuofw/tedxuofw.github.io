@@ -10,6 +10,8 @@ import {StyleSheet, css} from 'aphrodite';
 import {Profile} from '../components/profile.jsx';
 import {Modal} from '../components/tedmodal.jsx';
 
+const TABLET_WIDTH = 801;
+
 export class Speakers extends React.Component {
     constructor(props) {
         super(props);
@@ -25,7 +27,8 @@ export class Speakers extends React.Component {
     openModal(image, name, role, text) {
         if(text && text != ""){
            // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-            let tmp = '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
+            let tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>' :
+				'<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
             vex.dialog.alert("");
             $(".vex-content").html(tmp);
         }
