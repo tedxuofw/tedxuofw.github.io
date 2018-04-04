@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 	selectedtab: {
 		width:'10%',
 		color:'#E62B25',
-		fontSize:'1.3vw',
+		fontSize:'1.27vw',
 		fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',

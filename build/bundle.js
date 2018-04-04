@@ -48305,7 +48305,7 @@ var styles = _aphrodite.StyleSheet.create({
 		height: 'auto'
 	},
 	title: {
-		fontSize: '3vw',
+		fontSize: '2.8vw',
 		color: 'white',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
@@ -48326,12 +48326,12 @@ var styles = _aphrodite.StyleSheet.create({
 		position: 'absolute',
 		width: '60%',
 		height: '150px',
-		marginTop: '15%'
+		marginTop: '25%'
 	},
 	boderline: {
 		background: '#CBCACD',
 		position: 'absolute',
-		height: '0.3224%',
+		height: '0.28%',
 		width: '100%',
 		marginTop: '34.5%'
 	}
@@ -48824,10 +48824,10 @@ var Content = function (_React$Component3) {
 				_react2.default.createElement(Tab, { label: 'Design', selected: this.state.index == 2, onClick: function onClick() {
 						return _this4.setTab(2);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 3, onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 3, onClick: function onClick() {
 						return _this4.setTab(3);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 4, onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 4, onClick: function onClick() {
 						return _this4.setTab(4);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Production', selected: this.state.index == 5, onClick: function onClick() {
@@ -48871,7 +48871,7 @@ var styles = _aphrodite.StyleSheet.create({
 	selectedtab: {
 		width: '10%',
 		color: '#E62B25',
-		fontSize: '1.3vw',
+		fontSize: '1.27vw',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
@@ -49095,6 +49095,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var TABLET_WIDTH = 801;
+
 var Speakers = exports.Speakers = function (_React$Component) {
     _inherits(Speakers, _React$Component);
 
@@ -49119,7 +49121,7 @@ var Speakers = exports.Speakers = function (_React$Component) {
         value: function openModal(image, name, role, text) {
             if (text && text != "") {
                 // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-                var tmp = '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
+                var tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>' : '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
                 vex.dialog.alert("");
                 $(".vex-content").html(tmp);
             }
