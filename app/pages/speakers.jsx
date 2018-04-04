@@ -23,10 +23,12 @@ export class Speakers extends React.Component {
     }
     
     openModal(image, name, role, text) {
-       // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-        let tmp = '<div style="margin: 20px 20px 0 0;"> <div style="width: 25%; float:left "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="margin-left: 30%"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
-        vex.dialog.alert("");
-        $(".vex-content").html(tmp);
+        if(text && text != ""){
+           // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
+            let tmp = '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
+            vex.dialog.alert("");
+            $(".vex-content").html(tmp);
+        }
         
     }
 
@@ -64,7 +66,7 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/speakers/kirsti.png" 
+							img="/app/resources/images/speakers/kristi.png" 
 							title="Kristi Straus" 
 							role=""
 							company=""
@@ -125,6 +127,82 @@ class ProfileList extends React.Component {
 						/>
 					</td>
 				</tr>
+                <tr className={css(styles.tr)}>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                                img="/app/resources/images/speakers/andrea.png" 
+                                title="Andrea Weatherhead" 
+                                role=""
+                                company=""
+                                bio='Andrea has created award winning immersive environments for many museums across the country including the Experience Music Project (now called MoPOP) and the  Museum of History & Industry in Seattle. Her visionary educational and interactive exhibit environments have earned her numerous awards. Andrea was featured as the “woman to watch out for in technology in the 21st century” by Seattle Magazine and  was cited as “one of Seattle’s 36 most influential people” by Seattle Met Magazine.'
+                                openModal={this.props.openModal}
+                            />
+                    </td>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                                img="/app/resources/images/speakers/tyler.png" 
+                                title="Tyler Valentine" 
+                                role=""
+                                company=""
+                                bio="Tyler is studying Earth and Space Sciences at University of Washington, with minors in Philosophy and Physics. He researches extraterrestrial water extraction with the Applied Physics Laboratory. He also values public engagement about science issues, speaking at events like the Seattle March for Science."
+                                openModal={this.props.openModal}
+                            />
+                    </td>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                            img="/app/resources/images/speakers/sarah.png" 
+                            title="Sarah Mhyre" 
+                            role=""
+                            company=""
+                            bio="Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society."
+                            openModal={this.props.openModal}
+                          />
+                    </td>
+                </tr>
+                <tr className={css(styles.tr)}>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                            img="/app/resources/images/speakers/jeffery.png" 
+                            title="Jeffery Lew" 
+                            role=""
+                            company=""
+                            bio="Jeffery Lew was born and raised in Seattle and graduated from the University of Washington with a BA in marketing. As a proud graduate of Seattle Public Schools (Ingraham High) and a father of three, the problem of school lunch debt and lunch shaming hit close to home for him. Jeff could not fathom students being shamed or going hungry for having lunch debt at their school cafeteria, a situation that children have no control over. In 2017, Jeff began a movement to end lunch shaming and find a permanent solution to the problem. Also known as the 'Lunch Dad,' Jeff launched a campaign to pay off all the lunch debt in Seattle, Tacoma and Spokane, the three largest school districts in the state of Washington. He has raised over $100,000 to date and is now aiming to pay off the lunch debt for every district in the state. Still, not everyone is aware of school lunch debt and the shaming that stems from it. Jeff is on a mission to raise awareness and find a way to end this practice once and for all."
+                            openModal={this.props.openModal}
+                          />
+                    </td>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                            img="/app/resources/images/speakers/izdihar.png" 
+                            title="Izdihar Bailey" 
+                            role=""
+                            company=""
+                            bio="Izdihar Bailey is a Lobbyist and a former Government Affairs Team member at CAIR-Washington State, America's largest Muslim civil liberties and advocacy organization. As someone who has lived life without Islam and is now empowered by Islam, she believes her life experience allows her to create stronger link of communication with fellow Americans of all faiths and political alignments."
+                            openModal={this.props.openModal}
+                          />
+                    </td>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                            img="/app/resources/images/speakers/karen.png" 
+                            title="Karen Liftin" 
+                            role=""
+                            company=""
+                            bio=""
+                            openModal={this.props.openModal}
+                          />
+                    </td>
+                </tr>
+                <tr className={css(styles.tr)}>
+                    <td className={css(styles.td)}>
+                        <Profile 
+                            img="/app/resources/images/speakers/tarah.png" 
+                            title="Tarah Wheeler" 
+                            role=""
+                            company=""
+                            bio=""
+                            openModal={this.props.openModal}
+                          />
+                    </td>
+                </tr>
 				</tbody>
 			</table>
 		);
