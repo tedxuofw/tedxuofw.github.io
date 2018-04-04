@@ -29,7 +29,7 @@ export class Modal extends React.Component {
                                 <i className="fa fa-times-circle-o" aria-hidden="true"></i>
                             </span>
                         </div>
-                        <div className={css(styles.infoname)}>{this.props.modalText}</div>
+                        <div className={css(styles.infoname)}>{this.props.modalRole}</div>
                     </div>
                     <div className={css(styles.three)}>
                         {this.props.modalText}                    
@@ -131,7 +131,8 @@ const styles = StyleSheet.create({
     close: {
         position: 'absolute',
         top: '5px',
-        right: '5px'
+        right: '5px',
+        color: 'white'
     }
                                  
 });

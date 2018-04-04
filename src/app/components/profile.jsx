@@ -99,9 +99,9 @@ export class Profile extends React.Component {
 				<p style={descStyle} className={css(styles.subtitleone)}> {this.props.company} </p>
 				<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				<img src={this.props.img} 
-                       onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
+                       onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role, this.props.bio)} 
 					   onError={(e)=>{e.target.src=defaultImg}}
-                       className={css(styles.profilepicture)} />
+                       className={css(styles.profilepicture, styles.hover)} />
 			</div>
 		);
 	}
@@ -134,11 +134,15 @@ const styles = StyleSheet.create({
     profilepicture: {
         display: 'block',
 		width:'100%',
-		height:'auto',
+		maxHeight:'100%',
+        overflowY: 'hidden',
 		opacity:'1',
-		':hover': {
-			//opacity: '0.7'
-        }
+		
+    },
+    hover: {
+       ':hover': {
+			opacity: '0.9'
+        } 
     },
 	title: {
 		position: 'absolute',
