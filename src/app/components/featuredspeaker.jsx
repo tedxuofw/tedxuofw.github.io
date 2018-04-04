@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
 		height:'auto',
     },
 	title: {
-		fontSize: '3vw',
+		fontSize: '2.8vw',
 		color:'white',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
@@ -101,12 +101,12 @@ const styles = StyleSheet.create({
 		position:'absolute',
 		width: '60%',
 		height: '150px',
-		marginTop:'15%',
+		marginTop:'25%',
 	},
 	boderline: {
 		background: '#CBCACD',
 		position:'absolute',
-        height: '0.3224%',
+        height: '0.28%',
         width: '100%',
 		marginTop:'34.5%',
 	},
