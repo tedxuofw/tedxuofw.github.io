@@ -9,7 +9,7 @@ import {TedButton} from '../components/tedbutton.jsx';
 const speakers =[ {name:"Kristi Straus", 	desc:"UW Environmental Studies", 	img:"/app/resources/images/speakers/kristi.png"},
 			{name:"Ansel Santosa", 	desc:"UW Information School", 				img:"/app/resources/images/speakers/ansel.png"},
 			{name:"Heather Evans", 	desc:"University of Washington", 			img:"/app/resources/images/speakers/heather.png"},
-			{name:"Dr. Stephen Bezruchka", desc:"Departments of Health Services and Global Health", img:"/app/resources/images/speakers/stephen.png"},
+			{name:"Dr. Bezruchka", desc:"Departments of Health Services and Global Health", img:"/app/resources/images/speakers/stephen.png"},
 			{name:"John Sinclair", desc:"Songwriter, Producer, and Performer", 	img:"/app/resources/images/speakers/john.png"},
 			{name:"Fauzia Lala", desc:"", 										img:"/app/resources/images/speakers/fauzia.png"},
 			{name:"Andrea Weatherhead", desc:"", 								img:"/app/resources/images/speakers/andrea.png"},

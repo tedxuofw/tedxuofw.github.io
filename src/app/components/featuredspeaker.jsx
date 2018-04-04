@@ -99,14 +99,14 @@ const styles = StyleSheet.create({
     },
 	descriptioncontainer: {
 		position:'absolute',
-		width: '65%',
+		width: '60%',
 		height: '150px',
 		marginTop:'15%',
 	},
 	boderline: {
 		background: '#CBCACD',
 		position:'absolute',
-        height: '0.5%',
+        height: '0.3224%',
         width: '100%',
 		marginTop:'34.5%',
 	},

@@ -12781,7 +12781,7 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	hover: {
 		':hover': {
-			opacity: '0.8'
+			opacity: '0.9'
 		}
 	},
 	title: {
@@ -48084,18 +48084,35 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var speakers = [{ name: "Kristi Straus", desc: "UW Environmental Studies", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "UW Information School", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "University of Washington", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "Departments of Health Services and Global Health", img: "/app/resources/images/speakers/stephen.png" }, { name: "John Sinclair", desc: "Songwriter, Producer, and Performer", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "University of Washington", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Mhyre", desc: "UW Department of Oceanography", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Liftin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }];
+
 var Speakers = exports.Speakers = function (_React$Component) {
 	_inherits(Speakers, _React$Component);
 
-	function Speakers() {
+	function Speakers(props) {
 		_classCallCheck(this, Speakers);
 
-		return _possibleConstructorReturn(this, (Speakers.__proto__ || Object.getPrototypeOf(Speakers)).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, (Speakers.__proto__ || Object.getPrototypeOf(Speakers)).call(this, props));
+
+		_this.getSelection = _this.getSelection.bind(_this);
+		_this.state = { table: _this.getSelection() };
+		return _this;
 	}
 
 	_createClass(Speakers, [{
+		key: 'getSelection',
+		value: function getSelection() {
+			var table = [];
+			while (table.length < 3) {
+				var num = Math.floor(Math.random() * speakers.length);
+				if (!table.includes(speakers[num])) table.push(speakers[num]);
+			}
+			return table;
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var table = this.state.table;
 			return _react2.default.createElement(
 				'div',
 				{ className: (0, _aphrodite.css)(styles.container) },
@@ -48109,21 +48126,21 @@ var Speakers = exports.Speakers = function (_React$Component) {
 					)
 				),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
-					name: 'Erin Jones',
-					desc: 'Office of Public Education',
-					img: '/app/resources/images/erin-jones.jpg',
+					name: table[0].name,
+					desc: table[0].desc,
+					img: table[0].img,
 					flipped: true
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
-					name: 'Jasmine Samy',
-					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/generic.jpg',
+					name: table[1].name,
+					desc: table[1].desc,
+					img: table[1].img,
 					flipped: false
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
-					name: 'Jeannie Berwick',
-					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/generic.jpg',
+					name: table[2].name,
+					desc: table[2].desc,
+					img: table[2].img,
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
@@ -48264,7 +48281,10 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.boderline),
 					'data-aos': "flip-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' }),
 				_react2.default.createElement('img', { src: this.props.img, style: picstyle, className: (0, _aphrodite.css)(styles.picture),
-					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' })
+					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom',
+					onError: function onError(e) {
+						e.target.src = "/app/resources/images/generic.jpg";
+					} })
 			);
 		}
 	}]);
@@ -48304,14 +48324,14 @@ var styles = _aphrodite.StyleSheet.create({
 	},
 	descriptioncontainer: {
 		position: 'absolute',
-		width: '65%',
+		width: '60%',
 		height: '150px',
 		marginTop: '15%'
 	},
 	boderline: {
 		background: '#CBCACD',
 		position: 'absolute',
-		height: '0.5%',
+		height: '0.3224%',
 		width: '100%',
 		marginTop: '34.5%'
 	}
