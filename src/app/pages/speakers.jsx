@@ -22,8 +22,8 @@ export class Speakers extends React.Component {
         window.scrollTo(0, 0);
     }
     
-    openModal(image, name, text) {
-        this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalText: text });
+    openModal(image, name, role, text) {
+        this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
     }
 
     closeModal() {
@@ -60,28 +60,31 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/erin-jones.jpg" 
-							title="Erin Jones" 
-							role="Superintendent"
-							company="Office of Public Instruction"
+							img="/app/resources/images/speakers/kirsti.png" 
+							title="Kristi Straus" 
+							role=""
+							company=""
+                            bio="Kristi Straus is a lecturer in the College’s Environmental Studies program and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation and education surrounding environmental topics."
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.jpg" 
-							title="Barry Bington" 
-							role="Bouncer"
-							company="The Bureau of Braniacs"
+							img="/app/resources/images/speakers/ansel.png" 
+							title="Ansel Santosa" 
+                            role=""
+							company=""
+                            bio="Ansel is an engineer and educator. He graduated from the University of Washington Information School in 2013 where he now serves as an advisory board member. He works as a software engineer and early business validator at Pioneer Square Labs, a local startup studio and seed stage venture fund. He is passionate about helping entrepreneurs be successful and building great companies in Seattle."
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.JPG" 
-							title="Danny D. Daniels" 
-							role="Designer" 
-							company="Deployable Dedicated Designs"
+							img="/app/resources/images/speakers/heather.png" 
+							title="Heather Evans" 
+							role=""
+							company=""
+                            bio="Heather is a lecturer at the University of Washington, teaching several courses pertaining to disability studies. Her work revolves around better understanding ‘invisible disability,’ empowering disability identity, and breaking down institutional marginalization of disabled individuals."
                             openModal={this.props.openModal}
 						/>
 					</td>
@@ -89,28 +92,31 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.JPG" 
-							title="Iggy Irena" 
-							role="Irrigator" 
-							company="Illustrations Incorporated"
+							img="/app/resources/images/speakers/stephen.png" 
+							title="Steve Bezruchka" 
+							role=""
+							company=""
+                            bio="Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues."
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.JPG"  
-							title="Rodger Rabbit" 
-							role="Realtor" 
-							company="Relativistic Relations llc"
+							img="/app/resources/images/speakers/john.png"  
+							title="John Sinclair" 
+							role=""
+							company=""
+                            bio="John Sinclair (also known as Saint Claire) is a rising songwriter, producer, and performer in Seattle.  His work in singing, writing, producing, and composing for strings has led to recent music collaborations with prominent musicians, including Macklemore and Ryan Lewis."
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/generic.JPG" 
-							title="Connor Cadewack" 
-							role="Carrot Carver" 
-							company="The Crystal Cutting Company"
+							img="/app/resources/images/speakers/fauzia.png" 
+							title="Fauzia Lala" 
+							role=""
+							company=""
+                            bio="Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense trainings for women. She loves to train, both physically and mentally. She loves learning from books and by taking courses on Lynda.com. Fauzia is fanatic fan of all things psychology and personal/spiritual growth. Fauzia was a finalist of Forbes 30 Under 30 in 2016 and has won the Washington InnovateHer competition in 2017."
                             openModal={this.props.openModal}
 						/>
 					</td>

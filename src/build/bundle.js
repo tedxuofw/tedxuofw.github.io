@@ -12733,12 +12733,12 @@ var Profile = exports.Profile = function (_React$Component) {
 				),
 				_react2.default.createElement('img', { src: this.props.img,
 					onClick: function onClick() {
-						return _this3.props.openModal(_this3.props.img, _this3.props.title, _this3.props.role);
+						return _this3.props.openModal(_this3.props.img, _this3.props.title, _this3.props.role, _this3.props.bio);
 					},
 					onError: function onError(e) {
 						e.target.src = defaultImg;
 					},
-					className: (0, _aphrodite.css)(styles.profilepicture) })
+					className: (0, _aphrodite.css)(styles.profilepicture, styles.hover) })
 			);
 		}
 	}, {
@@ -12774,10 +12774,14 @@ var styles = _aphrodite.StyleSheet.create({
 	profilepicture: {
 		display: 'block',
 		width: '100%',
-		height: 'auto',
-		opacity: '1',
+		maxHeight: '100%',
+		overflowY: 'hidden',
+		opacity: '1'
+
+	},
+	hover: {
 		':hover': {
-			//opacity: '0.7'
+			opacity: '0.8'
 		}
 	},
 	title: {
@@ -12924,7 +12928,7 @@ var Modal = exports.Modal = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: (0, _aphrodite.css)(styles.infoname) },
-                            this.props.modalText
+                            this.props.modalRole
                         )
                     ),
                     _react2.default.createElement(
@@ -13031,7 +13035,8 @@ var styles = _aphrodite.StyleSheet.create({
     close: {
         position: 'absolute',
         top: '5px',
-        right: '5px'
+        right: '5px',
+        color: 'white'
     }
 
 });
@@ -49091,8 +49096,8 @@ var Speakers = exports.Speakers = function (_React$Component) {
 		}
 	}, {
 		key: 'openModal',
-		value: function openModal(image, name, text) {
-			this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalText: text });
+		value: function openModal(image, name, role, text) {
+			this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
 		}
 	}, {
 		key: 'closeModal',
@@ -49155,10 +49160,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/erin-jones.jpg',
-								title: 'Erin Jones',
-								role: 'Superintendent',
-								company: 'Office of Public Instruction',
+								img: '/app/resources/images/speakers/kirsti.png',
+								title: 'Kristi Straus',
+								role: '',
+								company: '',
+								bio: 'Kristi Straus is a lecturer in the College\u2019s Environmental Studies program and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation and education surrounding environmental topics.',
 								openModal: this.props.openModal
 							})
 						),
@@ -49166,10 +49172,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Barry Bington',
-								role: 'Bouncer',
-								company: 'The Bureau of Braniacs',
+								img: '/app/resources/images/speakers/ansel.png',
+								title: 'Ansel Santosa',
+								role: '',
+								company: '',
+								bio: 'Ansel is an engineer and educator. He graduated from the University of Washington Information School in 2013 where he now serves as an advisory board member. He works as a software engineer and early business validator at Pioneer Square Labs, a local startup studio and seed stage venture fund. He is passionate about helping entrepreneurs be successful and building great companies in Seattle.',
 								openModal: this.props.openModal
 							})
 						),
@@ -49177,10 +49184,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Danny D. Daniels',
-								role: 'Designer',
-								company: 'Deployable Dedicated Designs',
+								img: '/app/resources/images/speakers/heather.png',
+								title: 'Heather Evans',
+								role: '',
+								company: '',
+								bio: 'Heather is a lecturer at the University of Washington, teaching several courses pertaining to disability studies. Her work revolves around better understanding \u2018invisible disability,\u2019 empowering disability identity, and breaking down institutional marginalization of disabled individuals.',
 								openModal: this.props.openModal
 							})
 						)
@@ -49192,10 +49200,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Iggy Irena',
-								role: 'Irrigator',
-								company: 'Illustrations Incorporated',
+								img: '/app/resources/images/speakers/stephen.png',
+								title: 'Steve Bezruchka',
+								role: '',
+								company: '',
+								bio: 'Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues.',
 								openModal: this.props.openModal
 							})
 						),
@@ -49203,10 +49212,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Rodger Rabbit',
-								role: 'Realtor',
-								company: 'Relativistic Relations llc',
+								img: '/app/resources/images/speakers/john.png',
+								title: 'John Sinclair',
+								role: '',
+								company: '',
+								bio: 'John Sinclair (also known as Saint Claire) is a rising songwriter, producer, and performer in Seattle.  His work in singing, writing, producing, and composing for strings has led to recent music collaborations with prominent musicians, including Macklemore and Ryan Lewis.',
 								openModal: this.props.openModal
 							})
 						),
@@ -49214,10 +49224,11 @@ var ProfileList = function (_React$Component2) {
 							'td',
 							{ className: (0, _aphrodite.css)(styles.td) },
 							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Connor Cadewack',
-								role: 'Carrot Carver',
-								company: 'The Crystal Cutting Company',
+								img: '/app/resources/images/speakers/fauzia.png',
+								title: 'Fauzia Lala',
+								role: '',
+								company: '',
+								bio: 'Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense trainings for women. She loves to train, both physically and mentally. She loves learning from books and by taking courses on Lynda.com. Fauzia is fanatic fan of all things psychology and personal/spiritual growth. Fauzia was a finalist of Forbes 30 Under 30 in 2016 and has won the Washington InnovateHer competition in 2017.',
 								openModal: this.props.openModal
 							})
 						)
@@ -49312,13 +49323,22 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
                     _section.Section,
                     { title: 'Sponsors' },
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'ASUW', subtitle: 'Associated Students of the University of Washington',
-                        img: '/app/resources/images/sponsor-asuw.jpg',
+                        img: '/app/resources/images/sponsors/sponsor-asuw.jpg',
                         descr: 'The ASUW Special Appropriations Fund is a student levied, student distributed fund to support and enhance the out of class experience of students. The fund provides one-time funding grants to student initiated and developed event-centered programs which enrich the cultural, emotional, intellectual, and social well-being of the student.' }),
+                    _react2.default.createElement(_sponsor.Sponsor, { title: 'UMAC', subtitle: 'UW University Marketing and Communications',
+                        img: '/app/resources/images/sponsors/sponsor-asuw.jpg',
+                        descr: 'At UMAC we consider ourselves enthusiastic ambassadors of the University of Washington and its brand. We build awareness and increase support for the UW by collaborating with campus partners, valued supporters, and the community to further the mission of this great university!' }),
+                    _react2.default.createElement(_sponsor.Sponsor, { title: 'Buerk Center',
+                        img: '/app/resources/images/sponsors/sponsor-buerk.jpg',
+                        descr: 'The Buerk Center offers an exceptional curriculum, real-world experiences, and connections to the Seattle entrepreneurial community to inspire students from all majors and disciplines across campus to pursue their entrepreneurial passions.' }),
+                    _react2.default.createElement(_sponsor.Sponsor, { title: 'Wells Fargo',
+                        img: '/app/resources/images/sponsors/sponsor-wells.png'
+                    }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'Amazon Catalyst',
-                        img: '/app/resources/images/sponsor-amazon.png',
+                        img: '/app/resources/images/sponsors/sponsor-amazon.png',
                         descr: 'The Amazon Catalyst program is a collaboration between UW CoMotion and Amazon to encourage innovation within the UW community and awards grants from $10,000 to $100,000 per project. The goal of the program is to inspire people to think big, invent solutions to real-world problems, and make a positive impact on the world. Open to all three UW campuses and all disciplines, the program provides the winners with mentorship, community through the Amazon Catalyst Fellows, and funding. Amazon Catalyst is not a traditional research fund; it is a different kind of funding model to stimulate big ideas with immediate impact.' }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'UWAA', subtitle: 'UW Alumni Association',
-                        img: '/app/resources/images/sponsor-uwaa.png',
+                        img: '/app/resources/images/sponsors/sponsor-uwaa.png',
                         descr: 'The UW Alumni Association supports the UW and higher education in the state of Washington. In pursuit of that mission, UWAA member dues fund programs and services to help students, to inform the public about the UW community\u2019s remarkable achievements and to bring UW alumni and the public together for learning, fun and advocacy. With more than 56,000 members, UWAA is one of the largest alumni organizations in the United States.' })
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
