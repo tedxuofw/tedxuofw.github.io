@@ -81,7 +81,7 @@ export class Profile extends React.Component {
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
 				<div style={textContainerStyle}>
-					<p style={titleStyle} className={css(styles.title)}> {this.props.title} </p>
+					<p style={titleStyle} className={css(styles.subtitleone)}> {this.props.title} </p>
 					<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				</div>
 				<img src={img} className={css(styles.profilepicture)} onError={(e)=>{e.target.src=defaultImg}}/>
