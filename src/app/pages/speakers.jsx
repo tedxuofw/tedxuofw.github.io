@@ -98,7 +98,7 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-							img="/app/resources/images/speakers/stephen.png" 
+							img="/app/resources/images/speakers/bezruchka.jpg" 
 							title="Steve Bezruchka" 
 							role=""
 							company=""
