@@ -58,7 +58,8 @@ export class FeaturedSpeaker extends React.Component {
 				<span className={css(styles.boderline)}  
 						data-aos={"flip-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
 				<img src={this.props.img} style={picstyle} className={css(styles.picture)} 
-						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
+						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" 
+						onError={(e)=>{e.target.src="/app/resources/images/generic.jpg"}} />
 			</div>
 		);
 	}
@@ -98,14 +99,14 @@ const styles = StyleSheet.create({
     },
 	descriptioncontainer: {
 		position:'absolute',
-		width: '65%',
+		width: '60%',
 		height: '150px',
 		marginTop:'15%',
 	},
 	boderline: {
 		background: '#CBCACD',
 		position:'absolute',
-        height: '0.5%',
+        height: '0.3224%',
         width: '100%',
 		marginTop:'34.5%',
 	},
