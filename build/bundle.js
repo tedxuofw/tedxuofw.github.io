@@ -47899,7 +47899,7 @@ var CountdownSection = exports.CountdownSection = function (_React$Component) {
 		key: 'getSecondsRemaining',
 		value: function getSecondsRemaining() {
 			var time = Math.round(this.state.date.getTime() / 1000); //current time, in seconds
-			var deadline = 1523199600; //time of promotion end, in seconds
+			var deadline = 1523242800; //time of promotion end, in seconds
 			return deadline - time; //time until promotion end, in seconds
 		}
 	}]);
