@@ -23,7 +23,11 @@ export class Speakers extends React.Component {
     }
     
     openModal(image, name, role, text) {
-        this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
+       // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
+        let tmp = '<div style="margin: 20px 20px 0 0;"> <div style="width: 25%; float:left "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="margin-left: 30%"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
+        vex.dialog.alert("");
+        $(".vex-content").html(tmp);
+        
     }
 
     closeModal() {
