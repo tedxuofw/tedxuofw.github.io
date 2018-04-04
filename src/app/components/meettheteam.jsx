@@ -45,7 +45,7 @@ const profiles=[
 				{name:"Jenny Liang", 		role:"Web Manager", 			team:"web"},
 				{name:"Sara Tieu", 			role:"UX/UI Designer", 			team:"web"},
 				{name:"Soham Pardeshi", 	role:"Web Developer", 			team:"web"},
-				{name:"Nikolas Gaub", 		role:"Web Developer (cool)", 	team:"web"}];
+				{name:"Nikolas Gaub", 		role:"Web Developer", 	team:"web"}];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",
