@@ -21,31 +21,31 @@ const profiles=[
 				{name:"Maren Anderson", 	role:"Speaker Selection", 		team:"speaker selection"},
 				{name:"Tien Vo", 			role:"Speaker Selection", 		team:"speaker selection"},
 				{name:"Julia Pettere", 		role:"Speaker Selection", 		team:"speaker selection"},
-				{name:"Sneha", 				role:"Speaker Selection", 		team:"speaker selection"},
+				{name:"Sneha Mohidekar",	role:"Speaker Selection", 		team:"speaker selection"},
 				
 				{name:"Celia Schlekewey", 	role:"Finance Manager", 		team:"finance"},
 				{name:"Michael Jacobson", 	role:"Financial Analyst", 		team:"finance"},
 				{name:"Keren Zhang", 		role:"Financial Logistics", 	team:"finance"},
-				{name:"Maya Yamaguchi Sullivan", role:"Financial Analyst", 	team:"finance"},
+				{name:"Maya Sullivan", role:"Financial Analyst", 	team:"finance"},
 				{name:"Maya Gopalan", 		role:"Sponsorship", 			team:"finance"},
 				
 				{name:"TJ Gascho", 			role:"Production Manager", 		team:"production"},
-				{name:"Jessie Ma", 			role:"Stage Design", 			team:"production"},
+				{name:"Jay Ma", 			role:"Stage Design", 			team:"production"},
 				{name:"Sean Chronister", 	role:"Tech Lead", 				team:"production"},
-				{name:"Chistopher S. Gerken",role:"Tech Lead", 				team:"production"},
+				{name:"Christopher Gerken",role:"Tech Lead", 				team:"production"},
 				{name:"Miranda Reisman",	role:"Conference Facilitator", 	team:"production"},
 				{name:"Jed Kwek",			role:"Guest Experience", 		team:"production"},
 				
 				{name:"Hanna Choi", 		role:"PR Manager", 				team:"public relations"},
 				{name:"Rahul Prasad", 		role:"Internal Manager", 		team:"public relations"},
-				{name:"Emma Rose Hurring", 	role:"Public Relations", 		team:"public relations"},
+				{name:"Emma Hurring", 	role:"Public Relations", 		team:"public relations"},
 				{name:"Sehel Tahir", 		role:"External Outreach", 		team:"public relations"},
 				{name:"Natasha Lau", 		role:"Internal Manager",		team:"public relations"},
 				
 				{name:"Jenny Liang", 		role:"Web Manager", 			team:"web"},
 				{name:"Sara Tieu", 			role:"UX/UI Designer", 			team:"web"},
 				{name:"Soham Pardeshi", 	role:"Web Developer", 			team:"web"},
-				{name:"Nikolas Gaub", 		role:"Web Developer (cool)", 	team:"web"}];
+				{name:"Nikolas Gaub", 		role:"Web Developer", 	team:"web"}];
 				
 const descriptions=["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.",
 					"Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.",

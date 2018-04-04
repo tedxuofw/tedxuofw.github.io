@@ -48,9 +48,9 @@ export class Profile extends React.Component {
 	}
 	
 	teamProfile() {
-		const leftTolerance = 35;
-		const middleTolerance = 30;
-		const rightTolerance = 35;
+		const leftTolerance = 0;
+		const middleTolerance = 100;
+		const rightTolerance = 0;
 		const defaultImg = "/app/resources/images/generic.jpg";
 		
 		var xPercent = 50;
@@ -74,14 +74,22 @@ export class Profile extends React.Component {
 		}
 		img += ".jpg";
 		
+<<<<<<< HEAD
 		var textContainerStyle = {color:'#000000', opacity: this.state.mouseInside?'0':'1'};
+=======
+		var textContainerStyle = {color:'#000000'};
+>>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 		var titleStyle = {fontSize: this.props.large ? '6vw' : '2vw'};
 		var descStyle = {fontSize: this.props.large ? '4.5vw' : '1.5vw'};
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
 				<div style={textContainerStyle}>
+<<<<<<< HEAD
 					<p style={titleStyle} className={css(styles.title)}> {this.props.title} </p>
+=======
+					<p style={titleStyle} className={css(styles.subtitleone)}> {this.props.title} </p>
+>>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 					<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				</div>
 				<img src={img} className={css(styles.profilepicture)} onError={(e)=>{e.target.src=defaultImg}}/>
@@ -99,9 +107,15 @@ export class Profile extends React.Component {
 				<p style={descStyle} className={css(styles.subtitleone)}> {this.props.company} </p>
 				<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				<img src={this.props.img} 
+<<<<<<< HEAD
                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
 					   onError={(e)=>{e.target.src=defaultImg}}
                        className={css(styles.profilepicture)} />
+=======
+                       onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role, this.props.bio)} 
+					   onError={(e)=>{e.target.src=defaultImg}}
+                       className={css(styles.profilepicture, styles.hover)} />
+>>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			</div>
 		);
 	}
@@ -134,11 +148,15 @@ const styles = StyleSheet.create({
     profilepicture: {
         display: 'block',
 		width:'100%',
-		height:'auto',
+		maxHeight:'100%',
+        overflowY: 'hidden',
 		opacity:'1',
-		':hover': {
-			//opacity: '0.7'
-        }
+		
+    },
+    hover: {
+       ':hover': {
+			opacity: '0.9'
+        } 
     },
 	title: {
 		position: 'absolute',
@@ -147,7 +165,7 @@ const styles = StyleSheet.create({
         textTransform: 'uppercase',
 		margin:'10% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #555',
 	},
     subtitleone: {
 		position: 'absolute',
@@ -155,7 +173,7 @@ const styles = StyleSheet.create({
         fontFamily: 'AvenirBlack',
 		margin:'75% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #666',
     },
 	subtitletwo: {
 		position: 'absolute',
@@ -163,7 +181,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Avenir',
 		margin:'85% 0px 0px 7%',
 		color:'white',
-		textShadow:'2px 2px #000000',
+		textShadow:'1px 1px #666',
 	},
 	
 	blank: {
