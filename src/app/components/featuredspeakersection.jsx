@@ -6,19 +6,19 @@ import {StyleSheet, css} from 'aphrodite';
 import {FeaturedSpeaker} from '../components/featuredspeaker.jsx';
 import {TedButton} from '../components/tedbutton.jsx';
 
-const speakers =[ {name:"Kristi Straus", 	desc:"UW Environmental Studies", 	img:"/app/resources/images/kristi-straus.jpg"},
-			{name:"Ansel Santosa", 	desc:"UW Information School", 				img:"/app/resources/images/ansel-santosa.jpg"},
-			{name:"Heather Evans", 	desc:"University of Washington", 			img:"/app/resources/images/heather-evans.jpg"},
-			{name:"Dr. Stephen Bezruchka", desc:"Departments of Health Services and Global Health", img:"/app/resources/images/stephen-bezruchka.jpg"},
-			{name:"John Sinclair", desc:"Songwriter, Producer, and Performer", 	img:"/app/resources/images/john-sinclair.jpg"},
-			{name:"Fauzia Lala", desc:"", 										img:"/app/resources/images/fauzia-lala.jpg"},
-			{name:"Andrea Weatherhead", desc:"", 								img:"/app/resources/images/andrea-weatherhead.jpg"},
-			{name:"Tyler Valentine", desc:"University of Washington", 			img:"/app/resources/images/tyler-valentine.jpg"},
-			{name:"Sarah Mhyre", desc:"UW Department of Oceanography", 			img:"/app/resources/images/sarah-mhyre.jpg"},
-			{name:"Jeffery Lew", desc:"", 										img:"/app/resources/images/jeffery-lew.jpg"},
-			{name:"Izdihar Bailey", desc:"", 									img:"/app/resources/images/izdihar-bailey.jpg"},
-			{name:"Karen Liftin", desc:"", 										img:"/app/resources/images/karen-liftin.jpg"},
-			{name:"Tarah Wheeler", desc:"", 									img:"/app/resources/images/tarah-wheeler.jpg"} 
+const speakers =[ {name:"Kristi Straus", 	desc:"UW Environmental Studies", 	img:"/app/resources/images/speakers/kristi.png"},
+			{name:"Ansel Santosa", 	desc:"UW Information School", 				img:"/app/resources/images/speakers/ansel.png"},
+			{name:"Heather Evans", 	desc:"University of Washington", 			img:"/app/resources/images/speakers/heather.png"},
+			{name:"Dr. Stephen Bezruchka", desc:"Departments of Health Services and Global Health", img:"/app/resources/images/speakers/stephen.png"},
+			{name:"John Sinclair", desc:"Songwriter, Producer, and Performer", 	img:"/app/resources/images/speakers/john.png"},
+			{name:"Fauzia Lala", desc:"", 										img:"/app/resources/images/speakers/fauzia.png"},
+			{name:"Andrea Weatherhead", desc:"", 								img:"/app/resources/images/speakers/andrea.png"},
+			{name:"Tyler Valentine", desc:"University of Washington", 			img:"/app/resources/images/speakers/tyler.png"},
+			{name:"Sarah Mhyre", desc:"UW Department of Oceanography", 			img:"/app/resources/images/speakers/sarah.png"},
+			{name:"Jeffery Lew", desc:"", 										img:"/app/resources/images/speakers/jeffery.png"},
+			{name:"Izdihar Bailey", desc:"", 									img:"/app/resources/images/speakers/izdihar.png"},
+			{name:"Karen Liftin", desc:"", 										img:"/app/resources/images/speakers/karen.png"},
+			{name:"Tarah Wheeler", desc:"", 									img:"/app/resources/images/speakers/tarah.png"} 
 			];
 
 export class Speakers extends React.Component {
