@@ -1925,11 +1925,7 @@ var TEDNavbar = exports.TEDNavbar = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-<<<<<<< HEAD
-            var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Attend', className: 'tednavlink tednavgold', target: '_blank', link: 'https://tedxuofw.ticketleap.com/2018/' }];
-=======
             var links = [{ text: 'About', className: 'tednavlink', link: '#/about' }, { text: 'Speakers', className: 'tednavlink', link: '#/speakers' }, { text: 'Sponsors', className: 'tednavlink', link: '#/sponsors' }, { text: 'Contact', className: 'tednavlink', link: '#/contact' }, { text: 'Volunteer', className: 'tednavlink', target: '_blank', link: 'https://goo.gl/forms/HRSudBJVvVqHBcwF2' }, { text: 'Attend', className: 'tednavlink tednavgold', target: '_blank', link: 'https://tedxuofw.ticketleap.com/2018/' }];
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 
             var fixed = false;
             if (this.props.fixed) fixed = this.props.fixed;
@@ -12671,11 +12667,7 @@ var Profile = exports.Profile = function (_React$Component) {
 			}
 			img += ".jpg";
 
-<<<<<<< HEAD
-			var textContainerStyle = { color: '#000000', opacity: this.state.mouseInside ? '0' : '1' };
-=======
 			var textContainerStyle = { color: '#000000' };
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			var titleStyle = { fontSize: this.props.large ? '6vw' : '2vw' };
 			var descStyle = { fontSize: this.props.large ? '4.5vw' : '1.5vw' };
 
@@ -12689,11 +12681,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					{ style: textContainerStyle },
 					_react2.default.createElement(
 						'p',
-<<<<<<< HEAD
-						{ style: titleStyle, className: (0, _aphrodite.css)(styles.title) },
-=======
 						{ style: titleStyle, className: (0, _aphrodite.css)(styles.subtitleone) },
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 						' ',
 						this.props.title,
 						' '
@@ -12750,14 +12738,7 @@ var Profile = exports.Profile = function (_React$Component) {
 					onError: function onError(e) {
 						e.target.src = defaultImg;
 					},
-<<<<<<< HEAD
-					onError: function onError(e) {
-						e.target.src = defaultImg;
-					},
-					className: (0, _aphrodite.css)(styles.profilepicture) })
-=======
 					className: (0, _aphrodite.css)(styles.profilepicture, styles.hover) })
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			);
 		}
 	}, {
@@ -12947,11 +12928,7 @@ var Modal = exports.Modal = function (_React$Component) {
                         _react2.default.createElement(
                             'div',
                             { className: (0, _aphrodite.css)(styles.infoname) },
-<<<<<<< HEAD
-                            this.props.modalText
-=======
                             this.props.modalRole
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
                         )
                     ),
                     _react2.default.createElement(
@@ -34488,10 +34465,10 @@ var Home = exports.Home = function (_React$Component) {
     }, {
         key: 'closeVideo',
         value: function closeVideo() {
-            this.setState({ hideVideo: true, fixedBar: false });
+            this.setState({ hideVideo: true });
             AOS.refresh();
             setTimeout(function () {
-                this.setState({ hideVideo: true, fixedBar: true });
+                this.setState({ fixedBar: true });
                 AOS.refresh();
             }.bind(this), 1000);
         }
@@ -47563,11 +47540,7 @@ var LandingVideo = exports.LandingVideo = function (_React$Component) {
                     { className: (0, _aphrodite.css)(styles.videoContent) },
                     _react2.default.createElement(
                         'video',
-<<<<<<< HEAD
-                        { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', poster: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg', autoPlay: true, onEnded: function onEnded() {
-=======
                         { className: (0, _aphrodite.css)(styles.video), id: 'tedvideo', autoPlay: true, onEnded: function onEnded() {
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
                                 return _this2.props.close();
                             }, muted: true },
                         _react2.default.createElement('source', { src: './app/resources/videos/moonshot.mp4', type: 'video/mp4' })
@@ -48159,17 +48132,6 @@ var Speakers = exports.Speakers = function (_React$Component) {
 					flipped: true
 				}),
 				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
-<<<<<<< HEAD
-					name: 'Jasmine Samy',
-					desc: 'Council of Islamic American Relations',
-					img: '/app/resources/images/generic.jpg',
-					flipped: false
-				}),
-				_react2.default.createElement(_featuredspeaker.FeaturedSpeaker, {
-					name: 'Jeannie Berwick',
-					desc: 'One Equal Heart Foundation',
-					img: '/app/resources/images/generic.jpg',
-=======
 					name: table[1].name,
 					desc: table[1].desc,
 					img: table[1].img,
@@ -48179,7 +48141,6 @@ var Speakers = exports.Speakers = function (_React$Component) {
 					name: table[2].name,
 					desc: table[2].desc,
 					img: table[2].img,
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 					flipped: true
 				}),
 				_react2.default.createElement(_tedbutton.TedButton, { name: 'View All Speakers', linkTo: '/speakers' })
@@ -48320,14 +48281,10 @@ var FeaturedSpeaker = exports.FeaturedSpeaker = function (_React$Component) {
 				_react2.default.createElement('span', { className: (0, _aphrodite.css)(styles.boderline),
 					'data-aos': "flip-" + direction2, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' }),
 				_react2.default.createElement('img', { src: this.props.img, style: picstyle, className: (0, _aphrodite.css)(styles.picture),
-<<<<<<< HEAD
-					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom' })
-=======
 					'data-aos': "fade-" + direction1, 'data-aos-duration': '700', 'data-aos-anchor': "#trigger-appear-" + this.state.key, 'data-aos-anchor-placement': 'center-bottom',
 					onError: function onError(e) {
 						e.target.src = "/app/resources/images/generic.jpg";
 					} })
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			);
 		}
 	}]);
@@ -48348,7 +48305,7 @@ var styles = _aphrodite.StyleSheet.create({
 		height: 'auto'
 	},
 	title: {
-		fontSize: '3vw',
+		fontSize: '2.8vw',
 		color: 'white',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
@@ -48369,12 +48326,12 @@ var styles = _aphrodite.StyleSheet.create({
 		position: 'absolute',
 		width: '60%',
 		height: '150px',
-		marginTop: '15%'
+		marginTop: '25%'
 	},
 	boderline: {
 		background: '#CBCACD',
 		position: 'absolute',
-		height: '0.3224%',
+		height: '0.28%',
 		width: '100%',
 		marginTop: '34.5%'
 	}
@@ -48867,10 +48824,10 @@ var Content = function (_React$Component3) {
 				_react2.default.createElement(Tab, { label: 'Design', selected: this.state.index == 2, onClick: function onClick() {
 						return _this4.setTab(2);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 3, onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 3, onClick: function onClick() {
 						return _this4.setTab(3);
 					} }),
-				_react2.default.createElement(Tab, { label: 'Speaker Selection', selected: this.state.index == 4, onClick: function onClick() {
+				_react2.default.createElement(Tab, { label: 'Finance', selected: this.state.index == 4, onClick: function onClick() {
 						return _this4.setTab(4);
 					} }),
 				_react2.default.createElement(Tab, { label: 'Production', selected: this.state.index == 5, onClick: function onClick() {
@@ -48914,7 +48871,7 @@ var styles = _aphrodite.StyleSheet.create({
 	selectedtab: {
 		width: '10%',
 		color: '#E62B25',
-		fontSize: '1.3vw',
+		fontSize: '1.27vw',
 		fontWeight: 'bold',
 		fontFamily: 'AvenirBlack',
 		textTransform: 'uppercase',
@@ -49138,6 +49095,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var TABLET_WIDTH = 801;
+
 var Speakers = exports.Speakers = function (_React$Component) {
     _inherits(Speakers, _React$Component);
 
@@ -49162,7 +49121,7 @@ var Speakers = exports.Speakers = function (_React$Component) {
         value: function openModal(image, name, role, text) {
             if (text && text != "") {
                 // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-                var tmp = '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
+                var tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>' : '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
                 vex.dialog.alert("");
                 $(".vex-content").html(tmp);
             }
@@ -49212,95 +49171,6 @@ var ProfileList = function (_React$Component2) {
         return _possibleConstructorReturn(this, (ProfileList.__proto__ || Object.getPrototypeOf(ProfileList)).apply(this, arguments));
     }
 
-<<<<<<< HEAD
-	_createClass(ProfileList, [{
-		key: 'render',
-		value: function render() {
-			return _react2.default.createElement(
-				'table',
-				{ className: (0, _aphrodite.css)(styles.table) },
-				_react2.default.createElement(
-					'tbody',
-					null,
-					_react2.default.createElement(
-						'tr',
-						{ className: (0, _aphrodite.css)(styles.tr) },
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/erin-jones.jpg',
-								title: 'Erin Jones',
-								role: 'Superintendent',
-								company: 'Office of Public Instruction',
-								openModal: this.props.openModal
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.jpg',
-								title: 'Barry Bington',
-								role: 'Bouncer',
-								company: 'The Bureau of Braniacs',
-								openModal: this.props.openModal
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Danny D. Daniels',
-								role: 'Designer',
-								company: 'Deployable Dedicated Designs',
-								openModal: this.props.openModal
-							})
-						)
-					),
-					_react2.default.createElement(
-						'tr',
-						{ className: (0, _aphrodite.css)(styles.tr) },
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Iggy Irena',
-								role: 'Irrigator',
-								company: 'Illustrations Incorporated',
-								openModal: this.props.openModal
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Rodger Rabbit',
-								role: 'Realtor',
-								company: 'Relativistic Relations llc',
-								openModal: this.props.openModal
-							})
-						),
-						_react2.default.createElement(
-							'td',
-							{ className: (0, _aphrodite.css)(styles.td) },
-							_react2.default.createElement(_profile.Profile, {
-								img: '/app/resources/images/generic.JPG',
-								title: 'Connor Cadewack',
-								role: 'Carrot Carver',
-								company: 'The Crystal Cutting Company',
-								openModal: this.props.openModal
-							})
-						)
-					)
-				)
-			);
-		}
-	}]);
-=======
     _createClass(ProfileList, [{
         key: 'render',
         value: function render() {
@@ -49462,10 +49332,10 @@ var ProfileList = function (_React$Component2) {
                             { className: (0, _aphrodite.css)(styles.td) },
                             _react2.default.createElement(_profile.Profile, {
                                 img: '/app/resources/images/speakers/karen.png',
-                                title: 'Karen Liftin',
+                                title: 'Karen Litfin',
                                 role: '',
                                 company: '',
-                                bio: '',
+                                bio: 'Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>.',
                                 openModal: this.props.openModal
                             })
                         )
@@ -49481,7 +49351,7 @@ var ProfileList = function (_React$Component2) {
                                 title: 'Tarah Wheeler',
                                 role: '',
                                 company: '',
-                                bio: '',
+                                bio: '<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
                                 openModal: this.props.openModal
                             })
                         )
@@ -49490,7 +49360,6 @@ var ProfileList = function (_React$Component2) {
             );
         }
     }]);
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 
     return ProfileList;
 }(_react2.default.Component);

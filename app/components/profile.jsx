@@ -74,22 +74,14 @@ export class Profile extends React.Component {
 		}
 		img += ".jpg";
 		
-<<<<<<< HEAD
-		var textContainerStyle = {color:'#000000', opacity: this.state.mouseInside?'0':'1'};
-=======
 		var textContainerStyle = {color:'#000000'};
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 		var titleStyle = {fontSize: this.props.large ? '6vw' : '2vw'};
 		var descStyle = {fontSize: this.props.large ? '4.5vw' : '1.5vw'};
 		
 		return (
 			<div className={css(styles.tedprofile)} onMouseMove={this._onMouseMove.bind(this)} onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave} ref={(input) => {this.obj = input}} >
 				<div style={textContainerStyle}>
-<<<<<<< HEAD
-					<p style={titleStyle} className={css(styles.title)}> {this.props.title} </p>
-=======
 					<p style={titleStyle} className={css(styles.subtitleone)}> {this.props.title} </p>
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 					<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				</div>
 				<img src={img} className={css(styles.profilepicture)} onError={(e)=>{e.target.src=defaultImg}}/>
@@ -107,15 +99,9 @@ export class Profile extends React.Component {
 				<p style={descStyle} className={css(styles.subtitleone)}> {this.props.company} </p>
 				<p style={descStyle} className={css(styles.subtitletwo)}> {this.props.role} </p>
 				<img src={this.props.img} 
-<<<<<<< HEAD
-                       onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role)} 
-					   onError={(e)=>{e.target.src=defaultImg}}
-                       className={css(styles.profilepicture)} />
-=======
                        onClick={() => this.props.openModal(this.props.img, this.props.title, this.props.role, this.props.bio)} 
 					   onError={(e)=>{e.target.src=defaultImg}}
                        className={css(styles.profilepicture, styles.hover)} />
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			</div>
 		);
 	}

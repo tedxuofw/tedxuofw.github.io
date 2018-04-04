@@ -58,12 +58,8 @@ export class FeaturedSpeaker extends React.Component {
 				<span className={css(styles.boderline)}  
 						data-aos={"flip-"+direction2} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
 				<img src={this.props.img} style={picstyle} className={css(styles.picture)} 
-<<<<<<< HEAD
-						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" />
-=======
 						data-aos={"fade-"+direction1} data-aos-duration="700" data-aos-anchor={"#trigger-appear-"+this.state.key} data-aos-anchor-placement="center-bottom" 
 						onError={(e)=>{e.target.src="/app/resources/images/generic.jpg"}} />
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 			</div>
 		);
 	}
@@ -84,7 +80,7 @@ const styles = StyleSheet.create({
 		height:'auto',
     },
 	title: {
-		fontSize: '3vw',
+		fontSize: '2.8vw',
 		color:'white',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
@@ -105,12 +101,12 @@ const styles = StyleSheet.create({
 		position:'absolute',
 		width: '60%',
 		height: '150px',
-		marginTop:'15%',
+		marginTop:'25%',
 	},
 	boderline: {
 		background: '#CBCACD',
 		position:'absolute',
-        height: '0.3224%',
+        height: '0.28%',
         width: '100%',
 		marginTop:'34.5%',
 	},

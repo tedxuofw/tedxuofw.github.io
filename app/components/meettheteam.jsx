@@ -123,8 +123,8 @@ class Content extends React.Component {
 				<Tab label="All" 				selected={this.state.index == 0} onClick={() => this.setTab(0)} />
 				<Tab label="Curators" 			selected={this.state.index == 1} onClick={() => this.setTab(1)} />
 				<Tab label="Design" 			selected={this.state.index == 2} onClick={() => this.setTab(2)} />
-				<Tab label="Finance" 			selected={this.state.index == 3} onClick={() => this.setTab(3)} />
-				<Tab label="Speaker Selection" 	selected={this.state.index == 4} onClick={() => this.setTab(4)} />
+				<Tab label="Speaker Selection" 	selected={this.state.index == 3} onClick={() => this.setTab(3)} />
+				<Tab label="Finance" 			selected={this.state.index == 4} onClick={() => this.setTab(4)} />
 				<Tab label="Production" 		selected={this.state.index == 5} onClick={() => this.setTab(5)} />
 				<Tab label="Public Relations" 	selected={this.state.index == 6} onClick={() => this.setTab(6)} />
 				<Tab label="Web" 				selected={this.state.index == 7} onClick={() => this.setTab(7)} />
@@ -159,7 +159,7 @@ const styles = StyleSheet.create({
 	selectedtab: {
 		width:'10%',
 		color:'#E62B25',
-		fontSize:'1.3vw',
+		fontSize:'1.27vw',
 		fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase',

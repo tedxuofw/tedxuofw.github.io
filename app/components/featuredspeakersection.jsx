@@ -53,17 +53,6 @@ export class Speakers extends React.Component {
 					flipped={true}
 				/>
 				<FeaturedSpeaker 
-<<<<<<< HEAD
-					name="Jasmine Samy"
-					desc="Council of Islamic American Relations"
-					img="/app/resources/images/generic.jpg"
-					flipped={false}
-				/>
-				<FeaturedSpeaker 
-					name="Jeannie Berwick"
-					desc="One Equal Heart Foundation"
-					img="/app/resources/images/generic.jpg"
-=======
 					name={table[1].name}
 					desc={table[1].desc}
 					img={table[1].img}
@@ -73,7 +62,6 @@ export class Speakers extends React.Component {
 					name={table[2].name}
 					desc={table[2].desc}
 					img={table[2].img}
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
 					flipped={true}
 				/>
 				<TedButton name="View All Speakers" linkTo="/speakers" />

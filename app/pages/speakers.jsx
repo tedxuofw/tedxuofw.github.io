@@ -10,6 +10,8 @@ import {StyleSheet, css} from 'aphrodite';
 import {Profile} from '../components/profile.jsx';
 import {Modal} from '../components/tedmodal.jsx';
 
+const TABLET_WIDTH = 801;
+
 export class Speakers extends React.Component {
     constructor(props) {
         super(props);
@@ -25,7 +27,8 @@ export class Speakers extends React.Component {
     openModal(image, name, role, text) {
         if(text && text != ""){
            // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-            let tmp = '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
+            let tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>' :
+				'<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="'+ image +'" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">'+ name +'</h3> <p>' + text + ' </p> </div> </div>';
             vex.dialog.alert("");
             $(".vex-content").html(tmp);
         }
@@ -66,35 +69,21 @@ class ProfileList extends React.Component {
 				<tr className={css(styles.tr)}>
 					<td className={css(styles.td)}>
 						<Profile 
-<<<<<<< HEAD
-							img="/app/resources/images/erin-jones.jpg" 
-							title="Erin Jones" 
-							role="Superintendent"
-							company="Office of Public Instruction"
-=======
 							img="/app/resources/images/speakers/kristi.png" 
 							title="Kristi Straus" 
 							role=""
 							company=""
                             bio="Kristi Straus is a lecturer in the College’s Environmental Studies program and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation and education surrounding environmental topics."
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
                             openModal={this.props.openModal}
 						/>
 					</td>
 					<td className={css(styles.td)}>
 						<Profile 
-<<<<<<< HEAD
-							img="/app/resources/images/generic.jpg" 
-							title="Barry Bington" 
-							role="Bouncer"
-							company="The Bureau of Braniacs"
-=======
 							img="/app/resources/images/speakers/ansel.png" 
 							title="Ansel Santosa" 
                             role=""
 							company=""
                             bio="Ansel is an engineer and educator. He graduated from the University of Washington Information School in 2013 where he now serves as an advisory board member. He works as a software engineer and early business validator at Pioneer Square Labs, a local startup studio and seed stage venture fund. He is passionate about helping entrepreneurs be successful and building great companies in Seattle."
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
                             openModal={this.props.openModal}
 						/>
 					</td>
@@ -197,10 +186,10 @@ class ProfileList extends React.Component {
                     <td className={css(styles.td)}>
                         <Profile 
                             img="/app/resources/images/speakers/karen.png" 
-                            title="Karen Liftin" 
+                            title="Karen Litfin" 
                             role=""
                             company=""
-                            bio=""
+                            bio="Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>."
                             openModal={this.props.openModal}
                           />
                     </td>
@@ -212,7 +201,7 @@ class ProfileList extends React.Component {
                             title="Tarah Wheeler" 
                             role=""
                             company=""
-                            bio=""
+							bio='<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.'
                             openModal={this.props.openModal}
                           />
                     </td>

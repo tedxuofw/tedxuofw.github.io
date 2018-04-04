@@ -12,14 +12,10 @@ export class TEDNavbar extends React.Component {
                       {text: 'Speakers', className: 'tednavlink', link: '#/speakers'},
                       {text: 'Sponsors', className: 'tednavlink', link: '#/sponsors'},
                       {text: 'Contact', className: 'tednavlink', link: '#/contact'},
-<<<<<<< HEAD
-                      {text: 'Attend', className: 'tednavlink tednavgold', target:'_blank', link: 'https://tedxuofw.ticketleap.com/2018/'}];
-=======
                       {text: 'Volunteer', className: 'tednavlink', target:'_blank', link: 'https://goo.gl/forms/HRSudBJVvVqHBcwF2'},
                       {text: 'Attend', className: 'tednavlink tednavgold', target:'_blank', link: 'https://tedxuofw.ticketleap.com/2018/'}];
         
         
->>>>>>> 4f1dda82659ec831483702c7c5d71c5e73296fda
         
         var fixed = false;
         if(this.props.fixed) fixed = this.props.fixed;
