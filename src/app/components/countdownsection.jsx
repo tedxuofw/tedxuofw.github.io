@@ -83,7 +83,7 @@ export class CountdownSection extends React.Component {
 	
 	getSecondsRemaining() {
 		const time = Math.round(this.state.date.getTime() / 1000);//current time, in seconds
-		const deadline = 1523199600; //time of promotion end, in seconds
+		const deadline = 1523242800; //time of promotion end, in seconds
 		return deadline - time; //time until promotion end, in seconds
 	}
 }
