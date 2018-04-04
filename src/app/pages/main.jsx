@@ -48,10 +48,10 @@ export class Home extends React.Component {
     }
     
     closeVideo() {
-        this.setState({ hideVideo: true, fixedBar: false });
+        this.setState({ hideVideo: true });
         AOS.refresh();
         setTimeout(function(){
-            this.setState({ hideVideo: true, fixedBar: true });
+            this.setState({ fixedBar: true });
             AOS.refresh();
         }.bind(this), 1000);
     }

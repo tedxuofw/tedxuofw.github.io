@@ -34465,10 +34465,10 @@ var Home = exports.Home = function (_React$Component) {
     }, {
         key: 'closeVideo',
         value: function closeVideo() {
-            this.setState({ hideVideo: true, fixedBar: false });
+            this.setState({ hideVideo: true });
             AOS.refresh();
             setTimeout(function () {
-                this.setState({ hideVideo: true, fixedBar: true });
+                this.setState({ fixedBar: true });
                 AOS.refresh();
             }.bind(this), 1000);
         }
@@ -49332,10 +49332,10 @@ var ProfileList = function (_React$Component2) {
                             { className: (0, _aphrodite.css)(styles.td) },
                             _react2.default.createElement(_profile.Profile, {
                                 img: '/app/resources/images/speakers/karen.png',
-                                title: 'Karen Liftin',
+                                title: 'Karen Litfin',
                                 role: '',
                                 company: '',
-                                bio: '',
+                                bio: 'Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>.',
                                 openModal: this.props.openModal
                             })
                         )
@@ -49351,7 +49351,7 @@ var ProfileList = function (_React$Component2) {
                                 title: 'Tarah Wheeler',
                                 role: '',
                                 company: '',
-                                bio: '',
+                                bio: '<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
                                 openModal: this.props.openModal
                             })
                         )
