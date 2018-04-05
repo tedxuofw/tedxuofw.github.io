@@ -70,10 +70,10 @@ class ProfileList extends React.Component {
 					<td className={css(styles.td)}>
 						<Profile 
 							img="/app/resources/images/speakers/kristi.png" 
-							title="Kristi Straus" 
+							title="Dr. Kristi Straus" 
 							role=""
 							company=""
-                            bio="Kristi Straus is a lecturer in the College’s Environmental Studies program and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation and education surrounding environmental topics."
+                            bio="Dr. Kristi Straus is a lecturer at the University of Washington Program on the Environment and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation as well as science and sustainability education."
                             openModal={this.props.openModal}
 						/>
 					</td>
@@ -102,7 +102,7 @@ class ProfileList extends React.Component {
 					<td className={css(styles.td)}>
 						<Profile 
 							img="/app/resources/images/speakers/bezruchka.jpg" 
-							title="Steve Bezruchka" 
+							title="Dr. Steve Bezruchka" 
 							role=""
 							company=""
                             bio="Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues."
@@ -154,7 +154,7 @@ class ProfileList extends React.Component {
                     <td className={css(styles.td)}>
                         <Profile 
                             img="/app/resources/images/speakers/sarah.png" 
-                            title="Sarah Mhyre" 
+                            title="Dr. Sarah Mhyre" 
                             role=""
                             company=""
                             bio="Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society."
