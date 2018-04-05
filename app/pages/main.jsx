@@ -70,7 +70,7 @@ export class Home extends React.Component {
                         <div style={{background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw'}}></div>
                         <div style={{fontSize: '24px'}}><b>MAY 5, 2018</b> KANE HALL ROOM 130</div>
                         <br/><br/>
-                        <TedButton name="Learn More" linkTo="" />
+                        <TedButton name="Learn More" linkTo="/about/" />
                     </center>
                 </Section>
                 <Flair right/>
