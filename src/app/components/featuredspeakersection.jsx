@@ -9,7 +9,7 @@ import {TedButton} from '../components/tedbutton.jsx';
 const speakers =[ {name:"Kristi Straus", desc:"", 	img:"/app/resources/images/speakers/kristi.png"},
 			{name:"Ansel Santosa", 	desc:"", 		img:"/app/resources/images/speakers/ansel.png"},
 			{name:"Heather Evans", 	desc:"", 		img:"/app/resources/images/speakers/heather.png"},
-			{name:"Dr. Bezruchka", desc:"", 		img:"/app/resources/images/speakers/stephen.png"},
+			{name:"Dr. Bezruchka", desc:"", 		img:"/app/resources/images/speakers/bezruchka.jpg"},
 			{name:"John Sinclair", desc:"", 		img:"/app/resources/images/speakers/john.png"},
 			{name:"Fauzia Lala", desc:"", 			img:"/app/resources/images/speakers/fauzia.png"},
 			{name:"Andrea Weatherhead", desc:"", 	img:"/app/resources/images/speakers/andrea.png"},
