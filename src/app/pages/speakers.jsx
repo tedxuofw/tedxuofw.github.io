@@ -47,6 +47,9 @@ export class Speakers extends React.Component {
                 <Section title='Speakers'>
                     <ProfileList openModal={this.openModal} />
                 </Section>
+				<Section title='Performers'>
+					<PerformerList />
+				</Section>
                 <Modal 
                     isOpen={this.state.isModalOpen} 
                     onClose={() => this.closeModal()}
@@ -154,7 +157,7 @@ class ProfileList extends React.Component {
                     <td className={css(styles.td)}>
                         <Profile 
                             img="/app/resources/images/speakers/sarah.png" 
-                            title="Dr. Sarah Mhyre" 
+                            title="Dr. Sarah Myhre" 
                             role=""
                             company=""
                             bio="Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society."
@@ -208,6 +211,43 @@ class ProfileList extends React.Component {
                 </tr>
 				</tbody>
 			</table>
+		);
+	}
+}
+
+class PerformerList extends React.Component {
+	render() {
+		return (
+		<table className={css(styles.table)}>
+			<tbody>
+				<tr className={css(styles.tr)}>
+					<td className={css(styles.td)}>
+						<Profile 
+							img="/app/resources/images/speakers/performer1.png" 
+							title="Performer 1" 
+							role=""
+							company=""
+						/>
+					</td>
+					<td className={css(styles.td)}>
+						<Profile 
+							img="/app/resources/images/speakers/performer1.png" 
+							title="Performer 2" 
+							role=""
+							company=""
+						/>
+					</td>
+					<td className={css(styles.td)}>
+						<Profile 
+							img="/app/resources/images/speakers/performer1.png" 
+							title="Performer 3" 
+							role=""
+							company=""
+						/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 		);
 	}
 }
