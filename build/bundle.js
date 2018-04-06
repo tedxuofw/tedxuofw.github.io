@@ -12515,13 +12515,13 @@ var styles = _aphrodite.StyleSheet.create({
 		WebkitAppearance: 'none',
 		WebkitBoxShadow: 'none',
 		MozBoxShadow: 'none',
-		boxShadow: 'none',
-		"::-webkit-input-placeholder": {
-			fontStyle: 'italic'
-		},
-		"::-moz-placeholder": {
-			fontStyle: 'italic'
-		}
+		boxShadow: 'none'
+		//		"::-webkit-input-placeholder" : {
+		//			fontStyle:'italic',
+		//		},
+		//		"::-moz-placeholder" : {
+		//			fontStyle:'italic',
+		//		},
 	},
 	submitbutton: {
 		userSelect: 'none',
