@@ -2288,11 +2288,6 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'a',
-                        { target: '_blank', href: 'https://twitter.com/tedxuofw?lang=en' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-twitter.png' })
-                    ),
-                    _react2.default.createElement(
-                        'a',
                         { target: '_blank', href: 'https://www.instagram.com/tedxuofw/' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-instagram.png' })
                     ),
@@ -2319,6 +2314,12 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
 
     return TEDFooter;
 }(_react2.default.Component);
+
+/* // Apparently we don't use Twitter anymore?
+    <a target="_blank" href="https://twitter.com/tedxuofw?lang=en">
+        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
+    </a>
+*/
 
 var styles = _aphrodite.StyleSheet.create({
     tedfooter: {
@@ -2357,7 +2358,7 @@ var styles = _aphrodite.StyleSheet.create({
     },
     tedfootericon: {
         width: '36px',
-        margin: '0 10px 0 10px',
+        margin: '5px 10px 0 10px',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
         ':hover': {
