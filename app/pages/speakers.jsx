@@ -224,7 +224,7 @@ class PerformerList extends React.Component {
 					<td className={css(styles.td)}>
 						<Profile 
 							img="/app/resources/images/speakers/performer1.png" 
-							title="Performer 1" 
+							title="TBA" 
 							role=""
 							company=""
 						/>
@@ -232,7 +232,7 @@ class PerformerList extends React.Component {
 					<td className={css(styles.td)}>
 						<Profile 
 							img="/app/resources/images/speakers/performer1.png" 
-							title="Performer 2" 
+							title="TBA" 
 							role=""
 							company=""
 						/>
@@ -240,7 +240,7 @@ class PerformerList extends React.Component {
 					<td className={css(styles.td)}>
 						<Profile 
 							img="/app/resources/images/speakers/performer1.png" 
-							title="Performer 3" 
+							title="TBA" 
 							role=""
 							company=""
 						/>

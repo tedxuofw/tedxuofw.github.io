@@ -74,7 +74,6 @@ export class Home extends React.Component {
                     </center>
                 </Section>
                 <Flair right/>
-				<CountdownSection />
                 <Section border='20%' bgColor='black'>
 					<Speakers />
                 </Section>

@@ -34519,7 +34519,6 @@ var Home = exports.Home = function (_React$Component) {
                     )
                 ),
                 _react2.default.createElement(_flair.Flair, { right: true }),
-                _react2.default.createElement(_countdownsection.CountdownSection, null),
                 _react2.default.createElement(
                     _section.Section,
                     { border: '20%', bgColor: 'black' },
@@ -48129,7 +48128,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/stephen.png" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Mhyre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Liftin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }];
+var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/bezruchka.jpg" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Myhre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Liftin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }];
 
 var Speakers = exports.Speakers = function (_React$Component) {
 	_inherits(Speakers, _React$Component);
@@ -49440,7 +49439,7 @@ var PerformerList = function (_React$Component3) {
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
                 img: '/app/resources/images/speakers/performer1.png',
-                title: 'Performer 1',
+                title: 'TBA',
                 role: '',
                 company: ''
               })
@@ -49450,7 +49449,7 @@ var PerformerList = function (_React$Component3) {
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
                 img: '/app/resources/images/speakers/performer1.png',
-                title: 'Performer 2',
+                title: 'TBA',
                 role: '',
                 company: ''
               })
@@ -49460,7 +49459,7 @@ var PerformerList = function (_React$Component3) {
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
                 img: '/app/resources/images/speakers/performer1.png',
-                title: 'Performer 3',
+                title: 'TBA',
                 role: '',
                 company: ''
               })
