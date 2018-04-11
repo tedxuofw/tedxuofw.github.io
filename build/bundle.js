@@ -2288,11 +2288,6 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'a',
-                        { target: '_blank', href: 'https://twitter.com/tedxuofw?lang=en' },
-                        _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-twitter.png' })
-                    ),
-                    _react2.default.createElement(
-                        'a',
                         { target: '_blank', href: 'https://www.instagram.com/tedxuofw/' },
                         _react2.default.createElement('img', { className: (0, _aphrodite.css)(styles.tedfootericon), src: '/app/resources/images/icon-instagram.png' })
                     ),
@@ -2319,6 +2314,12 @@ var TEDFooter = exports.TEDFooter = function (_React$Component) {
 
     return TEDFooter;
 }(_react2.default.Component);
+
+/* // Apparently we don't use Twitter anymore?
+    <a target="_blank" href="https://twitter.com/tedxuofw?lang=en">
+        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
+    </a>
+*/
 
 var styles = _aphrodite.StyleSheet.create({
     tedfooter: {
@@ -2357,7 +2358,7 @@ var styles = _aphrodite.StyleSheet.create({
     },
     tedfootericon: {
         width: '36px',
-        margin: '0 10px 0 10px',
+        margin: '5px 10px 0 10px',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
         ':hover': {
@@ -12515,13 +12516,13 @@ var styles = _aphrodite.StyleSheet.create({
 		WebkitAppearance: 'none',
 		WebkitBoxShadow: 'none',
 		MozBoxShadow: 'none',
-		boxShadow: 'none',
-		"::-webkit-input-placeholder": {
-			fontStyle: 'italic'
-		},
-		"::-moz-placeholder": {
-			fontStyle: 'italic'
-		}
+		boxShadow: 'none'
+		//		"::-webkit-input-placeholder" : {
+		//			fontStyle:'italic',
+		//		},
+		//		"::-moz-placeholder" : {
+		//			fontStyle:'italic',
+		//		},
 	},
 	submitbutton: {
 		userSelect: 'none',
@@ -34515,11 +34516,10 @@ var Home = exports.Home = function (_React$Component) {
                         ),
                         _react2.default.createElement('br', null),
                         _react2.default.createElement('br', null),
-                        _react2.default.createElement(_tedbutton.TedButton, { name: 'Learn More', linkTo: '' })
+                        _react2.default.createElement(_tedbutton.TedButton, { name: 'Learn More', linkTo: '/about/' })
                     )
                 ),
                 _react2.default.createElement(_flair.Flair, { right: true }),
-                _react2.default.createElement(_countdownsection.CountdownSection, null),
                 _react2.default.createElement(
                     _section.Section,
                     { border: '20%', bgColor: 'black' },
@@ -47663,7 +47663,19 @@ var LinksSection = exports.LinksSection = function (_React$Component) {
 				_react2.default.createElement(
 					LinkSection,
 					{ title: 'Get your tickets now!', color: '#000000', bgColor: '#FFFFFF' },
-					_react2.default.createElement(_tedbutton.TedButton, { name: 'Attend', linkTo: '/attend' })
+					_react2.default.createElement(
+						'div',
+						{ className: (0, _aphrodite.css)(styles.container) },
+						_react2.default.createElement(
+							'div',
+							{ className: (0, _aphrodite.css)(styles.linkButton) },
+							_react2.default.createElement(
+								'a',
+								{ className: (0, _aphrodite.css)(styles.link), target: '_blank', href: 'https://tedxuofw.ticketleap.com/2018/' },
+								'Attend'
+							)
+						)
+					)
 				),
 				_react2.default.createElement(
 					LinkSection,
@@ -47689,6 +47701,39 @@ var styles = _aphrodite.StyleSheet.create({
 		margin: '0px',
 		paddingTop: '0px',
 		paddingBottom: '0px'
+	},
+	container: {
+		textAlign: 'center'
+	},
+	linkButton: {
+		border: 'none',
+		userSelect: 'none',
+		cursor: 'pointer',
+		display: 'inline-block',
+		minWidth: '10vw',
+		height: '5vw',
+		paddingRight: '1.5vw',
+		paddingLeft: '1.5vw',
+		marginRight: '0px',
+		marginLeft: '0px',
+		marginBottom: '10vh',
+		marginTop: '3vw',
+		lineHeight: '5vw',
+		textAlign: 'center',
+		color: '#FFFFFF',
+		backgroundColor: '#E62B25',
+		fontSize: '14px',
+		fontFamily: 'AvenirBlack',
+		transition: 'opacity 0.2s ease-out',
+		textTransform: 'uppercase',
+		":hover": {
+			opacity: ".8",
+			transition: 'opacity 0.2s ease-out'
+		}
+	},
+	link: {
+		color: 'white',
+		textDecoration: 'none'
 	}
 });
 
@@ -48084,7 +48129,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/stephen.png" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Mhyre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Liftin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }];
+var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/bezruchka.jpg" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Myhre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Liftin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }];
 
 var Speakers = exports.Speakers = function (_React$Component) {
 	_inherits(Speakers, _React$Component);
@@ -48708,7 +48753,7 @@ var teams = ["", "curators", "design", "speaker selection", "finance", "producti
 
 var profiles = [{ name: "Jamie Housen", role: "Curator", team: "curators" }, { name: "Ryan Washburne", role: "Curator", team: "curators" }, { name: "Sierra Simmerman", role: "Curator", team: "curators" }, { name: "Ian Yu", role: "Design Manager", team: "design" }, { name: "Marie Danilychev", role: "Photographer", team: "design" }, { name: "Sarah Strickler", role: "Graphic Designer", team: "design" }, { name: "Katie Chun", role: "Speaker Selection Manager", team: "speaker selection" }, { name: "Sara Gustafson", role: "Speaker Selection", team: "speaker selection" }, { name: "Maren Anderson", role: "Speaker Selection", team: "speaker selection" }, { name: "Tien Vo", role: "Speaker Selection", team: "speaker selection" }, { name: "Julia Pettere", role: "Speaker Selection", team: "speaker selection" }, { name: "Sneha Mohidekar", role: "Speaker Selection", team: "speaker selection" }, { name: "Celia Schlekewey", role: "Finance Manager", team: "finance" }, { name: "Michael Jacobson", role: "Financial Analyst", team: "finance" }, { name: "Keren Zhang", role: "Financial Logistics", team: "finance" }, { name: "Maya Sullivan", role: "Financial Analyst", team: "finance" }, { name: "Maya Gopalan", role: "Sponsorship", team: "finance" }, { name: "TJ Gascho", role: "Production Manager", team: "production" }, { name: "Jay Ma", role: "Stage Design", team: "production" }, { name: "Sean Chronister", role: "Tech Lead", team: "production" }, { name: "Christopher Gerken", role: "Tech Lead", team: "production" }, { name: "Miranda Reisman", role: "Conference Facilitator", team: "production" }, { name: "Jed Kwek", role: "Guest Experience", team: "production" }, { name: "Hanna Choi", role: "PR Manager", team: "public relations" }, { name: "Rahul Prasad", role: "Internal Manager", team: "public relations" }, { name: "Emma Hurring", role: "Public Relations", team: "public relations" }, { name: "Sehel Tahir", role: "External Outreach", team: "public relations" }, { name: "Natasha Lau", role: "Internal Manager", team: "public relations" }, { name: "Jenny Liang", role: "Web Manager", team: "web" }, { name: "Sara Tieu", role: "UX/UI Designer", team: "web" }, { name: "Soham Pardeshi", role: "Web Developer", team: "web" }, { name: "Nikolas Gaub", role: "Web Developer", team: "web" }];
 
-var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
+var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
 var Descriptions = exports.Descriptions = function (_React$Component) {
 	_inherits(Descriptions, _React$Component);
@@ -49061,7 +49106,7 @@ var styles = _aphrodite.StyleSheet.create({
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.Speakers = undefined;
 
@@ -49098,288 +49143,359 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var TABLET_WIDTH = 801;
 
 var Speakers = exports.Speakers = function (_React$Component) {
-    _inherits(Speakers, _React$Component);
+  _inherits(Speakers, _React$Component);
 
-    function Speakers(props) {
-        _classCallCheck(this, Speakers);
+  function Speakers(props) {
+    _classCallCheck(this, Speakers);
 
-        var _this = _possibleConstructorReturn(this, (Speakers.__proto__ || Object.getPrototypeOf(Speakers)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Speakers.__proto__ || Object.getPrototypeOf(Speakers)).call(this, props));
 
-        _this.state = { isModalOpen: false };
-        _this.openModal = _this.openModal.bind(_this); // Important!
-        return _this;
+    _this.state = { isModalOpen: false };
+    _this.openModal = _this.openModal.bind(_this); // Important!
+    return _this;
+  }
+
+  _createClass(Speakers, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      document.title = "Speakers - TEDxUofW";
+      window.scrollTo(0, 0);
     }
+  }, {
+    key: 'openModal',
+    value: function openModal(image, name, role, text) {
+      if (text && text != "") {
+        // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
+        var tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>' : '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
+        vex.dialog.alert("");
+        $(".vex-content").html(tmp);
+      }
+    }
+  }, {
+    key: 'closeModal',
+    value: function closeModal() {
+      this.setState({ isModalOpen: false });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
 
-    _createClass(Speakers, [{
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            document.title = "Speakers - TEDxUofW";
-            window.scrollTo(0, 0);
-        }
-    }, {
-        key: 'openModal',
-        value: function openModal(image, name, role, text) {
-            if (text && text != "") {
-                // this.setState({ isModalOpen: true, modalImage: image, modalName: name, modalRole: role, modalText: text });
-                var tmp = window.innerWidth < TABLET_WIDTH ? '<div style="margin: 20px 20px 0 0; display: table; "> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>' : '<div style="margin: 20px 20px 0 0; display: table; "> <div style="width: 25%; display: table-cell; vertical-align: middle "><img src="' + image + '" style="display: block; width: 100%; height: auto;"/></div> <div style="padding: 20px; display: table-cell; vertical-align: middle"> <h3 style="font-weight: bold; font-size: 200%">' + name + '</h3> <p>' + text + ' </p> </div> </div>';
-                vex.dialog.alert("");
-                $(".vex-content").html(tmp);
-            }
-        }
-    }, {
-        key: 'closeModal',
-        value: function closeModal() {
-            this.setState({ isModalOpen: false });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_tednavbar.TEDNavbar, { index: '1' }),
+        _react2.default.createElement(
+          _section.Section,
+          { title: 'Speakers' },
+          _react2.default.createElement(ProfileList, { openModal: this.openModal })
+        ),
+        _react2.default.createElement(
+          _section.Section,
+          { title: 'Performers' },
+          _react2.default.createElement(PerformerList, { openModal: this.openModal })
+        ),
+        _react2.default.createElement(_tedmodal.Modal, {
+          isOpen: this.state.isModalOpen,
+          onClose: function onClose() {
+            return _this2.closeModal();
+          },
+          modalImage: this.state.modalImage,
+          modalName: this.state.modalName,
+          modalText: this.state.modalText
+        }),
+        _react2.default.createElement(_tedfooter.TEDFooter, null)
+      );
+    }
+  }]);
 
-            return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_tednavbar.TEDNavbar, { index: '1' }),
-                _react2.default.createElement(
-                    _section.Section,
-                    { title: 'Speakers' },
-                    _react2.default.createElement(ProfileList, { openModal: this.openModal })
-                ),
-                _react2.default.createElement(_tedmodal.Modal, {
-                    isOpen: this.state.isModalOpen,
-                    onClose: function onClose() {
-                        return _this2.closeModal();
-                    },
-                    modalImage: this.state.modalImage,
-                    modalName: this.state.modalName,
-                    modalText: this.state.modalText
-                }),
-                _react2.default.createElement(_tedfooter.TEDFooter, null)
-            );
-        }
-    }]);
-
-    return Speakers;
+  return Speakers;
 }(_react2.default.Component);
 
 var ProfileList = function (_React$Component2) {
-    _inherits(ProfileList, _React$Component2);
+  _inherits(ProfileList, _React$Component2);
 
-    function ProfileList() {
-        _classCallCheck(this, ProfileList);
+  function ProfileList() {
+    _classCallCheck(this, ProfileList);
 
-        return _possibleConstructorReturn(this, (ProfileList.__proto__ || Object.getPrototypeOf(ProfileList)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (ProfileList.__proto__ || Object.getPrototypeOf(ProfileList)).apply(this, arguments));
+  }
+
+  _createClass(ProfileList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'table',
+        { className: (0, _aphrodite.css)(styles.table) },
+        _react2.default.createElement(
+          'tbody',
+          null,
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/kristi.png',
+                title: 'Dr. Kristi Straus',
+                role: '',
+                company: '',
+                bio: 'Dr. Kristi Straus is a lecturer at the University of Washington Program on the Environment and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation as well as science and sustainability education.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/ansel.png',
+                title: 'Ansel Santosa',
+                role: '',
+                company: '',
+                bio: 'Ansel is an engineer and educator. He graduated from the University of Washington Information School in 2013 where he now serves as an advisory board member. He works as a software engineer and early business validator at Pioneer Square Labs, a local startup studio and seed stage venture fund. He is passionate about helping entrepreneurs be successful and building great companies in Seattle.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/heather.png',
+                title: 'Heather Evans',
+                role: '',
+                company: '',
+                bio: 'Heather is a lecturer at the University of Washington, teaching several courses pertaining to disability studies. Her work revolves around better understanding \u2018invisible disability,\u2019 empowering disability identity, and breaking down institutional marginalization of disabled individuals.',
+                openModal: this.props.openModal
+              })
+            )
+          ),
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/bezruchka.jpg',
+                title: 'Dr. Steve Bezruchka',
+                role: '',
+                company: '',
+                bio: 'Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/john.png',
+                title: 'John Sinclair',
+                role: '',
+                company: '',
+                bio: 'John Sinclair (also known as Saint Claire) is a rising songwriter, producer, and performer in Seattle.  His work in singing, writing, producing, and composing for strings has led to recent music collaborations with prominent musicians, including Macklemore and Ryan Lewis.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/fauzia.png',
+                title: 'Fauzia Lala',
+                role: '',
+                company: '',
+                bio: 'Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense trainings for women. She loves to train, both physically and mentally. She loves learning from books and by taking courses on Lynda.com. Fauzia is fanatic fan of all things psychology and personal/spiritual growth. Fauzia was a finalist of Forbes 30 Under 30 in 2016 and has won the Washington InnovateHer competition in 2017.',
+                openModal: this.props.openModal
+              })
+            )
+          ),
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/andrea.png',
+                title: 'Andrea Weatherhead',
+                role: '',
+                company: '',
+                bio: 'Andrea has created award winning immersive environments for many museums across the country including the Experience Music Project (now called MoPOP) and the  Museum of History & Industry in Seattle. Her visionary educational and interactive exhibit environments have earned her numerous awards. Andrea was featured as the \u201Cwoman to watch out for in technology in the 21st century\u201D by Seattle Magazine and  was cited as \u201Cone of Seattle\u2019s 36 most influential people\u201D by Seattle Met Magazine.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/tyler.png',
+                title: 'Tyler Valentine',
+                role: '',
+                company: '',
+                bio: 'Tyler is studying Earth and Space Sciences at University of Washington, with minors in Philosophy and Physics. He researches extraterrestrial water extraction with the Applied Physics Laboratory. He also values public engagement about science issues, speaking at events like the Seattle March for Science.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/sarah.png',
+                title: 'Dr. Sarah Myhre',
+                role: '',
+                company: '',
+                bio: 'Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society.',
+                openModal: this.props.openModal
+              })
+            )
+          ),
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/jeffery.png',
+                title: 'Jeffery Lew',
+                role: '',
+                company: '',
+                bio: 'Jeffery Lew was born and raised in Seattle and graduated from the University of Washington with a BA in marketing. As a proud graduate of Seattle Public Schools (Ingraham High) and a father of three, the problem of school lunch debt and lunch shaming hit close to home for him. Jeff could not fathom students being shamed or going hungry for having lunch debt at their school cafeteria, a situation that children have no control over. In 2017, Jeff began a movement to end lunch shaming and find a permanent solution to the problem. Also known as the \'Lunch Dad,\' Jeff launched a campaign to pay off all the lunch debt in Seattle, Tacoma and Spokane, the three largest school districts in the state of Washington. He has raised over $100,000 to date and is now aiming to pay off the lunch debt for every district in the state. Still, not everyone is aware of school lunch debt and the shaming that stems from it. Jeff is on a mission to raise awareness and find a way to end this practice once and for all.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/izdihar.png',
+                title: 'Izdihar Bailey',
+                role: '',
+                company: '',
+                bio: 'Izdihar Bailey is a Lobbyist and a former Government Affairs Team member at CAIR-Washington State, America\'s largest Muslim civil liberties and advocacy organization. As someone who has lived life without Islam and is now empowered by Islam, she believes her life experience allows her to create stronger link of communication with fellow Americans of all faiths and political alignments.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/karen.png',
+                title: 'Karen Litfin',
+                role: '',
+                company: '',
+                bio: 'Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>.',
+                openModal: this.props.openModal
+              })
+            )
+          ),
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/speakers/tarah.png',
+                title: 'Tarah Wheeler',
+                role: '',
+                company: '',
+                bio: '<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
+                openModal: this.props.openModal
+              })
+            )
+          )
+        )
+      );
     }
+  }]);
 
-    _createClass(ProfileList, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'table',
-                { className: (0, _aphrodite.css)(styles.table) },
-                _react2.default.createElement(
-                    'tbody',
-                    null,
-                    _react2.default.createElement(
-                        'tr',
-                        { className: (0, _aphrodite.css)(styles.tr) },
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/kristi.png',
-                                title: 'Kristi Straus',
-                                role: '',
-                                company: '',
-                                bio: 'Kristi Straus is a lecturer in the College\u2019s Environmental Studies program and the recipient of the 2017 University of Washington Distinguished Teaching Award. She is passionate about environmental conservation and education surrounding environmental topics.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/ansel.png',
-                                title: 'Ansel Santosa',
-                                role: '',
-                                company: '',
-                                bio: 'Ansel is an engineer and educator. He graduated from the University of Washington Information School in 2013 where he now serves as an advisory board member. He works as a software engineer and early business validator at Pioneer Square Labs, a local startup studio and seed stage venture fund. He is passionate about helping entrepreneurs be successful and building great companies in Seattle.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/heather.png',
-                                title: 'Heather Evans',
-                                role: '',
-                                company: '',
-                                bio: 'Heather is a lecturer at the University of Washington, teaching several courses pertaining to disability studies. Her work revolves around better understanding \u2018invisible disability,\u2019 empowering disability identity, and breaking down institutional marginalization of disabled individuals.',
-                                openModal: this.props.openModal
-                            })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'tr',
-                        { className: (0, _aphrodite.css)(styles.tr) },
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/bezruchka.jpg',
-                                title: 'Steve Bezruchka',
-                                role: '',
-                                company: '',
-                                bio: 'Dr. Stephen Bezruchka is a Senior Lecturer in the Departments of Health Services and Global Health, with degrees from Harvard, Stanford and Johns Hopkins. His courses and research focus on population health and their socioeconomic determinants. Prior to his time at the University of Washington, he spent 30 years as an emergency physician and trained doctors in remote hospitals in Nepal. Throughout his career, he has continued to be involved with international health issues.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/john.png',
-                                title: 'John Sinclair',
-                                role: '',
-                                company: '',
-                                bio: 'John Sinclair (also known as Saint Claire) is a rising songwriter, producer, and performer in Seattle.  His work in singing, writing, producing, and composing for strings has led to recent music collaborations with prominent musicians, including Macklemore and Ryan Lewis.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/fauzia.png',
-                                title: 'Fauzia Lala',
-                                role: '',
-                                company: '',
-                                bio: 'Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense trainings for women. She loves to train, both physically and mentally. She loves learning from books and by taking courses on Lynda.com. Fauzia is fanatic fan of all things psychology and personal/spiritual growth. Fauzia was a finalist of Forbes 30 Under 30 in 2016 and has won the Washington InnovateHer competition in 2017.',
-                                openModal: this.props.openModal
-                            })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'tr',
-                        { className: (0, _aphrodite.css)(styles.tr) },
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/andrea.png',
-                                title: 'Andrea Weatherhead',
-                                role: '',
-                                company: '',
-                                bio: 'Andrea has created award winning immersive environments for many museums across the country including the Experience Music Project (now called MoPOP) and the  Museum of History & Industry in Seattle. Her visionary educational and interactive exhibit environments have earned her numerous awards. Andrea was featured as the \u201Cwoman to watch out for in technology in the 21st century\u201D by Seattle Magazine and  was cited as \u201Cone of Seattle\u2019s 36 most influential people\u201D by Seattle Met Magazine.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/tyler.png',
-                                title: 'Tyler Valentine',
-                                role: '',
-                                company: '',
-                                bio: 'Tyler is studying Earth and Space Sciences at University of Washington, with minors in Philosophy and Physics. He researches extraterrestrial water extraction with the Applied Physics Laboratory. He also values public engagement about science issues, speaking at events like the Seattle March for Science.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/sarah.png',
-                                title: 'Sarah Mhyre',
-                                role: '',
-                                company: '',
-                                bio: 'Dr. Myhre is a paleoceanographer and science communicator, currently researching in the UW Department of Oceanography. She organized the Seattle chapter of 500 Women Scientists and has been recognized as an active voice for women in science and society.',
-                                openModal: this.props.openModal
-                            })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'tr',
-                        { className: (0, _aphrodite.css)(styles.tr) },
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/jeffery.png',
-                                title: 'Jeffery Lew',
-                                role: '',
-                                company: '',
-                                bio: 'Jeffery Lew was born and raised in Seattle and graduated from the University of Washington with a BA in marketing. As a proud graduate of Seattle Public Schools (Ingraham High) and a father of three, the problem of school lunch debt and lunch shaming hit close to home for him. Jeff could not fathom students being shamed or going hungry for having lunch debt at their school cafeteria, a situation that children have no control over. In 2017, Jeff began a movement to end lunch shaming and find a permanent solution to the problem. Also known as the \'Lunch Dad,\' Jeff launched a campaign to pay off all the lunch debt in Seattle, Tacoma and Spokane, the three largest school districts in the state of Washington. He has raised over $100,000 to date and is now aiming to pay off the lunch debt for every district in the state. Still, not everyone is aware of school lunch debt and the shaming that stems from it. Jeff is on a mission to raise awareness and find a way to end this practice once and for all.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/izdihar.png',
-                                title: 'Izdihar Bailey',
-                                role: '',
-                                company: '',
-                                bio: 'Izdihar Bailey is a Lobbyist and a former Government Affairs Team member at CAIR-Washington State, America\'s largest Muslim civil liberties and advocacy organization. As someone who has lived life without Islam and is now empowered by Islam, she believes her life experience allows her to create stronger link of communication with fellow Americans of all faiths and political alignments.',
-                                openModal: this.props.openModal
-                            })
-                        ),
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/karen.png',
-                                title: 'Karen Litfin',
-                                role: '',
-                                company: '',
-                                bio: 'Karen Litfin is Associate Professor of Political Science at the University of Washington, and author of <em>Ozone Discourses</em>; <em>The Greening Sovereignty</em>; and <em>Ecovillages: Lessons for Sustainable Community</em>.',
-                                openModal: this.props.openModal
-                            })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'tr',
-                        { className: (0, _aphrodite.css)(styles.tr) },
-                        _react2.default.createElement(
-                            'td',
-                            { className: (0, _aphrodite.css)(styles.td) },
-                            _react2.default.createElement(_profile.Profile, {
-                                img: '/app/resources/images/speakers/tarah.png',
-                                title: 'Tarah Wheeler',
-                                role: '',
-                                company: '',
-                                bio: '<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
-                                openModal: this.props.openModal
-                            })
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+  return ProfileList;
+}(_react2.default.Component);
 
-    return ProfileList;
+var PerformerList = function (_React$Component3) {
+  _inherits(PerformerList, _React$Component3);
+
+  function PerformerList() {
+    _classCallCheck(this, PerformerList);
+
+    return _possibleConstructorReturn(this, (PerformerList.__proto__ || Object.getPrototypeOf(PerformerList)).apply(this, arguments));
+  }
+
+  _createClass(PerformerList, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'table',
+        { className: (0, _aphrodite.css)(styles.table) },
+        _react2.default.createElement(
+          'tbody',
+          null,
+          _react2.default.createElement(
+            'tr',
+            { className: (0, _aphrodite.css)(styles.tr) },
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/awaaz.png',
+                title: 'UW Awaaz',
+                role: '',
+                company: '',
+                bio: 'Awaaz is the premiere co-ed South Asian fusion a cappella team at the University of Washington. Founded in 2009, Awaaz (which means \u201Cvoice\u201D in Hindi), is made up of singers who come from various musical backgrounds. This group aims to fuse South Asian and Western vocal music through melodious and rhythmic a cappella arrangements. Awaaz competes at collegiate a cappella competitions at various universities across the country. They most recently competed at Anahat at UC Berkeley and Sahana at UCLA. All of the group members enjoy working together to celebrate and share their South Asian heritage and unique experiences in America through musical performances in the UW community and the greater Seattle area.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/aura.png',
+                title: 'Aura Dance Collective',
+                role: '',
+                company: '',
+                bio: 'Aura is a collaborative contemporary dance company. Aura performs a variety of styles, emphasizing jazz, contemporary, and lyrical styling in their performances.',
+                openModal: this.props.openModal
+              })
+            ),
+            _react2.default.createElement(
+              'td',
+              { className: (0, _aphrodite.css)(styles.td) },
+              _react2.default.createElement(_profile.Profile, {
+                img: '/app/resources/images/gaultier.png',
+                title: 'Rapha\xEBl Gaultier',
+                role: '',
+                company: '',
+                bio: 'Rapha\xEBl is the founder of Human Condition Magazine, a collective dedicated to providing a platform and building a community for emerging artists in Seattle. Rapha\xEBl is concerned with creating conversations around what the Human Condition is and how we can be more empathetic to the people around us!',
+                openModal: this.props.openModal
+              })
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return PerformerList;
 }(_react2.default.Component);
 
 var styles = _aphrodite.StyleSheet.create({
-    table: {
-        width: '100%'
+  table: {
+    width: '100%'
+  },
+  tr: {
+    padding: '1%'
+  },
+  td: {
+    padding: '1%',
+    ':first-child': {
+      paddingLeft: '0px'
     },
-    tr: {
-        padding: '1%'
-    },
-    td: {
-        padding: '1%',
-        ':first-child': {
-            paddingLeft: '0px'
-        },
-        ':last-child': {
-            paddingRight: '0px'
-        }
+    ':last-child': {
+      paddingRight: '0px'
     }
+  }
 });
 
 /***/ }),
