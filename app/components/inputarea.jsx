@@ -62,12 +62,12 @@ const styles = StyleSheet.create({
         WebkitBoxShadow: 'none',
         MozBoxShadow: 'none',
         boxShadow: 'none',
-		"::-webkit-input-placeholder" : {
-			fontStyle:'italic',
-		},
-		"::-moz-placeholder" : {
-			fontStyle:'italic',
-		},
+//		"::-webkit-input-placeholder" : {
+//			fontStyle:'italic',
+//		},
+//		"::-moz-placeholder" : {
+//			fontStyle:'italic',
+//		},
 	},
 	submitbutton: {
         userSelect: 'none',

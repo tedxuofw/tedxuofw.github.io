@@ -17,9 +17,6 @@ export class TEDFooter extends React.Component {
                     <a target="_blank" href="https://www.facebook.com/TEDxUofW/">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-facebook.png" />
                     </a>
-                    <a target="_blank" href="https://twitter.com/tedxuofw?lang=en">
-                        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
-                    </a>
                     <a target="_blank" href="https://www.instagram.com/tedxuofw/">
                         <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-instagram.png" />
                     </a>
@@ -34,6 +31,12 @@ export class TEDFooter extends React.Component {
         );
     }
 }
+
+/* // Apparently we don't use Twitter anymore?
+    <a target="_blank" href="https://twitter.com/tedxuofw?lang=en">
+        <img className={css(styles.tedfootericon)} src="/app/resources/images/icon-twitter.png" />
+    </a>
+*/
 
 const styles = StyleSheet.create({
     tedfooter: {
@@ -72,7 +75,7 @@ const styles = StyleSheet.create({
     },
     tedfootericon: {
         width: '36px',
-        margin: '0 10px 0 10px',
+        margin: '5px 10px 0 10px',
         verticalAlign: 'middle',
         transition: 'opacity 0.2s ease-out',
         ':hover': {
