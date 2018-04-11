@@ -49193,7 +49193,7 @@ var Speakers = exports.Speakers = function (_React$Component) {
         _react2.default.createElement(
           _section.Section,
           { title: 'Performers' },
-          _react2.default.createElement(PerformerList, null)
+          _react2.default.createElement(PerformerList, { openModal: this.openModal })
         ),
         _react2.default.createElement(_tedmodal.Modal, {
           isOpen: this.state.isModalOpen,
@@ -49439,30 +49439,36 @@ var PerformerList = function (_React$Component3) {
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/awaaz.png',
+                title: 'UW Awaaz',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Awaaz is the premiere co-ed South Asian fusion a cappella team at the University of Washington. Founded in 2009, Awaaz (which means \u201Cvoice\u201D in Hindi), is made up of singers who come from various musical backgrounds. This group aims to fuse South Asian and Western vocal music through melodious and rhythmic a cappella arrangements. Awaaz competes at collegiate a cappella competitions at various universities across the country. They most recently competed at Anahat at UC Berkeley and Sahana at UCLA. All of the group members enjoy working together to celebrate and share their South Asian heritage and unique experiences in America through musical performances in the UW community and the greater Seattle area.',
+                openModal: this.props.openModal
               })
             ),
             _react2.default.createElement(
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/aura.png',
+                title: 'Aura Dance Collective',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Aura is a collaborative contemporary dance company. Aura performs a variety of styles, emphasizing jazz, contemporary, and lyrical styling in their performances.',
+                openModal: this.props.openModal
               })
             ),
             _react2.default.createElement(
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/gaultier.png',
+                title: 'Rapha\xEBl Gaultier',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Rapha\xEBl is the founder of Human Condition Magazine, a collective dedicated to providing a platform and building a community for emerging artists in Seattle. Rapha\xEBl is concerned with creating conversations around what the Human Condition is and how we can be more empathetic to the people around us!',
+                openModal: this.props.openModal
               })
             )
           )
