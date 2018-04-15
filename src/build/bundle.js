@@ -48753,7 +48753,7 @@ var teams = ["", "curators", "design", "speaker selection", "finance", "producti
 
 var profiles = [{ name: "Jamie Housen", role: "Curator", team: "curators" }, { name: "Ryan Washburne", role: "Curator", team: "curators" }, { name: "Sierra Simmerman", role: "Curator", team: "curators" }, { name: "Ian Yu", role: "Design Manager", team: "design" }, { name: "Marie Danilychev", role: "Photographer", team: "design" }, { name: "Sarah Strickler", role: "Graphic Designer", team: "design" }, { name: "Katie Chun", role: "Speaker Selection Manager", team: "speaker selection" }, { name: "Sara Gustafson", role: "Speaker Selection", team: "speaker selection" }, { name: "Maren Anderson", role: "Speaker Selection", team: "speaker selection" }, { name: "Tien Vo", role: "Speaker Selection", team: "speaker selection" }, { name: "Julia Pettere", role: "Speaker Selection", team: "speaker selection" }, { name: "Sneha Mohidekar", role: "Speaker Selection", team: "speaker selection" }, { name: "Celia Schlekewey", role: "Finance Manager", team: "finance" }, { name: "Michael Jacobson", role: "Financial Analyst", team: "finance" }, { name: "Keren Zhang", role: "Financial Logistics", team: "finance" }, { name: "Maya Sullivan", role: "Financial Analyst", team: "finance" }, { name: "Maya Gopalan", role: "Sponsorship", team: "finance" }, { name: "TJ Gascho", role: "Production Manager", team: "production" }, { name: "Jay Ma", role: "Stage Design", team: "production" }, { name: "Sean Chronister", role: "Tech Lead", team: "production" }, { name: "Christopher Gerken", role: "Tech Lead", team: "production" }, { name: "Miranda Reisman", role: "Conference Facilitator", team: "production" }, { name: "Jed Kwek", role: "Guest Experience", team: "production" }, { name: "Hanna Choi", role: "PR Manager", team: "public relations" }, { name: "Rahul Prasad", role: "Internal Manager", team: "public relations" }, { name: "Emma Hurring", role: "Public Relations", team: "public relations" }, { name: "Sehel Tahir", role: "External Outreach", team: "public relations" }, { name: "Natasha Lau", role: "Internal Manager", team: "public relations" }, { name: "Jenny Liang", role: "Web Manager", team: "web" }, { name: "Sara Tieu", role: "UX/UI Designer", team: "web" }, { name: "Soham Pardeshi", role: "Web Developer", team: "web" }, { name: "Nikolas Gaub", role: "Web Developer", team: "web" }];
 
-var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
+var descriptions = ["The TEDxUofW team is a community of creative thinkers, leaders, and lovers of TED. We are passionate UW undergrads who collaborate to host the TEDxUofW conference. We are in charge of the conference from start to finish in finance, design, website development, PR, production, and speaker selection.", "Curators oversee the conference and planning in its entirety, including the management of team members, communication, and all-team and exec meetings. Their tasks include recruiting team managers and members, selecting the conference's theme, and representing TEDxUofW in professional inquiries.", "The design team creates the branding for each TEDxUofW conference to tie in the theme within TEDx general guidelines. These graphics are used for print ads, digital media, a mobile app, and a website, which shape the face of the event, inspire people to attend and create appealing products.", "The speaker selection committee recruits a diverse, interesting, and cohesive group of speakers. These speakers embody the conference's theme and shape the conference. They reach out to a variety of speakers and help shape their speech into an iconic TED talk that inspires our audience.", "The finance and sponsorship team ensures that TEDxUofW’s financial needs are always met. They control the organization’s money, its collection, and disbursement. They track organization expenses, oversee the master budget, and develop relationships with sponsors to get the conference running.", "The production team ensures our guests receive the full TED experience during the conference. They create an environment that allows our speakers to inspiring guests, from when they enter until they leave. Our production committee may not be in the spotlight, but the light shines because of them.", "The public relations committee creatively and strategically promotes the TEDxUofW conference. They own all promotion leading up to the event, “hyping” people about TEDxUofW. They work to create stellar content and reach out to communities around UW to spread the message of what TEDxUofW is all about!", "The web committee builds all of the technology that TEDxUofW uses to connect to their audience, including www.tedxuofw.com and our day-of-conference application. They are completely in charge of these products, from the initial designs until they are completely built and ready for the conference."];
 
 var Descriptions = exports.Descriptions = function (_React$Component) {
 	_inherits(Descriptions, _React$Component);
@@ -49193,7 +49193,7 @@ var Speakers = exports.Speakers = function (_React$Component) {
         _react2.default.createElement(
           _section.Section,
           { title: 'Performers' },
-          _react2.default.createElement(PerformerList, null)
+          _react2.default.createElement(PerformerList, { openModal: this.openModal })
         ),
         _react2.default.createElement(_tedmodal.Modal, {
           isOpen: this.state.isModalOpen,
@@ -49439,30 +49439,36 @@ var PerformerList = function (_React$Component3) {
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/awaaz.png',
+                title: 'UW Awaaz',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Awaaz is the premiere co-ed South Asian fusion a cappella team at the University of Washington. Founded in 2009, Awaaz (which means \u201Cvoice\u201D in Hindi), is made up of singers who come from various musical backgrounds. This group aims to fuse South Asian and Western vocal music through melodious and rhythmic a cappella arrangements. Awaaz competes at collegiate a cappella competitions at various universities across the country. They most recently competed at Anahat at UC Berkeley and Sahana at UCLA. All of the group members enjoy working together to celebrate and share their South Asian heritage and unique experiences in America through musical performances in the UW community and the greater Seattle area.',
+                openModal: this.props.openModal
               })
             ),
             _react2.default.createElement(
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/aura.png',
+                title: 'Aura Dance Collective',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Aura is a collaborative contemporary dance company. Aura performs a variety of styles, emphasizing jazz, contemporary, and lyrical styling in their performances.',
+                openModal: this.props.openModal
               })
             ),
             _react2.default.createElement(
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
               _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/performer1.png',
-                title: 'TBA',
+                img: '/app/resources/images/gaultier.png',
+                title: 'Rapha\xEBl Gaultier',
                 role: '',
-                company: ''
+                company: '',
+                bio: 'Rapha\xEBl is the founder of Human Condition Magazine, a collective dedicated to providing a platform and building a community for emerging artists in Seattle. Rapha\xEBl is concerned with creating conversations around what the Human Condition is and how we can be more empathetic to the people around us!',
+                openModal: this.props.openModal
               })
             )
           )
