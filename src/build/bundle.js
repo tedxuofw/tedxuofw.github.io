@@ -49556,7 +49556,7 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
                     _section.Section,
                     { title: 'Sponsors' },
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'ASUW', subtitle: 'Associated Students of the University of Washington',
-                        img: '/app/resources/images/sponsors/sponsor-asuw.jpg',
+                        img: '/app/resources/images/sponsors/asuw.png',
                         descr: 'The ASUW Special Appropriations Fund is a student levied, student distributed fund to support and enhance the out of class experience of students. The fund provides one-time funding grants to student initiated and developed event-centered programs which enrich the cultural, emotional, intellectual, and social well-being of the student.' }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'UMAC', subtitle: 'UW University Marketing and Communications',
                         img: '/app/resources/images/sponsors/sponsor-umac.jpg',
@@ -49579,7 +49579,10 @@ var Sponsors = exports.Sponsors = function (_React$Component) {
                         descr: 'The UW Alumni Association supports the UW and higher education in the state of Washington. In pursuit of that mission, UWAA member dues fund programs and services to help students, to inform the public about the UW community\u2019s remarkable achievements and to bring UW alumni and the public together for learning, fun and advocacy. With more than 56,000 members, UWAA is one of the largest alumni organizations in the United States.' }),
                     _react2.default.createElement(_sponsor.Sponsor, { title: 'The Hub',
                         img: '/app/resources/images/sponsors/hub.png',
-                        descr: 'The HUB, in an effort to assist Registered Student Organizations, has a source of funding to help make such activities and events possible.' })
+                        descr: 'The HUB, in an effort to assist Registered Student Organizations, has a source of funding to help make such activities and events possible.' }),
+                    _react2.default.createElement(_sponsor.Sponsor, { title: 'RCSA', subtitle: 'Residential Community Student Association',
+                        img: '/app/resources/images/sponsors/rcsa.png',
+                        descr: 'RCSA is an independent, student-run organization that represents the voice of residents. We work with ASUW, HFS, and various other organizations on behalf of our residents to advocate for changes to policies that directly affect them and their experience living on campus.' })
                 ),
                 _react2.default.createElement(_tedfooter.TEDFooter, null)
             );

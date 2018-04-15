@@ -18,7 +18,7 @@ export class Sponsors extends React.Component {
                 <TEDNavbar index='2'/>
                 <Section title='Sponsors'>
                     <Sponsor title='ASUW' subtitle='Associated Students of the University of Washington'
-                        img='/app/resources/images/sponsors/sponsor-asuw.jpg'
+                        img='/app/resources/images/sponsors/asuw.png'
                         descr='The ASUW Special Appropriations Fund is a student levied, student distributed fund to support and enhance the out of class experience of students. The fund provides one-time funding grants to student initiated and developed event-centered programs which enrich the cultural, emotional, intellectual, and social well-being of the student.'/>
                     
                     <Sponsor title='UMAC' subtitle='UW University Marketing and Communications'
@@ -53,6 +53,10 @@ export class Sponsors extends React.Component {
                     <Sponsor title='The Hub'
                         img='/app/resources/images/sponsors/hub.png'
                         descr='The HUB, in an effort to assist Registered Student Organizations, has a source of funding to help make such activities and events possible.'/>
+                    
+                    <Sponsor title='RCSA' subtitle='Residential Community Student Association'
+                        img='/app/resources/images/sponsors/rcsa.png'
+                        descr='RCSA is an independent, student-run organization that represents the voice of residents. We work with ASUW, HFS, and various other organizations on behalf of our residents to advocate for changes to policies that directly affect them and their experience living on campus.'/>
                     
                     
                 </Section>
