@@ -128,7 +128,7 @@ class ProfileList extends React.Component {
 							title="Fauzia Lala" 
 							role=""
 							company=""
-                            bio="Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense trainings for women. She loves to train, both physically and mentally. She loves learning from books and by taking courses on Lynda.com. Fauzia is fanatic fan of all things psychology and personal/spiritual growth. Fauzia was a finalist of Forbes 30 Under 30 in 2016 and has won the Washington InnovateHer competition in 2017."
+                            bio="Fauzia Lala is an ex-Microsoft engineer, motivational speaker and a serial entrepreneur. She has 3 startups including self-defense training for women in the Greater Seattle area. Fauzia loves to learn and read about all things psychology and personal/spiritual growth. She was a finalist of Forbes 30 Under 30 in 2016 and one of the winners of the Washington InnovateHer competition in 2017."
                             openModal={this.props.openModal}
 						/>
 					</td>

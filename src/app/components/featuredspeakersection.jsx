@@ -17,7 +17,7 @@ const speakers =[ {name:"Kristi Straus", desc:"", 	img:"/app/resources/images/sp
 			{name:"Sarah Myhre", desc:"", 			img:"/app/resources/images/speakers/sarah.png"},
 			{name:"Jeffery Lew", desc:"", 			img:"/app/resources/images/speakers/jeffery.png"},
 			{name:"Izdihar Bailey", desc:"", 		img:"/app/resources/images/speakers/izdihar.png"},
-			{name:"Karen Liftin", desc:"", 			img:"/app/resources/images/speakers/karen.png"},
+			{name:"Karen Litfin", desc:"", 			img:"/app/resources/images/speakers/karen.png"},
 			{name:"Tarah Wheeler", desc:"", 		img:"/app/resources/images/speakers/tarah.png"} 
 			];
 
