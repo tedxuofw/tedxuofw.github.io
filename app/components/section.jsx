@@ -7,8 +7,9 @@ export class Section extends React.Component {
     render(){
         let title = this.props.title;
 		let borderSize = this.props.border;
-        let height = this.props.height;
+		let height = this.props.height;
 		let bgColor = this.props.bgColor;
+		let fontsize = this.props.fontSize;
 		if (typeof height === 'undefined') {
 			height = '75vh';
 		}
@@ -17,6 +18,9 @@ export class Section extends React.Component {
 		}
 		if (typeof bgColor === 'undefined') {
 			bgColor = 'white';
+		}
+		if (typeof fontsize === 'undefined') {
+			fontsize = '6vw';
 		}
         
 		var style = {
@@ -33,7 +37,7 @@ export class Section extends React.Component {
         
         return ( 
             <div style={style} className={css(styles.tedsection)}>
-                <div className={css(styles.tedsectiontitle)}>{title}</div>
+                <div style={{fontSize:fontsize}} className={css(styles.tedsectiontitle)}>{title}</div>
                 {this.props.children}
             </div> 
         );
@@ -49,7 +53,6 @@ const styles = StyleSheet.create({
         paddingBottom: '50px'
     },
     tedsectiontitle: {
-        fontSize: '6vw',
         fontWeight: 'bold',
         fontFamily: 'AvenirBlack',
         textTransform: 'uppercase'
