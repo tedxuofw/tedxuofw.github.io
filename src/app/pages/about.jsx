@@ -6,6 +6,7 @@ import {TEDFooter} from '../components/tedfooter.jsx';
 import {Section} from '../components/section.jsx';
 import {SliderSection} from '../components/slidersection.jsx';
 import {Descriptions} from '../components/meettheteam.jsx';
+import {ConferenceSupport} from '../components/conferencesupport.jsx';
 
 export class About extends React.Component {
     componentDidMount() {
@@ -21,6 +22,9 @@ export class About extends React.Component {
                 <Section title="Meet the Team">
                     <Descriptions />
                 </Section>
+				<Section title='Our Conference Support' fontSize='4vw'>
+					<ConferenceSupport />
+				</Section>
                 <TEDFooter />
             </div>
         );
