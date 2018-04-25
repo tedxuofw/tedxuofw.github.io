@@ -214,7 +214,7 @@ class ProfileList extends React.Component {
                             title="Jeanne Suchodolski" 
                             role=""
                             company=""
-							bio='Jeanne is a multifaceted woman with titles such as engineer, lawyer, pilot, and member. She has remained within the technology and aerospace world throughout her career, from working as a rocket engineer at Boeing to acting as patent and corporate counsel for companies such as Boeing, Microsoft, and Honeywell. Jeanne is a multi-year veteran of the United States’ Antarctic Program and wintered-over as the Station Manager of McMurdo Station. She is currently earning an LLM in Space, Cyber and Telecommunications Law.'
+							bio="Jeanne C. Suchodolski, Explorer's Club MN '09, is a multifaceted powerhouse of a woman with titles such as engineer, lawyer, pilot, and polar expedition member. She has remained within the technology and aerospace world throughout her career, from working as a rocket engineer at Boeing to acting as patent and corporate counsel for companies such as Boeing, Microsoft, and Honeywell. Jeanne is a multi-year veteran of the United States’ Antarctic Program and wintered-over as the Station Manager of  McMurdo Station. She is currently earning an LLM in Space, Cyber and Telecommunications Law."
 							openModal={this.props.openModal}
                           />
                     </td>
