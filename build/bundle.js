@@ -48132,7 +48132,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/bezruchka.jpg" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Myhre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Litfin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Tarah Wheeler", desc: "", img: "/app/resources/images/speakers/tarah.png" }, { name: "Jeanne Suchodolski", desc: "", img: "/app/resources/images/speakers/jeanne.png" }];
+var speakers = [{ name: "Kristi Straus", desc: "", img: "/app/resources/images/speakers/kristi.png" }, { name: "Ansel Santosa", desc: "", img: "/app/resources/images/speakers/ansel.png" }, { name: "Heather Evans", desc: "", img: "/app/resources/images/speakers/heather.png" }, { name: "Dr. Bezruchka", desc: "", img: "/app/resources/images/speakers/bezruchka.jpg" }, { name: "John Sinclair", desc: "", img: "/app/resources/images/speakers/john.png" }, { name: "Fauzia Lala", desc: "", img: "/app/resources/images/speakers/fauzia.png" }, { name: "Andrea Weatherhead", desc: "", img: "/app/resources/images/speakers/andrea.png" }, { name: "Tyler Valentine", desc: "", img: "/app/resources/images/speakers/tyler.png" }, { name: "Sarah Myhre", desc: "", img: "/app/resources/images/speakers/sarah.png" }, { name: "Jeffery Lew", desc: "", img: "/app/resources/images/speakers/jeffery.png" }, { name: "Izdihar Bailey", desc: "", img: "/app/resources/images/speakers/izdihar.png" }, { name: "Karen Litfin", desc: "", img: "/app/resources/images/speakers/karen.png" }, { name: "Jeanne Suchodolski", desc: "", img: "/app/resources/images/speakers/jeanne.png" }];
 
 var Speakers = exports.Speakers = function (_React$Component) {
 	_inherits(Speakers, _React$Component);
@@ -49586,18 +49586,6 @@ var ProfileList = function (_React$Component2) {
           _react2.default.createElement(
             'tr',
             { className: (0, _aphrodite.css)(styles.tr) },
-            _react2.default.createElement(
-              'td',
-              { className: (0, _aphrodite.css)(styles.td) },
-              _react2.default.createElement(_profile.Profile, {
-                img: '/app/resources/images/speakers/tarah.png',
-                title: 'Tarah Wheeler',
-                role: '',
-                company: '',
-                bio: '<a href="http://twitter.com/tarah">Tarah Wheeler</a> (MS, CSM, CSD, CSP, CISSP) is an information security researcher, author, entrepreneur, keynote speaker, nonprofit founder, scientist, and poker player. She is currently <a href="https://www.newamerica.org/cybersecurity-initiative/2017-2018-cybersecurity-policy-fellows/">Cybersecurity Policy Fellow at New America</a> and Principal Security Advisor & CEO at <a href="https://redqueentech.com/">Red Queen Technologies.</a> She is the lead author of the best-selling <a href="http://amzn.to/2q9iFik"><em>Women In Tech: Take Your Career to The Next Level With Practical Advice And Inspiring Stories</em></a>. She has been Senior Director of Engineering and Principal Security Advocate at <a href="http://symantec.com/">Symantec</a> Website Security. She founded and now sits on the board of Fizzmint, an end-to-end secure HR management company. She has led projects at <a href="http://www.xbox.com/en-US/games/xbox-one">Microsoft Game Studios</a> (Halo and Lips) and architected systems at encrypted mobile communications firm <a href="http://silentcircle.com/">Silent Circle</a>. She founded <a="http://isunlocked.com/">Infosec Unlocked</a>, an initiative to add diversity in infosec conference speakers). Reach her at <a href="http://twitter.com/tarah">@tarah</a>.',
-                openModal: this.props.openModal
-              })
-            ),
             _react2.default.createElement(
               'td',
               { className: (0, _aphrodite.css)(styles.td) },
