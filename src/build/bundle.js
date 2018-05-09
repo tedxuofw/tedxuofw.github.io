@@ -34497,29 +34497,21 @@ var Home = exports.Home = function (_React$Component) {
                             _react2.default.createElement(
                                 'b',
                                 null,
-                                'At ',
+                                'Thank you for attending ',
                                 _react2.default.createElement(
                                     'span',
                                     { style: { color: "#E62B25" } },
                                     'TEDxUofW 2018'
                                 ),
-                                ', we are building a community inspired to shape the future.'
+                                '!'
                             )
                         ),
                         _react2.default.createElement('div', { style: { background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw' } }),
                         _react2.default.createElement(
                             'div',
                             { style: { fontSize: '24px' } },
-                            _react2.default.createElement(
-                                'b',
-                                null,
-                                'MAY 5, 2018'
-                            ),
-                            ' KANE HALL ROOM 130'
-                        ),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement('br', null),
-                        _react2.default.createElement(_tedbutton.TedButton, { name: 'Learn More', linkTo: '/about/' })
+                            'See you again next year!'
+                        )
                     )
                 ),
                 _react2.default.createElement(_flair.Flair, { right: true }),
