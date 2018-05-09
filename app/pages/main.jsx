@@ -65,12 +65,10 @@ export class Home extends React.Component {
                     <div id="topSection" style={{height: '90px'}}></div>
                     <center>
                         <div style={{fontSize: '32px', maxWidth: '475px'}}>
-                            <b>At <span style={{color: "#E62B25"}}>TEDxUofW 2018</span>, we are building a community inspired to shape the future.</b>
+                            <b>Thank you for attending <span style={{color: "#E62B25"}}>TEDxUofW 2018</span>!</b>
                         </div>
                         <div style={{background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw'}}></div>
-                        <div style={{fontSize: '24px'}}><b>MAY 5, 2018</b> KANE HALL ROOM 130</div>
-                        <br/><br/>
-                        <TedButton name="Learn More" linkTo="/about/" />
+                        <div style={{fontSize: '24px'}}>See you again next year!</div>
                     </center>
                 </Section>
                 <Flair right/>
