@@ -65,7 +65,7 @@ export class Home extends React.Component {
                     <div id="topSection" style={{height: '90px'}}></div>
                     <center>
                         <div style={{fontSize: '32px', maxWidth: '475px'}}>
-                            <b>Thank you for attending <span style={{color: "#E62B25"}}>TEDxUofW 2018</span>!</b>
+                            <b>Thank you for attending <span style={{color: "#E62B25"}}>TEDxUofW 2018</span></b>
                         </div>
                         <div style={{background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw'}}></div>
                         <div style={{fontSize: '24px'}}>See you again next year!</div>

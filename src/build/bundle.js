@@ -34502,8 +34502,7 @@ var Home = exports.Home = function (_React$Component) {
                                     'span',
                                     { style: { color: "#E62B25" } },
                                     'TEDxUofW 2018'
-                                ),
-                                '!'
+                                )
                             )
                         ),
                         _react2.default.createElement('div', { style: { background: '#E62B25', height: '10px', width: '10vw', marginTop: '4vh', marginBottom: '4vw' } }),
